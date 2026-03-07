@@ -1,0 +1,22 @@
+flowchart LR
+    User[Business User / Knowledge Worker]
+    Reviewer[Reviewer / Compliance Officer]
+    Admin[Platform Admin]
+
+    DMS[DMS Platform]
+
+    IAM[Identity and Access Provider]
+    Workflow[Workflow / BPM Platform]
+    Messaging[Notification / Messaging Infrastructure]
+    Analytics[Analytics / Reporting Consumer]
+    External[External Systems and Partners]
+
+    User --> DMS
+    Reviewer --> DMS
+    Admin --> DMS
+
+    DMS --> IAM
+    DMS --> Workflow
+    DMS --> Messaging
+    DMS --> Analytics
+    DMS --> External

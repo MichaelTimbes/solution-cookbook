@@ -7,6 +7,7 @@ This folder contains the cookbook scaffold in three layers:
 - Level 3: foundational design patterns in `foundational-patterns/`
 - Cross-link map: `cross-link-matrix.md`
 - Navigation matrix: `archetype-capability-matrix.md`
+- Tri-map (pattern → capability → archetype): `pattern-capability-archetype-tri-map.md`
 
 ## Scope
 
@@ -26,6 +27,7 @@ This folder contains the cookbook scaffold in three layers:
 - Archetype-capability matrix: [cross-link-matrix.md](cross-link-matrix.md)
 - Capability-row navigation matrix: [archetype-capability-matrix.md](archetype-capability-matrix.md)
 - Foundational patterns index: [foundational-patterns/README.md](foundational-patterns/README.md)
+- Executive tri-map: [pattern-capability-archetype-tri-map.md](pattern-capability-archetype-tri-map.md)
 
 ## Coverage notes
 
@@ -42,5 +44,7 @@ This folder contains the cookbook scaffold in three layers:
 - By archetype: start in [archetypes](archetypes)
 - By capability: start in [capabilities](capabilities)
 - By foundational pattern: start in [foundational-patterns](foundational-patterns)
+- By concept-to-implementation chain: [pattern-capability-archetype-tri-map.md](pattern-capability-archetype-tri-map.md)
+
 
 

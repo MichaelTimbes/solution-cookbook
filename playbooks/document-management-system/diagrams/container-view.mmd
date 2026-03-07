@@ -1,0 +1,37 @@
+flowchart TB
+    UI[Document UI]
+    API[Document API]
+
+    Ingest[Ingestion Service]
+    Metadata[Metadata & Classification Service]
+    Repo[Document Repository Service]
+    Search[Search Query Service]
+    WF[Workflow Orchestration Service]
+    Notify[Notification Service]
+    Audit[Audit & Provenance Service]
+    DataMove[Import/Export Service]
+
+    ObjStore[(Document Storage)]
+    MetaDB[(Metadata Store)]
+    Index[(Search Index)]
+    Queue[(Event / Message Queue)]
+
+    UI --> API
+    API --> Ingest
+    API --> Search
+    API --> DataMove
+
+    Ingest --> Metadata
+    Metadata --> Repo
+    Repo --> ObjStore
+    Metadata --> MetaDB
+    Metadata --> Index
+
+    Repo --> WF
+    WF --> Queue
+    Queue --> Notify
+
+    API --> Audit
+    Ingest --> Audit
+    Search --> Audit
+    DataMove --> Audit

@@ -1,0 +1,31 @@
+# Pattern → Capability → Archetype Tri-Map
+
+This page is a compact executive map of recurring enterprise software structures.
+
+It connects:
+- conceptual force (**Foundational Pattern**),
+- reusable implementation building block (**Capability**),
+- product/system shape (**Archetype**).
+
+## Tri-map table
+
+| Foundational pattern | Core capabilities | Common archetypes |
+|---|---|---|
+| [Identity & Access Control](foundational-patterns/identity-access-control.md) | [Notification / Messaging System](capabilities/notification-messaging-system.md), [Audit Log + Provenance](capabilities/audit-log-provenance.md), [Approval Workflows / Human-In-The-Loop](capabilities/approval-workflows-human-in-the-loop.md) | [Identity / Access (CIAM)](archetypes/identity-access-ciam.md), [CRM](archetypes/crm.md), [Case / Ticket System](archetypes/case-ticket-system.md) |
+| [Auditability / Traceability](foundational-patterns/auditability-traceability.md) | [Audit Log + Provenance](capabilities/audit-log-provenance.md), [Idempotency + Outbox + Retries + DLQ](capabilities/idempotency-outbox-retries-dlq.md) | [Document Management System](archetypes/document-management-system.md), [Payments / Billing](archetypes/payments-billing.md), [Identity / Access (CIAM)](archetypes/identity-access-ciam.md) |
+| [Extensibility](foundational-patterns/extensibility.md) | [Custom Fields / Extensible Attributes](capabilities/custom-fields-extensible-attributes.md), [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md), [Dynamic Evaluation / Survey Engine](capabilities/dynamic-evaluation-survey-engine.md) | [CRM](archetypes/crm.md), [Inventory / Catalog](archetypes/inventory-catalog.md), [CMS / Wiki / Knowledge Base](archetypes/cms-wiki-kb.md) |
+| [Discoverability (Search & Queryability)](foundational-patterns/discoverability-search-queryability.md) | [Search / Filters / Saved Views](capabilities/search-filters-saved-views.md), [Import / Export Pipelines](capabilities/import-export-pipelines.md) | [Analytics Portal](archetypes/analytics-portal.md), [Case / Ticket System](archetypes/case-ticket-system.md), [Document Management System](archetypes/document-management-system.md) |
+| [Workflow / Stateful Progression](foundational-patterns/workflow-stateful-progression.md) | [Approval Workflows / Human-In-The-Loop](capabilities/approval-workflows-human-in-the-loop.md), [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md) | [Workflow / BPM System](archetypes/workflow-bpm-system.md), [Case / Ticket System](archetypes/case-ticket-system.md), [Payments / Billing](archetypes/payments-billing.md) |
+| [Policy-Driven Behavior (Rules / Decisioning)](foundational-patterns/policy-driven-behavior.md) | [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md), [Dynamic Evaluation / Survey Engine](capabilities/dynamic-evaluation-survey-engine.md) | [Workflow / BPM System](archetypes/workflow-bpm-system.md), [Identity / Access (CIAM)](archetypes/identity-access-ciam.md), [Inventory / Catalog](archetypes/inventory-catalog.md) |
+| [Messaging & Notifications](foundational-patterns/messaging-notifications.md) | [Notification / Messaging System](capabilities/notification-messaging-system.md), [Notification Preferences and Routing](capabilities/notification-preferences-routing.md), [Idempotency + Outbox + Retries + DLQ](capabilities/idempotency-outbox-retries-dlq.md) | [Scheduling / Rostering](archetypes/scheduling-rostering.md), [Case / Ticket System](archetypes/case-ticket-system.md), [Payments / Billing](archetypes/payments-billing.md) |
+| [Reliability Under Retry (Idempotency / Outbox)](foundational-patterns/reliability-under-retry.md) | [Idempotency + Outbox + Retries + DLQ](capabilities/idempotency-outbox-retries-dlq.md), [Notification / Messaging System](capabilities/notification-messaging-system.md) | [Payments / Billing](archetypes/payments-billing.md), [Workflow / BPM System](archetypes/workflow-bpm-system.md), [Inventory / Catalog](archetypes/inventory-catalog.md) |
+| [Data Movement (Import / Export)](foundational-patterns/data-movement.md) | [Import / Export Pipelines](capabilities/import-export-pipelines.md), [Audit Log + Provenance](capabilities/audit-log-provenance.md) | [CRM](archetypes/crm.md), [Document Management System](archetypes/document-management-system.md), [Inventory / Catalog](archetypes/inventory-catalog.md) |
+| [Human Approval / Human-In-The-Loop](foundational-patterns/human-approval-human-in-the-loop.md) | [Approval Workflows / Human-In-The-Loop](capabilities/approval-workflows-human-in-the-loop.md), [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md) | [Workflow / BPM System](archetypes/workflow-bpm-system.md), [Case / Ticket System](archetypes/case-ticket-system.md), [Payments / Billing](archetypes/payments-billing.md) |
+| [Generated Artifacts (Document / Template Generation)](foundational-patterns/generated-artifacts-document-template-generation.md) | [Template / Merge Fields Document Generation](capabilities/template-merge-fields-document-generation.md), [Import / Export Pipelines](capabilities/import-export-pipelines.md) | [CMS / Wiki / Knowledge Base](archetypes/cms-wiki-kb.md), [Document Management System](archetypes/document-management-system.md), [CRM](archetypes/crm.md) |
+| [Operational Visibility (Observability)](foundational-patterns/operational-visibility-observability.md) | [Audit Log + Provenance](capabilities/audit-log-provenance.md), [Idempotency + Outbox + Retries + DLQ](capabilities/idempotency-outbox-retries-dlq.md), [Notification / Messaging System](capabilities/notification-messaging-system.md) | [Analytics Portal](archetypes/analytics-portal.md), [Workflow / BPM System](archetypes/workflow-bpm-system.md), [Identity / Access (CIAM)](archetypes/identity-access-ciam.md) |
+
+## How to read this map
+
+- If you start from a business system shape, go from archetype → capability details.
+- If you start from platform architecture, go from capability → foundational rationale.
+- If you need stakeholder alignment, start with foundational patterns and map down to concrete capability pages.
