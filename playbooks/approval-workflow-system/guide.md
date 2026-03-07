@@ -2,27 +2,34 @@
 playbook: Approval Workflow System
 archetype: workflow-bpm-system
 required-capabilities:
-  - approval-workflows-human-in-the-loop
-  - rules-engine-decisioning
-  - notification-messaging-system
-  - audit-log-provenance
   - search-filters-saved-views
-optional-capabilities:
+  - custom-fields-extensible-attributes
+  - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
   - notification-preferences-routing
+  - notification-messaging-system
+  - rules-engine-decisioning
+  - audit-log-provenance
+  - import-export-pipelines
   - idempotency-outbox-retries-dlq
+optional-capabilities:
+  - template-merge-fields-document-generation
 patterns:
+  - identity-access-control
+  - auditability-traceability
+  - discoverability-search-queryability
   - workflow-stateful-progression
   - policy-driven-behavior
-  - auditability-traceability
-  - human-approval-human-in-the-loop
+  - operational-visibility-observability
 ---
 
 # Approval Workflow System Playbook
 
 ## Problem Context
 
-Approval workflow systems coordinate request submission, review, decisioning, escalation, and closure for policy-controlled approvals.
+Approval workflow systems coordinate request submission, policy evaluation, multi-step decision routing, escalation handling, and closure evidence for controlled business approvals. They ensure decisions are authorized, traceable, and time-bound.
+
+Typical real-world examples include spend approvals, access exceptions, policy waivers, and operational change controls.
 
 ## Archetype
 
@@ -32,34 +39,81 @@ Primary archetype:
 Related archetypes:
 - [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
 - [Identity / Access (CIAM)](../../cookbook-v1/archetypes/identity-access-ciam.md)
+- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+
+Interaction model:
+- Approval Workflow owns request-to-decision progression and policy-driven routing.
+- Case/Ticket provides escalation and exception tracking continuity.
+- Identity/Access governs authorization context and approver eligibility.
+- Document management provides governed request artifacts and evidence attachments.
 
 ## Foundational Patterns
 
+Key patterns shaping approval workflow architecture:
+- [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
+- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
-- [Human Approval / Human-In-The-Loop](../../cookbook-v1/foundational-patterns/human-approval-human-in-the-loop.md)
+- [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
+
+These patterns are essential because approvals demand strict transition control, explicit authorization, and immutable decision provenance.
 
 ## Required Capabilities
 
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
+- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+
+How capabilities participate:
+- Custom fields and dynamic evaluation drive policy-aware request capture.
+- Rules and approval workflows govern approver routing and decision checkpoints.
+- Notification and routing coordinate decision deadlines and escalations.
+- Search supports queue operations and SLA management.
+- Audit, import/export, and idempotency maintain trusted lifecycle evidence and integration stability.
 
 ## Reference Architecture
 
-Architecture combines request intake, policy decisioning, approval routing, escalation timers, and immutable decision audit.
+Diagrams:
+- [System context](diagrams/system-context.mmd)
+- [Container view](diagrams/container-view.mmd)
+- [Lifecycle flow](diagrams/lifecycle-flow.mmd)
+
+High-level architecture:
+- Intake boundaries accept approval requests from UI, API, and integrated systems.
+- Core workflow domain services manage request state, assignments, and decision progression.
+- A repository/core state store persists canonical request and decision state.
+- Search/query services maintain pending, escalated, and completed queue views.
+- Workflow and orchestration services execute policy routing and escalation timers.
+- Notification and messaging services route reminders and decision outcomes.
+- Audit and provenance services capture immutable approval evidence.
+- Integration boundaries handle callback, export, and reconciliation flows.
 
 ## System Evolution
 
-Phase 1: single-step approval  
-Phase 2: multi-step policy routing  
-Phase 3: escalation and SLA handling  
-Phase 4: external system callbacks and automation  
-Phase 5: governance and approval analytics
+Phase 1: request intake and single-step approval baseline  
+Phase 2: policy-driven multi-step routing  
+Phase 3: escalation timers and SLA governance  
+Phase 4: integration callbacks and reliability controls  
+Phase 5: observability and decision governance optimization
+
+As maturity increases, approval systems evolve from basic decision capture toward deterministic, policy-governed orchestration with full provenance.
 
 ## Failure Modes
 
-Risks include approval bypass, stuck approvals, and duplicate decision actions. See [failure-modes.md](failure-modes.md).
+Common architectural risks:
+- unauthorized decisions from weak approver validation
+- stuck approvals due to missing escalation controls
+- duplicate callbacks creating conflicting downstream outcomes
+- notification drift causing missed response windows
+- backlog invisibility causing SLA breaches
+
+See detailed analysis in [failure-modes.md](failure-modes.md).

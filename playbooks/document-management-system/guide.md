@@ -1,3 +1,25 @@
+---
+playbook: Document Management System
+archetype: document-management-system
+required-capabilities:
+  - search-filters-saved-views
+  - audit-log-provenance
+  - import-export-pipelines
+  - human-communication-coordination
+  - template-merge-fields-document-generation
+  - notification-messaging-system
+  - approval-workflows-human-in-the-loop
+optional-capabilities:
+  []
+patterns:
+  - identity-access-control
+  - auditability-traceability
+  - discoverability-search-queryability
+  - workflow-stateful-progression
+  - generated-artifacts-document-template-generation
+  - operational-visibility-observability
+---
+
 # Document Management System Playbook
 
 ## Problem Context
@@ -27,6 +49,7 @@ Key patterns influencing DMS architecture:
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Generated Artifacts (Document / Template Generation)](../../cookbook-v1/foundational-patterns/generated-artifacts-document-template-generation.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
 
@@ -38,24 +61,26 @@ Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 - [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
 - [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 
 Role of each capability in the DMS:
 - Search/filters/saved views drives discoverability and operational triage.
-- Audit/provenance provides accountability for document state and access changes.
+- Audit and provenance provides accountability for document state and access changes.
 - Import/export pipelines support migration, partner interchange, and compliance exports.
+- Human communication capability provides review discussions, directed clarifications, and durable decision context around document records.
 - Template generation supports controlled output from structured document data.
-- Notification/messaging coordinates lifecycle events, approvals, and policy alerts.
+- Notification and messaging coordinates lifecycle events, approvals, and policy alerts.
 - Human-in-the-loop workflows govern high-risk transitions and exceptions.
 
 ## Reference Architecture
 
 Diagrams:
 - [System context](diagrams/system-context.mmd)
-- [Container architecture](diagrams/container-view.mmd)
-- [Document lifecycle](diagrams/document-lifecycle.mmd)
+- [Container view](diagrams/container-view.mmd)
+- [Lifecycle flow](diagrams/lifecycle-flow.mmd)
 
 Core architecture components:
 - Document ingestion boundary for uploads and source intake.

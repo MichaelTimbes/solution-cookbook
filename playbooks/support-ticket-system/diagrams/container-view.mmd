@@ -1,16 +1,42 @@
+%% Support Ticket container view
+%% Shows major services, stores, and interaction paths.
 flowchart TB
-    UI[Support UI]
-    API[Ticket API]
-    Intake[Intake Service]
-    Domain[Ticket Domain Service]
-    Routing[Routing and SLA Service]
-    Search[Search Service]
-    Notify[Notification Service]
-    Audit[Audit Service]
-    Store[(Ticket Store)]
-    Index[(Search Index)]
+    Portal[Requester Portal]
+    AgentUI[Agent Operations UI]
+    API[Support Ticket API Boundary]
 
-    UI --> API --> Intake --> Domain --> Store
-    Domain --> Routing --> Notify
-    Domain --> Search --> Index
+    Intake[Intake and Classification Service]
+    Domain[Ticket Lifecycle Service]
+    Queue[Queue and Assignment Service]
+    Workflow[Workflow and Orchestration Service]
+    Notify[Notification and Messaging Service]
+    Search[Search and Query Service]
+    Audit[Audit and Provenance Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Repository/Core State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    Portal --> API
+    AgentUI --> API
+    API --> Intake
+    API --> Domain
+    API --> Search
+
+    Intake --> Queue
+    Queue --> Domain
+    Domain --> State
+    Domain --> Events
+
+    Events --> Workflow
+    Workflow --> Notify
+    Events --> Integrations
+
+    Domain --> Index
+    Search --> Index
+
     API --> Audit
+    Domain --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

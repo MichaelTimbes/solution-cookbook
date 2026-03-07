@@ -3,17 +3,19 @@ playbook: Workflow and Business Process Management System
 archetype: workflow-bpm-system
 required-capabilities:
   - approval-workflows-human-in-the-loop
+  - dynamic-evaluation-survey-engine
+  - human-communication-coordination
   - rules-engine-decisioning
+  - notification-preferences-routing
   - notification-messaging-system
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
-  - search-filters-saved-views
-optional-capabilities:
-  - dynamic-evaluation-survey-engine
-  - notification-preferences-routing
   - import-export-pipelines
+  - search-filters-saved-views
   - custom-fields-extensible-attributes
   - template-merge-fields-document-generation
+optional-capabilities:
+  []
 patterns:
   - workflow-stateful-progression
   - policy-driven-behavior
@@ -55,6 +57,7 @@ Interaction model:
 
 Key patterns shaping workflow architecture:
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Reliability Under Retry (Idempotency / Outbox)](../../cookbook-v1/foundational-patterns/reliability-under-retry.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
@@ -68,6 +71,7 @@ These patterns matter because process systems must enforce deterministic transit
 Core capability pages:
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
 - [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
@@ -80,6 +84,7 @@ Core capability pages:
 How capabilities participate:
 - Rules and dynamic evaluation control process branching and policy decisions.
 - Approval and workflow capabilities coordinate human task progression.
+- Human communication capability provides context-linked discussion, directed mentions, and handoff communication across process steps.
 - Messaging and notification capabilities support signal handling and participant communication.
 - Idempotency and retry controls ensure deterministic side effects.
 - Audit and observability capture complete process history and operational state.

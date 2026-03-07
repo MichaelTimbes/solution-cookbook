@@ -8,9 +8,7 @@ required-capabilities:
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
 optional-capabilities:
-  - approval-workflows-human-in-the-loop
-  - notification-preferences-routing
-  - import-export-pipelines
+  - template-merge-fields-document-generation
 patterns:
   - workflow-stateful-progression
   - operational-visibility-observability

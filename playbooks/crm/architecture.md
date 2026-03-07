@@ -15,15 +15,16 @@ Related archetypes:
 ## Logical Components
 
 - Input boundary service: accepts user and integration-originated changes.
+- Repository / Core State Store service: persists authoritative customer, pipeline, and ownership state.
 - Customer domain service: manages accounts, contacts, relationships, and ownership.
 - Pipeline domain service: manages leads, opportunities, stage transitions, and qualification outcomes.
 - Activity timeline service: captures tasks, meetings, calls, and interaction history.
 - Case linkage service: links service interactions to account and opportunity context.
 - Rules and decisioning service: evaluates assignment, scoring, transition, and policy rules.
-- Workflow orchestration service: coordinates approvals, escalations, and exception paths.
+- Workflow and Orchestration service: coordinates approvals, escalations, and exception paths.
 - Search/query service: provides indexed retrieval, filtering, and saved operational views.
-- Notification service: publishes assignment and lifecycle events with routing controls.
-- Audit/provenance service: records immutable actor-action-object change history.
+- Notification and Messaging service: publishes assignment and lifecycle events with routing controls.
+- Audit and Provenance service: records immutable actor-action-object change history.
 - Data movement service: handles imports, exports, and reconciliation with external boundaries.
 
 ## Capability Mapping
@@ -34,7 +35,7 @@ Related archetypes:
 - Workflow orchestration -> [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - Notification service -> [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - Data movement service -> [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
-- Audit/provenance service -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- Audit and Provenance service -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 
 ## Boundary Principles
 
@@ -54,7 +55,15 @@ Related archetypes:
 - Notification and integration services react to events and update external boundaries.
 - Audit and observability capture all critical transitions for forensics and operations.
 
-## Diagram Links
+## Evolution Anchors
+
+- Start with core account, contact, lead, and opportunity state management.
+- Add stage transition controls, search views, and ownership policy enforcement.
+- Add workflow-driven approvals and notification routing for high-risk transitions.
+- Add import/export synchronization with idempotent and reconciled integration behavior.
+- Add governance maturity through audit depth and operational observability baselines.
+
+## Diagram References
 
 - [System context](diagrams/system-context.mmd)
 - [Container view](diagrams/container-view.mmd)

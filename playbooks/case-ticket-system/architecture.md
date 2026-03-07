@@ -16,13 +16,14 @@ Related archetypes:
 
 - Intake boundary service: accepts requests from portal, messaging, and API channels.
 - Classification and prioritization service: assigns category, severity, and policy tags.
+- Repository / Core State Store service: persists canonical ticket, assignment, and transition state.
 - Queue and assignment service: manages ownership, team routing, and workload balancing.
 - Ticket lifecycle service: controls state transitions and resolution context.
 - SLA policy service: evaluates response and resolution timers against active policy versions.
-- Workflow and decisioning service: executes escalations, approvals, and exception paths.
-- Communication service: manages requester and internal notification delivery flows.
+- Workflow and Orchestration service: executes escalations, approvals, and exception paths.
+- Notification and Messaging service: manages requester and internal notification delivery flows.
 - Search and reporting query service: provides retrieval, saved views, and operational slices.
-- Audit and observability service: records immutable events and service-level operational signals.
+- Audit and Provenance service: records immutable events and service-level operational signals.
 - Integration and data movement service: handles ingest, export, and external synchronization.
 
 ## Capability Mapping
@@ -39,7 +40,7 @@ Related archetypes:
 - Keep canonical ticket state separate from read-optimized query projections.
 - Keep SLA and policy evaluation centralized and versioned.
 - Keep workflow orchestration separate from core state mutation paths.
-- Keep communication intent separate from channel delivery mechanics.
+- Keep notification intent separate from channel delivery mechanics.
 - Keep audit trails immutable and independently queryable.
 - Keep integrations idempotent and monitored for drift.
 
@@ -51,7 +52,15 @@ Related archetypes:
 - SLA evaluation runs continuously against ticket state and policy timelines.
 - Resolution and closure actions trigger communication, audit capture, and export synchronization.
 
-## Diagram Links
+## Evolution Anchors
+
+- Start with intake, canonical ticket state, and queue assignment controls.
+- Add SLA policy evaluation with deterministic escalation and notification behavior.
+- Add workflow-driven exception handling and approval gates.
+- Add integration synchronization with idempotent processing and reconciliation.
+- Add operational governance with search quality, audit depth, and observability maturity.
+
+## Diagram References
 
 - [System context](diagrams/system-context.mmd)
 - [Container view](diagrams/container-view.mmd)

@@ -1,10 +1,13 @@
+%% Approval Workflow lifecycle flow
+%% Shows request progression with escalation and decision completion.
 flowchart LR
-    Submit[Submit]
-    Evaluate[Evaluate]
-    Route[Route]
-    Approve[Approve/Reject]
-    Escalate[Escalate]
-    Complete[Complete]
+    Submit[Request Submission]
+    Evaluate[Policy Evaluation]
+    Route[Approver Routing]
+    Decide[Decision Step]
+    Escalate[Escalation Path]
+    Finalize[Finalization and Callback]
 
-    Submit --> Evaluate --> Route --> Approve --> Complete
+    Submit --> Evaluate --> Route --> Decide --> Finalize
     Route -->|Timeout| Escalate --> Route
+    Decide -->|Needs Revision| Submit

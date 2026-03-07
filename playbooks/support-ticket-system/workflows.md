@@ -1,37 +1,68 @@
 # Support Ticket System Workflows
 
-## 1) Intake and Classification
+## Core Workflow Set
 
-1. Request arrives from portal, email, or API.
-2. Required metadata is validated.
-3. Priority and category are assigned.
-4. Queue ownership is determined.
+## 1) Multi-Channel Intake and Classification
 
-Capabilities:
+1. Requester submits issue through portal, email, or API.
+2. Intake validation enforces required fields and policy constraints.
+3. Classification applies category, urgency, and queue routing labels.
+4. Initial SLA and ownership context is established.
+
+Capabilities involved:
+- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+
+## 2) Queue Assignment and Active Handling
+
+1. Ticket is assigned to queue and agent using routing policy.
+2. Agent records work notes and requester-facing updates.
+3. Status transitions progress through active handling states.
+4. Saved views surface pending, aging, and blocked workloads.
+
+Capabilities involved:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-
-## 2) Assignment and Active Handling
-
-1. Agent accepts or is assigned the ticket.
-2. Work logs and customer updates are added.
-3. Status moves through in-progress states.
-
-Capabilities:
+- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 
-## 3) Escalation and Approval
+## 3) SLA Escalation and Exception Approval
 
-1. SLA thresholds trigger escalation.
-2. Supervisor approval is required for exceptions.
-3. Escalation outcomes update queue routing.
+1. SLA thresholds are continuously evaluated against ticket state.
+2. Warning and breach conditions trigger escalation paths.
+3. Exception actions (override, reassignment, policy extension) require approval.
+4. Outcomes are captured and reflected in queue priorities.
 
-Capabilities:
+Capabilities involved:
+- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 
-## 4) Resolution and Closure
+## 4) Resolution, Confirmation, and Reopen Handling
 
-1. Resolution is recorded.
-2. Requester receives closure communication.
-3. Ticket closes or reopens based on follow-up.
+1. Resolution record is captured with supporting rationale.
+2. Requester receives closure communication based on delivery preferences.
+3. Ticket transitions to closed or reopens if follow-up criteria are met.
+4. Reopen path preserves prior closure context and SLA history.
+
+Capabilities involved:
+- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
+- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+
+## 5) Export and Operational Reporting
+
+1. Scoped support data exports are requested under policy constraints.
+2. Export jobs package lifecycle, SLA, and communication outcomes.
+3. Delivery and replay behavior is tracked and reconciled.
+4. Operational reporting surfaces backlog and service trend signals.
+
+Capabilities involved:
+- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)

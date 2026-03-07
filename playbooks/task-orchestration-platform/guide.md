@@ -8,9 +8,7 @@ required-capabilities:
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
 optional-capabilities:
-  - approval-workflows-human-in-the-loop
-  - notification-preferences-routing
-  - custom-fields-extensible-attributes
+  - template-merge-fields-document-generation
 patterns:
   - workflow-stateful-progression
   - reliability-under-retry

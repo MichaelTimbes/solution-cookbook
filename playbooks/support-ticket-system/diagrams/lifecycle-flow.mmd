@@ -1,12 +1,15 @@
+%% Support Ticket lifecycle flow
+%% Shows progression from intake through closure with escalation and reopen behavior.
 flowchart LR
-    Intake[Ticket Intake]
-    Triage[Triage]
-    Assigned[Assigned]
-    InProgress[In Progress]
-    Escalated[Escalated]
-    Resolved[Resolved]
-    Closed[Closed]
+    Intake[Request Intake]
+    Classify[Classification and Prioritization]
+    Queue[Queue Assignment]
+    Active[Active Handling]
+    Escalate[Escalation or Approval]
+    Resolve[Resolution]
+    Confirm[Requester Confirmation]
+    Close[Closure]
 
-    Intake --> Triage --> Assigned --> InProgress --> Resolved --> Closed
-    InProgress --> Escalated --> InProgress
-    Closed -->|Reopen| InProgress
+    Intake --> Classify --> Queue --> Active --> Resolve --> Confirm --> Close
+    Active --> Escalate --> Active
+    Close -->|Reopened| Active

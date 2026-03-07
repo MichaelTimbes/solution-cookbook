@@ -15,3 +15,5 @@ Solution Cookbook is a reference repository for composing enterprise systems fro
 ## Playbooks
 
 Use [playbooks/index.md](playbooks/index.md) as the main entry point for example architectures, workflows, data models, failure modes, and diagrams.
+
+- Reusable review prompt: [playbooks/consistency-review-prompt.md](playbooks/consistency-review-prompt.md)

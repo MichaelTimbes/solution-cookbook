@@ -3,17 +3,19 @@ playbook: Case and Ticket Management System
 archetype: case-ticket-system
 required-capabilities:
   - search-filters-saved-views
+  - custom-fields-extensible-attributes
+  - human-communication-coordination
   - approval-workflows-human-in-the-loop
+  - dynamic-evaluation-survey-engine
+  - template-merge-fields-document-generation
+  - notification-preferences-routing
   - notification-messaging-system
   - rules-engine-decisioning
   - audit-log-provenance
   - import-export-pipelines
-optional-capabilities:
-  - custom-fields-extensible-attributes
-  - dynamic-evaluation-survey-engine
-  - notification-preferences-routing
-  - template-merge-fields-document-generation
   - idempotency-outbox-retries-dlq
+optional-capabilities:
+  []
 patterns:
   - identity-access-control
   - auditability-traceability
@@ -58,6 +60,7 @@ Key patterns shaping case and ticket architecture:
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
 
@@ -67,6 +70,7 @@ These forces are central because ticket systems must apply trust boundaries, pre
 
 Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
 - [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
@@ -81,6 +85,7 @@ Core capability pages:
 How capabilities participate:
 - Search and saved views power queue operations and workload triage.
 - Rules, workflows, and approval gates control assignment, escalation, and closure behavior.
+- Human communication capability provides threaded discussion, mentions, handoff context, and durable coordination history.
 - Notification capabilities coordinate requester and agent communication.
 - Audit and observability provide compliance-grade process traceability.
 - Import/export and idempotency stabilize ingestion and external synchronization.
@@ -96,7 +101,7 @@ Diagrams:
 High-level architecture:
 - Intake boundaries accept requests from portals, messaging channels, and integration APIs.
 - Core ticket domain services manage classification, queue state, assignment, and resolution.
-- A state store persists canonical ticket, comment, and transition records.
+- A repository/core state store persists canonical ticket, comment, and transition records.
 - Search/query services maintain indexed retrieval and operational dashboards.
 - Workflow and policy services evaluate SLA and escalation rules.
 - Notification services route lifecycle communications.

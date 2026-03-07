@@ -13,8 +13,8 @@ This folder contains the cookbook scaffold in four layers:
 ## Scope
 
 - 10 archetype pages
-- 11 capability pages
-- 12 foundational pattern pages
+- 12 capability pages
+- 13 foundational pattern pages
 
 ## How to use
 
@@ -69,6 +69,10 @@ If you are building a document platform, start with the Document Management arch
 	- [Search / Filters / Saved Views](capabilities/search-filters-saved-views.md)
 - Newly scaffolded as missing foundational capability:
 	- [Notification / Messaging System](capabilities/notification-messaging-system.md)
+	- [Human Communication / Collaboration Layer](capabilities/human-communication-coordination.md)
+
+- Newly scaffolded as recurring foundational pattern:
+	- [Human Communication & Coordination](foundational-patterns/human-communication-coordination.md)
 
 ## Three-way navigation model
 

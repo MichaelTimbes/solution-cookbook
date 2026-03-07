@@ -9,8 +9,6 @@ required-capabilities:
   - notification-messaging-system
 optional-capabilities:
   - template-merge-fields-document-generation
-  - rules-engine-decisioning
-  - idempotency-outbox-retries-dlq
 patterns:
   - discoverability-search-queryability
   - auditability-traceability

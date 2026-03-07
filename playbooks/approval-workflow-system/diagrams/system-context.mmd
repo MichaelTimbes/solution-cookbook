@@ -1,9 +1,22 @@
+%% Approval Workflow system context
+%% Shows approval actors and adjacent systems around the workflow platform.
 flowchart LR
     Requester[Requester]
     Approver[Approver]
-    System[Approval Workflow]
-    Business[Business Systems]
+    Manager[Approval Manager]
 
-    Requester --> System
-    Approver --> System
-    System --> Business
+    AWS[Approval Workflow Platform]
+
+    Identity[Identity and Access Provider]
+    Business[Business Systems]
+    Documents[Document Management]
+    Analytics[Governance Analytics Consumers]
+
+    Requester --> AWS
+    Approver --> AWS
+    Manager --> AWS
+
+    AWS --> Identity
+    AWS --> Business
+    AWS --> Documents
+    AWS --> Analytics

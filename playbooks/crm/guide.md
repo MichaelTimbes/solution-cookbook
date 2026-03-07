@@ -2,18 +2,20 @@
 playbook: Customer Relationship Management System
 archetype: crm
 required-capabilities:
+  - custom-fields-extensible-attributes
+  - dynamic-evaluation-survey-engine
+  - template-merge-fields-document-generation
+  - human-communication-coordination
   - search-filters-saved-views
   - audit-log-provenance
   - approval-workflows-human-in-the-loop
+  - notification-preferences-routing
   - notification-messaging-system
+  - idempotency-outbox-retries-dlq
   - import-export-pipelines
   - rules-engine-decisioning
 optional-capabilities:
-  - custom-fields-extensible-attributes
-  - dynamic-evaluation-survey-engine
-  - notification-preferences-routing
-  - template-merge-fields-document-generation
-  - idempotency-outbox-retries-dlq
+  []
 patterns:
   - identity-access-control
   - auditability-traceability
@@ -58,6 +60,7 @@ Key patterns shaping CRM architecture:
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
 
@@ -69,6 +72,7 @@ Core capability pages:
 - [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
 - [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
@@ -82,6 +86,7 @@ How capabilities participate:
 - Search and saved views support daily pipeline operations and segmentation.
 - Audit and provenance preserve accountability for ownership, stage, and policy changes.
 - Rules and workflow capabilities enforce allowed transitions and approval gates.
+- Human communication capability anchors discussion threads, mentions, and handoff context directly on customer and opportunity records.
 - Messaging capabilities coordinate assignments, escalations, and reminders.
 - Import/export and idempotency support safe integration with external systems.
 - Extensibility and dynamic evaluation support evolving business models and qualification logic.
@@ -96,7 +101,7 @@ Diagrams:
 High-level architecture:
 - An intake boundary accepts lead, account, and activity inputs from users and integrations.
 - Core domain services manage account, contact, lead, opportunity, case, and activity lifecycles.
-- A state store persists authoritative records and ownership assignments.
+- A repository/core state store persists authoritative records and ownership assignments.
 - Search/query services maintain discoverability through indexed views.
 - Workflow and rules services govern transitions, approvals, and escalation conditions.
 - Notification and messaging services deliver operational events.

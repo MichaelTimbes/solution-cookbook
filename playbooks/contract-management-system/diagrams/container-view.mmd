@@ -1,13 +1,40 @@
+%% Contract Management container view
+%% Shows major services, stores, and interaction paths.
 flowchart TB
-    API[Contract API]
-    Draft[Drafting Service]
-    Clause[Clause Library]
-    Review[Review Workflow]
-    Execute[Execution Service]
-    Audit[Audit Service]
-    Store[(Contract Store)]
+    Portal[Contract Operations UI]
+    API[Contract API Boundary]
 
-    API --> Draft --> Store
-    Draft --> Clause
-    Draft --> Review --> Execute
+    Intake[Draft Intake and Authoring Service]
+    Lifecycle[Contract Lifecycle Service]
+    Workflow[Review and Approval Orchestration Service]
+    Rules[Policy and Clause Evaluation Service]
+    Notify[Notification and Messaging Service]
+    Search[Search and Query Service]
+    Audit[Audit and Provenance Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Repository/Core State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    Portal --> API
+    API --> Intake
+    API --> Lifecycle
+    API --> Search
+
+    Intake --> Lifecycle
+    Lifecycle --> State
+    Lifecycle --> Events
+
+    Events --> Workflow
+    Workflow --> Rules
+    Workflow --> Notify
+    Events --> Integrations
+
+    Lifecycle --> Index
+    Search --> Index
+
     API --> Audit
+    Lifecycle --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

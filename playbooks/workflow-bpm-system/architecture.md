@@ -15,14 +15,15 @@ Related archetypes:
 ## Logical Components
 
 - Process API boundary: receives process-start requests, signals, and task actions.
+- Repository / Core State Store service: persists workflow state, task state, and transition history.
 - Process definition service: manages process models, versioning, and deployment controls.
 - Execution engine: manages workflow state transitions and task lifecycle coordination.
 - Task orchestration service: assigns human/system tasks and tracks execution outcomes.
 - Decisioning service: evaluates route logic, policies, and conditional branching.
 - Scheduler and timer service: emits reminders, deadlines, and escalation triggers.
-- Notification and signal service: handles process events, participant notifications, and external signals.
+- Notification and Messaging service: handles process events, participant notifications, and external signals.
 - Search and operations query service: supports operational monitoring, filtering, and backlog triage.
-- Audit and provenance service: records immutable process and administrative history.
+- Audit and Provenance service: records immutable process and administrative history.
 - Integration and side-effect service: executes external calls with retry-safe semantics.
 
 ## Capability Mapping
@@ -53,7 +54,15 @@ Related archetypes:
 - Search and operations projections update asynchronously for dashboards and triage.
 - Audit service captures all transitions, overrides, and policy decisions.
 
-## Diagram Links
+## Evolution Anchors
+
+- Start with versioned process definitions, execution state, and task coordination.
+- Add policy-driven branching, approval controls, and deterministic transition enforcement.
+- Add scheduler, escalation, and notification behavior for long-running reliability.
+- Add idempotent integration side-effects with retry, dead-letter, and replay-safe recovery.
+- Add observability and governance maturity for operational optimization and forensics.
+
+## Diagram References
 
 - [System context](diagrams/system-context.mmd)
 - [Container view](diagrams/container-view.mmd)

@@ -1,9 +1,66 @@
-# Contract Management Architecture
+# Contract Management Architecture Composition
 
-- Contract intake and drafting service.
-- Clause/template library service.
-- Negotiation and redline workflow service.
-- Approval and execution orchestration service.
-- Search and obligations query service.
-- Audit and evidence service.
-- Integration boundary for e-signature and ERP systems.
+## Composition Intent
+
+This playbook composes the Document Management System archetype for agreement-centric operations where lifecycle governance, approval control, and evidence traceability are primary concerns.
+
+Primary archetype:
+- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+
+Related archetypes:
+- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
+- [CRM](../../cookbook-v1/archetypes/crm.md)
+- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+
+## Logical Components
+
+- Intake boundary service: accepts draft requests, negotiated artifacts, and metadata updates.
+- Document lifecycle service: manages contract versions and controlled state transitions.
+- Repository / Core State Store service: persists canonical contract, clause, and obligation state.
+- Workflow and Orchestration service: governs review, approval, execution, and renewal paths.
+- Rules and policy service: evaluates clause policy, escalation, and exception constraints.
+- Notification and Messaging service: coordinates participant communications and deadlines.
+- Search and reporting query service: supports retrieval by party, clause, obligation, and timeline.
+- Audit and Provenance service: records immutable actor-action-object contract evidence.
+- Integration and data movement service: synchronizes e-signature, ERP, and export channels.
+
+## Capability Mapping
+
+- Draft and metadata intake -> [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md), [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- Review and approval governance -> [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md), [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- Discovery operations -> [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- Deadline communications -> [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- Integration reliability -> [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- Evidence controls -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+
+## Boundary Principles
+
+- Keep canonical contract lifecycle state separate from search and reporting projections.
+- Keep workflow and orchestration separate from direct version state mutation.
+- Keep notification intent separate from delivery channel behavior.
+- Keep audit and provenance records immutable and independently queryable.
+- Keep integration processing idempotent and reconciliation-aware.
+
+## Interaction Flow
+
+- Intake boundaries normalize draft and update events.
+- Document lifecycle service applies controlled transitions and version management.
+- Repository/core state store persists contract and obligation state changes.
+- Workflow and orchestration drives review, approval, and renewal actions.
+- Notification and messaging distributes lifecycle and deadline updates.
+- Search/query projections update for operational and legal retrieval.
+- Audit and provenance captures immutable lifecycle evidence.
+
+## Evolution Anchors
+
+- Start with drafting, versioning, and canonical contract state controls.
+- Add governed review and approval workflow orchestration.
+- Add execution and obligation tracking with deadline awareness.
+- Add integration synchronization and replay-safe processing.
+- Add observability and governance optimization for compliance confidence.
+
+## Diagram References
+
+- [System context](diagrams/system-context.mmd)
+- [Container view](diagrams/container-view.mmd)
+- [Lifecycle flow](diagrams/lifecycle-flow.mmd)

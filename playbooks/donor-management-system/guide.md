@@ -9,8 +9,6 @@ required-capabilities:
   - approval-workflows-human-in-the-loop
 optional-capabilities:
   - template-merge-fields-document-generation
-  - import-export-pipelines
-  - custom-fields-extensible-attributes
 patterns:
   - discoverability-search-queryability
   - auditability-traceability

@@ -8,9 +8,7 @@ required-capabilities:
   - audit-log-provenance
   - import-export-pipelines
 optional-capabilities:
-  - approval-workflows-human-in-the-loop
-  - dynamic-evaluation-survey-engine
-  - search-filters-saved-views
+  - template-merge-fields-document-generation
 patterns:
   - workflow-stateful-progression
   - policy-driven-behavior

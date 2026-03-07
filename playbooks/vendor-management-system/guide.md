@@ -8,9 +8,7 @@ required-capabilities:
   - audit-log-provenance
   - import-export-pipelines
 optional-capabilities:
-  - notification-messaging-system
-  - custom-fields-extensible-attributes
-  - idempotency-outbox-retries-dlq
+  - template-merge-fields-document-generation
 patterns:
   - policy-driven-behavior
   - identity-access-control

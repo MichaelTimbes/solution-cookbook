@@ -8,9 +8,7 @@ required-capabilities:
   - audit-log-provenance
   - approval-workflows-human-in-the-loop
 optional-capabilities:
-  - notification-preferences-routing
-  - import-export-pipelines
-  - custom-fields-extensible-attributes
+  - template-merge-fields-document-generation
 patterns:
   - identity-access-control
   - auditability-traceability

@@ -3,28 +3,33 @@ playbook: Support Ticket System
 archetype: case-ticket-system
 required-capabilities:
   - search-filters-saved-views
-  - rules-engine-decisioning
-  - notification-messaging-system
-  - audit-log-provenance
+  - custom-fields-extensible-attributes
   - approval-workflows-human-in-the-loop
-optional-capabilities:
+  - dynamic-evaluation-survey-engine
   - notification-preferences-routing
-  - idempotency-outbox-retries-dlq
+  - notification-messaging-system
+  - rules-engine-decisioning
+  - audit-log-provenance
   - import-export-pipelines
+  - idempotency-outbox-retries-dlq
+optional-capabilities:
+  - template-merge-fields-document-generation
 patterns:
-  - workflow-stateful-progression
-  - discoverability-search-queryability
+  - identity-access-control
   - auditability-traceability
+  - discoverability-search-queryability
+  - workflow-stateful-progression
   - policy-driven-behavior
+  - operational-visibility-observability
 ---
 
 # Support Ticket System Playbook
 
 ## Problem Context
 
-A support ticket system organizes customer-reported issues into a managed lifecycle from intake through resolution. It reduces response delays, improves handoff quality, and creates clear accountability for service outcomes.
+Support ticket systems coordinate customer issue intake, triage, assignment, resolution, and closure under service-level commitments. They reduce queue ambiguity, prevent ownership gaps, and provide traceable service outcomes for customer-facing operations.
 
-Typical examples include customer help desks, SaaS support operations, and internal IT support desks.
+Typical real-world examples include SaaS help desks, managed service support centers, and internal enterprise service desks.
 
 ## Archetype
 
@@ -34,21 +39,46 @@ Primary archetype:
 Related archetypes:
 - [CRM](../../cookbook-v1/archetypes/crm.md)
 - [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
+- [CMS / Wiki / Knowledge Base](../../cookbook-v1/archetypes/cms-wiki-kb.md)
+
+Interaction model:
+- Support Ticket owns requester-to-resolution lifecycle and SLA-governed progression.
+- CRM provides account and contact context for prioritization and communication.
+- Workflow/BPM governs escalations and exception approvals.
+- CMS/Knowledge Base supplies guided resolution content and reusable response patterns.
 
 ## Foundational Patterns
 
-- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
-- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
+Key patterns shaping support ticket architecture:
+- [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
+- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
+- [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
+
+These patterns are essential because support operations require controlled state transitions, rapid triage, policy-consistent escalations, and complete forensic visibility.
 
 ## Required Capabilities
 
+Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
+- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+
+How capabilities participate:
+- Search and saved views drive queue triage and workload management.
+- Rules, dynamic evaluation, and approvals enforce routing and escalation controls.
+- Notification and messaging coordinate requester and agent communications.
+- Audit and provenance maintain accountable service history.
+- Import/export and idempotency stabilize integration and replay behavior.
 
 ## Reference Architecture
 
@@ -57,16 +87,33 @@ Diagrams:
 - [Container view](diagrams/container-view.mmd)
 - [Lifecycle flow](diagrams/lifecycle-flow.mmd)
 
-Core components include intake boundary, classification service, queue and assignment service, SLA policy evaluator, communication service, and audit service.
+High-level architecture:
+- Intake boundaries accept ticket requests from portal, email, and API channels.
+- Core ticket domain services manage classification, queue state, assignment, and resolution.
+- A repository/core state store persists canonical ticket, comment, and transition records.
+- Search/query services maintain indexed retrieval and operational queue views.
+- Workflow and orchestration services execute SLA, escalation, and exception paths.
+- Notification and messaging services route lifecycle updates.
+- Audit and provenance services capture immutable support activity evidence.
+- Integration boundaries manage CRM context synchronization and controlled exports.
 
 ## System Evolution
 
-Phase 1: ticket intake and assignment  
-Phase 2: SLA and routing policies  
-Phase 3: escalation workflows and approvals  
-Phase 4: integration and automation hardening  
-Phase 5: advanced service analytics and governance
+Phase 1: intake, triage, and assignment baseline  
+Phase 2: SLA rules, queue visibility, and routing policy  
+Phase 3: escalation orchestration and approval controls  
+Phase 4: integration-aware operations with idempotent synchronization  
+Phase 5: observability and governance optimization
+
+As maturity increases, support systems evolve from basic queueing toward policy-governed, automation-assisted, and analytics-driven service operations.
 
 ## Failure Modes
 
-Common risks include queue overload, stale notifications, duplicate tickets from retries, and weak policy enforcement. See [failure-modes.md](failure-modes.md).
+Common architectural risks:
+- queue overload causing assignment latency and SLA breaches
+- automation loops causing repeated reassignment or status thrashing
+- notification delivery drift causing missed requester updates
+- duplicate ticket creation from replayed intake events
+- permission leakage via shared views and exports
+
+See detailed analysis in [failure-modes.md](failure-modes.md).

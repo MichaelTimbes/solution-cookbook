@@ -8,8 +8,6 @@ required-capabilities:
   - rules-engine-decisioning
   - import-export-pipelines
 optional-capabilities:
-  - notification-messaging-system
-  - idempotency-outbox-retries-dlq
   - template-merge-fields-document-generation
 patterns:
   - auditability-traceability

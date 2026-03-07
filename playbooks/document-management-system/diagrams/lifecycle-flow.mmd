@@ -1,15 +1,15 @@
 flowchart LR
     Ingest[Ingestion]
-    Classify[Classification & Metadata]
+    Classify[Classification and Metadata]
     Store[Versioned Storage]
-    Review[Review / Approval]
+    Review[Review and Approval]
     Publish[Available for Retrieval]
-    Retrieve[Search & Retrieve]
-    Archive[Archive / Retain]
+    Retrieve[Search and Retrieve]
+    Archive[Archive and Retain]
     Dispose[Controlled Disposal]
 
     Ingest --> Classify --> Store --> Review --> Publish --> Retrieve
     Publish --> Archive --> Dispose
 
-    Review -->|Rejected / Needs changes| Classify
+    Review -->|Rejected or needs changes| Classify
     Retrieve -->|New revision requested| Store

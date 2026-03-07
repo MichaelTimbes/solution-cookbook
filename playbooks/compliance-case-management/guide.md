@@ -8,9 +8,7 @@ required-capabilities:
   - search-filters-saved-views
   - notification-messaging-system
 optional-capabilities:
-  - import-export-pipelines
-  - idempotency-outbox-retries-dlq
-  - dynamic-evaluation-survey-engine
+  - template-merge-fields-document-generation
 patterns:
   - policy-driven-behavior
   - auditability-traceability

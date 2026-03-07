@@ -1,11 +1,24 @@
+%% Sales CRM system context
+%% Shows sales actors and adjacent systems around the CRM platform.
 flowchart LR
-    SalesRep[Sales Rep]
+    SalesRep[Sales Representative]
     Manager[Sales Manager]
-    System[Sales CRM]
-    Marketing[Marketing Systems]
-    Billing[Billing Systems]
+    Ops[Sales Operations]
 
-    SalesRep --> System
-    Manager --> System
-    System --> Marketing
-    System --> Billing
+    CRM[Sales CRM Platform]
+
+    Identity[Identity and Access Provider]
+    Marketing[Marketing Automation]
+    Support[Support Ticket Platform]
+    Docs[Document Management]
+    Analytics[Revenue Analytics Consumers]
+
+    SalesRep --> CRM
+    Manager --> CRM
+    Ops --> CRM
+
+    CRM --> Identity
+    CRM --> Marketing
+    CRM --> Support
+    CRM --> Docs
+    CRM --> Analytics

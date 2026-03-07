@@ -2,27 +2,34 @@
 playbook: Contract Management System
 archetype: document-management-system
 required-capabilities:
-  - template-merge-fields-document-generation
-  - approval-workflows-human-in-the-loop
-  - audit-log-provenance
   - search-filters-saved-views
-  - rules-engine-decisioning
-optional-capabilities:
+  - custom-fields-extensible-attributes
+  - approval-workflows-human-in-the-loop
+  - dynamic-evaluation-survey-engine
+  - notification-preferences-routing
   - notification-messaging-system
+  - rules-engine-decisioning
+  - audit-log-provenance
   - import-export-pipelines
   - idempotency-outbox-retries-dlq
+optional-capabilities:
+  - template-merge-fields-document-generation
 patterns:
-  - generated-artifacts-document-template-generation
+  - identity-access-control
+  - auditability-traceability
+  - discoverability-search-queryability
   - workflow-stateful-progression
   - policy-driven-behavior
-  - auditability-traceability
+  - operational-visibility-observability
 ---
 
 # Contract Management System Playbook
 
 ## Problem Context
 
-Contract management systems support authoring, review, negotiation, approval, execution, renewal, and obligation tracking for agreements.
+Contract management systems coordinate authoring, review, negotiation, approval, execution, renewal, and obligation tracking for legally significant agreements. They ensure contract lifecycle controls are policy-governed, auditable, and operationally visible.
+
+Typical real-world examples include enterprise procurement contracts, sales agreements, and vendor service contracts.
 
 ## Archetype
 
@@ -32,34 +39,81 @@ Primary archetype:
 Related archetypes:
 - [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
 - [CRM](../../cookbook-v1/archetypes/crm.md)
+- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+
+Interaction model:
+- Contract Management owns document-centric agreement lifecycle state.
+- Workflow/BPM governs review, approval, and exception handling paths.
+- CRM provides account and opportunity context for commercial agreements.
+- Case/Ticket provides escalation and operational follow-up pathways.
 
 ## Foundational Patterns
 
-- [Generated Artifacts (Document / Template Generation)](../../cookbook-v1/foundational-patterns/generated-artifacts-document-template-generation.md)
+Key patterns shaping contract management architecture:
+- [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
+- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
+
+These patterns are essential because contract operations require controlled state transitions, high-integrity provenance, and deadline-sensitive governance.
 
 ## Required Capabilities
 
-- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
+- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+
+How capabilities participate:
+- Search and extensible attributes support clause, obligation, and party discoverability.
+- Rules, dynamic evaluation, and approvals govern review and exception paths.
+- Notification and routing coordinate legal, commercial, and operational participants.
+- Audit and provenance preserve execution and decision evidence.
+- Import/export and idempotency stabilize external signing and downstream synchronization.
 
 ## Reference Architecture
 
-Architecture centers on contract clause templates, review workflow, obligations timeline, and execution evidence.
+Diagrams:
+- [System context](diagrams/system-context.mmd)
+- [Container view](diagrams/container-view.mmd)
+- [Lifecycle flow](diagrams/lifecycle-flow.mmd)
+
+High-level architecture:
+- Intake boundaries accept draft requests, templates, and negotiated artifacts.
+- Core contract domain services manage clause, version, and state progression.
+- A repository/core state store persists canonical contract and obligation state.
+- Search/query services maintain retrieval across clauses, parties, and timelines.
+- Workflow and orchestration services execute review, approval, and renewal paths.
+- Notification and messaging services route deadlines and decision communications.
+- Audit and provenance services capture immutable contract lifecycle evidence.
+- Integration boundaries coordinate signature systems and downstream exports.
 
 ## System Evolution
 
-Phase 1: template-based drafting  
-Phase 2: review and negotiation workflows  
-Phase 3: approval and execution control  
-Phase 4: obligation and renewal automation  
-Phase 5: enterprise contract intelligence
+Phase 1: drafting and canonical agreement state baseline  
+Phase 2: controlled review and negotiation progression  
+Phase 3: approval and execution governance  
+Phase 4: obligation tracking and renewal orchestration  
+Phase 5: observability and compliance optimization
+
+As maturity increases, contract systems evolve from document storage toward policy-governed lifecycle orchestration with reliable legal and operational evidence.
 
 ## Failure Modes
 
-Risks include clause version drift, untracked obligations, and unsigned execution states. See [failure-modes.md](failure-modes.md).
+Common architectural risks:
+- clause and template drift causing inconsistent obligations
+- approval bypass before execution
+- untracked obligations and renewal deadlines
+- notification drift causing missed legal or operational actions
+- integration replay causing duplicate execution records
+
+See detailed analysis in [failure-modes.md](failure-modes.md).
