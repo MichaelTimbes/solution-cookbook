@@ -26,28 +26,28 @@ Vendor management systems manage vendor onboarding, qualification, performance r
 ## Archetype
 
 Primary archetype:
-- [CRM](../../cookbook-v1/archetypes/crm.md)
+- [CRM](../../cookbook/archetypes/crm.md)
 
 Related archetypes:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
-- [Identity / Access (CIAM)](../../cookbook-v1/archetypes/identity-access-ciam.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
+- [Identity / Access (CIAM)](../../cookbook/archetypes/identity-access-ciam.md)
 
 ## Foundational Patterns
 
-- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
-- [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
-- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
-- [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
+- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook/foundational-patterns/policy-driven-behavior.md)
+- [Identity & Access Control](../../cookbook/foundational-patterns/identity-access-control.md)
+- [Human Communication & Coordination](../../cookbook/foundational-patterns/human-communication-coordination.md)
+- [Auditability / Traceability](../../cookbook/foundational-patterns/auditability-traceability.md)
+- [Data Movement (Import / Export)](../../cookbook/foundational-patterns/data-movement.md)
 
 ## Required Capabilities
 
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 
 ## Reference Architecture
 

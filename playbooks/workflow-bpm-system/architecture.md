@@ -5,12 +5,12 @@
 This playbook composes the Workflow / BPM archetype with reliability, policy, and observability capabilities to provide durable process orchestration across human and system tasks.
 
 Primary archetype:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
 
 Related archetypes:
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
-- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
-- [Identity / Access (CIAM)](../../cookbook-v1/archetypes/identity-access-ciam.md)
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
+- [Document Management System](../../cookbook/archetypes/document-management-system.md)
+- [Identity / Access (CIAM)](../../cookbook/archetypes/identity-access-ciam.md)
 
 ## Logical Components
 
@@ -28,13 +28,13 @@ Related archetypes:
 
 ## Capability Mapping
 
-- Execution and task services -> [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- Decisioning service -> [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md), [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
-- Notification and signal service -> [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md), [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- Integration service -> [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md), [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- Operations query service -> [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- Process configurability -> [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
-- Audit and forensics -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- Execution and task services -> [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- Decisioning service -> [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md), [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
+- Notification and signal service -> [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md), [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- Integration service -> [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md), [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- Operations query service -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Process configurability -> [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
+- Audit and forensics -> [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## Boundary Principles
 

@@ -40,12 +40,12 @@ Typical real-world examples include:
 ## Archetype
 
 Primary archetype:
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
 
 Related archetypes:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
-- [CRM](../../cookbook-v1/archetypes/crm.md)
-- [CMS / Wiki / Knowledge Base](../../cookbook-v1/archetypes/cms-wiki-kb.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
+- [CRM](../../cookbook/archetypes/crm.md)
+- [CMS / Wiki / Knowledge Base](../../cookbook/archetypes/cms-wiki-kb.md)
 
 Interaction model:
 - Case/Ticket owns intake through closure and SLA-governed progression.
@@ -56,31 +56,31 @@ Interaction model:
 ## Foundational Patterns
 
 Key patterns shaping case and ticket architecture:
-- [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
-- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
-- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
-- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
-- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
-- [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
+- [Identity & Access Control](../../cookbook/foundational-patterns/identity-access-control.md)
+- [Auditability / Traceability](../../cookbook/foundational-patterns/auditability-traceability.md)
+- [Discoverability (Search & Queryability)](../../cookbook/foundational-patterns/discoverability-search-queryability.md)
+- [Workflow / Stateful Progression](../../cookbook/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook/foundational-patterns/human-communication-coordination.md)
+- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook/foundational-patterns/policy-driven-behavior.md)
+- [Operational Visibility (Observability)](../../cookbook/foundational-patterns/operational-visibility-observability.md)
 
 These forces are central because ticket systems must apply trust boundaries, preserve complete process history, ensure rapid retrieval and triage, enforce state transition policy, and operate predictably under queue pressure.
 
 ## Required Capabilities
 
 Core capability pages:
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
-- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
-- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
+- [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
+- [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 
 How capabilities participate:
 - Search and saved views power queue operations and workload triage.

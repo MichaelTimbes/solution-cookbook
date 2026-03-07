@@ -11,9 +11,9 @@
 5. Search index is updated asynchronously.
 
 Capabilities involved:
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 2) Review and Approval
 
@@ -24,9 +24,9 @@ Capabilities involved:
 5. Notifications are emitted to stakeholders.
 
 Capabilities involved:
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 3) Retrieval and Operational Search
 
@@ -36,8 +36,8 @@ Capabilities involved:
 4. User opens specific version or history timeline.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 4) Export and External Sharing
 
@@ -47,9 +47,9 @@ Capabilities involved:
 4. Delivery events are tracked to completion.
 
 Capabilities involved:
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 
 ## 5) Retention and Archival
 
@@ -59,6 +59,6 @@ Capabilities involved:
 4. Final actions are audited and reported.
 
 Capabilities involved:
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)

@@ -13,8 +13,8 @@
 3. Approvals or revisions update matter state.
 
 Capabilities:
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 3) Filing and Closure
 

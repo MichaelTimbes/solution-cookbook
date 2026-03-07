@@ -10,10 +10,10 @@
 4. Initial SLA and ownership context is established.
 
 Capabilities involved:
-- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 2) Queue Assignment and Active Handling
 
@@ -23,10 +23,10 @@ Capabilities involved:
 4. Saved views surface pending, aging, and blocked workloads.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 3) SLA Escalation and Exception Approval
 
@@ -36,10 +36,10 @@ Capabilities involved:
 4. Outcomes are captured and reflected in queue priorities.
 
 Capabilities involved:
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 4) Resolution, Confirmation, and Reopen Handling
 
@@ -49,10 +49,10 @@ Capabilities involved:
 4. Reopen path preserves prior closure context and SLA history.
 
 Capabilities involved:
-- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
+- [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 5) Export and Operational Reporting
 
@@ -62,7 +62,7 @@ Capabilities involved:
 4. Operational reporting surfaces backlog and service trend signals.
 
 Capabilities involved:
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

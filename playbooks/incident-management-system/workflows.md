@@ -7,8 +7,8 @@
 3. Incident is created with severity and ownership.
 
 Capabilities:
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 
 ## 2) Escalation and Response Coordination
 
@@ -17,8 +17,8 @@ Capabilities:
 3. Tasks are assigned and tracked.
 
 Capabilities:
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
 
 ## 3) Mitigation and Recovery
 
@@ -33,4 +33,4 @@ Capabilities:
 3. Follow-up actions are tracked.
 
 Capabilities:
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

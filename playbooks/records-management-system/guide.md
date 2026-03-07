@@ -26,28 +26,28 @@ Records management systems govern retention, legal hold, classification, and dis
 ## Archetype
 
 Primary archetype:
-- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+- [Document Management System](../../cookbook/archetypes/document-management-system.md)
 
 Related archetypes:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
 
 ## Foundational Patterns
 
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
-- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
-- [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
-- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
-- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Auditability / Traceability](../../cookbook/foundational-patterns/auditability-traceability.md)
+- [Human Communication & Coordination](../../cookbook/foundational-patterns/human-communication-coordination.md)
+- [Data Movement (Import / Export)](../../cookbook/foundational-patterns/data-movement.md)
+- [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook/foundational-patterns/policy-driven-behavior.md)
+- [Workflow / Stateful Progression](../../cookbook/foundational-patterns/workflow-stateful-progression.md)
 
 ## Required Capabilities
 
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 
 ## Reference Architecture
 

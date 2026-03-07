@@ -3,7 +3,7 @@
 Use this file to document the key workflows/use cases supported by the system.
 
 Authoring references:
-- Capabilities index: [../../cookbook-v1/capabilities](../../cookbook-v1/capabilities)
+- Capabilities index: [../../cookbook/capabilities](../../cookbook/capabilities)
 
 ## Workflow Authoring Notes
 
@@ -21,8 +21,8 @@ Stages:
 3. <stage-3>
 
 Capabilities involved:
-- [<capability-1>](../../cookbook-v1/capabilities/<capability-1>.md)
-- [<capability-2>](../../cookbook-v1/capabilities/<capability-2>.md)
+- [<capability-1>](../../cookbook/capabilities/<capability-1>.md)
+- [<capability-2>](../../cookbook/capabilities/<capability-2>.md)
 
 Notes:
 - <policy checks, approvals, notifications, retries, etc.>
@@ -35,8 +35,8 @@ Stages:
 3. <stage-3>
 
 Capabilities involved:
-- [<capability-1>](../../cookbook-v1/capabilities/<capability-1>.md)
-- [<capability-2>](../../cookbook-v1/capabilities/<capability-2>.md)
+- [<capability-1>](../../cookbook/capabilities/<capability-1>.md)
+- [<capability-2>](../../cookbook/capabilities/<capability-2>.md)
 
 Notes:
 - <operational constraints, audit expectations, failure handling>
@@ -49,8 +49,8 @@ Stages:
 3. <stage-3>
 
 Capabilities involved:
-- [<capability-1>](../../cookbook-v1/capabilities/<capability-1>.md)
-- [<capability-2>](../../cookbook-v1/capabilities/<capability-2>.md)
+- [<capability-1>](../../cookbook/capabilities/<capability-1>.md)
+- [<capability-2>](../../cookbook/capabilities/<capability-2>.md)
 
 Notes:
 - <state transitions, SLAs/SLOs, exception paths>

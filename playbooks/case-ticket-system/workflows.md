@@ -11,10 +11,10 @@
 5. Notifications are sent to assigned team or queue.
 
 Capabilities involved:
-- [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 2) Assignment and Active Work Progression
 
@@ -24,10 +24,10 @@ Capabilities involved:
 4. Reassignment and escalation paths apply when thresholds are met.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 3) SLA Monitoring and Escalation
 
@@ -37,10 +37,10 @@ Capabilities involved:
 4. Escalation outcomes are recorded and communicated.
 
 Capabilities involved:
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 4) Resolution, Confirmation, and Closure
 
@@ -50,10 +50,10 @@ Capabilities involved:
 4. Final communications and audit events are emitted.
 
 Capabilities involved:
-- [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
+- [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 5) Export, Reporting, and External Synchronization
 
@@ -63,7 +63,7 @@ Capabilities involved:
 4. Reconciliation checks detect partial writes and stale states.
 
 Capabilities involved:
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

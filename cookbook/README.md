@@ -1,4 +1,4 @@
-# Solution Cookbook v1
+# Solution Cookbook
 
 This folder contains the cookbook scaffold in four layers:
 

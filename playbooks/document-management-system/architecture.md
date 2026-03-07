@@ -5,12 +5,12 @@
 This architecture composes one primary archetype and multiple reusable capabilities to produce a governed document platform rather than a generic file store.
 
 Primary archetype:
-- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+- [Document Management System](../../cookbook/archetypes/document-management-system.md)
 
 Supporting archetypal interactions:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md) for process transitions.
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md) for evidence-centric operations.
-- [CMS / Wiki / Knowledge Base](../../cookbook-v1/archetypes/cms-wiki-kb.md) for curated publication of managed content.
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md) for process transitions.
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md) for evidence-centric operations.
+- [CMS / Wiki / Knowledge Base](../../cookbook/archetypes/cms-wiki-kb.md) for curated publication of managed content.
 
 ## Logical Components
 
@@ -25,12 +25,12 @@ Supporting archetypal interactions:
 
 ## Capability Mapping
 
-- Repository / Core State Store service -> [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- Metadata and classification service -> [Template / Merge Fields Document Generation](../../cookbook-v1/capabilities/template-merge-fields-document-generation.md)
-- Search/query service -> [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- Notification and Messaging service -> [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- Audit and Provenance service -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- Data movement service -> [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
+- Repository / Core State Store service -> [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- Metadata and classification service -> [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
+- Search/query service -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Notification and Messaging service -> [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- Audit and Provenance service -> [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- Data movement service -> [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 
 ## Boundary Principles
 

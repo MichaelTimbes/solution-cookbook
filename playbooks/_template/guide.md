@@ -16,10 +16,10 @@ patterns:
 Use this template to author a new playbook in a technology-agnostic way.
 
 Authoring references:
-- Archetypes index: [../../cookbook-v1/archetypes](../../cookbook-v1/archetypes)
-- Capabilities index: [../../cookbook-v1/capabilities](../../cookbook-v1/capabilities)
-- Foundational patterns index: [../../cookbook-v1/foundational-patterns/README.md](../../cookbook-v1/foundational-patterns/README.md)
-- Tri-map: [../../cookbook-v1/pattern-capability-archetype-tri-map.md](../../cookbook-v1/pattern-capability-archetype-tri-map.md)
+- Archetypes index: [../../cookbook/archetypes](../../cookbook/archetypes)
+- Capabilities index: [../../cookbook/capabilities](../../cookbook/capabilities)
+- Foundational patterns index: [../../cookbook/foundational-patterns/README.md](../../cookbook/foundational-patterns/README.md)
+- Tri-map: [../../cookbook/pattern-capability-archetype-tri-map.md](../../cookbook/pattern-capability-archetype-tri-map.md)
 
 ## Problem Context
 
@@ -35,10 +35,10 @@ Guidance:
 Identify the primary archetype and any related archetypes.
 
 Fill in:
-- Primary archetype: [<primary-archetype-page>](../../cookbook-v1/archetypes/<primary-archetype-page>.md)
+- Primary archetype: [<primary-archetype-page>](../../cookbook/archetypes/<primary-archetype-page>.md)
 - Related archetypes:
-  - [<related-archetype-1>](../../cookbook-v1/archetypes/<related-archetype-1>.md)
-  - [<related-archetype-2>](../../cookbook-v1/archetypes/<related-archetype-2>.md)
+  - [<related-archetype-1>](../../cookbook/archetypes/<related-archetype-1>.md)
+  - [<related-archetype-2>](../../cookbook/archetypes/<related-archetype-2>.md)
 
 Explain briefly how these archetypes interact in this system.
 
@@ -47,9 +47,9 @@ Explain briefly how these archetypes interact in this system.
 List the high-level patterns that influence this system shape.
 
 Fill in:
-- [<pattern-1>](../../cookbook-v1/foundational-patterns/<pattern-1>.md)
-- [<pattern-2>](../../cookbook-v1/foundational-patterns/<pattern-2>.md)
-- [<pattern-3>](../../cookbook-v1/foundational-patterns/<pattern-3>.md)
+- [<pattern-1>](../../cookbook/foundational-patterns/<pattern-1>.md)
+- [<pattern-2>](../../cookbook/foundational-patterns/<pattern-2>.md)
+- [<pattern-3>](../../cookbook/foundational-patterns/<pattern-3>.md)
 
 Explain why each pattern is relevant to this system and how it influences design decisions.
 
@@ -58,12 +58,12 @@ Explain why each pattern is relevant to this system and how it influences design
 Reference the capabilities that must be assembled for this playbook.
 
 Fill in:
-- [<required-capability-1>](../../cookbook-v1/capabilities/<required-capability-1>.md)
-- [<required-capability-2>](../../cookbook-v1/capabilities/<required-capability-2>.md)
-- [<required-capability-3>](../../cookbook-v1/capabilities/<required-capability-3>.md)
+- [<required-capability-1>](../../cookbook/capabilities/<required-capability-1>.md)
+- [<required-capability-2>](../../cookbook/capabilities/<required-capability-2>.md)
+- [<required-capability-3>](../../cookbook/capabilities/<required-capability-3>.md)
 
 Optional:
-- [<optional-capability-1>](../../cookbook-v1/capabilities/<optional-capability-1>.md)
+- [<optional-capability-1>](../../cookbook/capabilities/<optional-capability-1>.md)
 
 For each capability, add a short note describing how it participates in the system.
 

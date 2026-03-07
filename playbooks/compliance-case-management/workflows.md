@@ -19,5 +19,5 @@
 3. Case status transitions to closed.
 
 Capabilities:
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

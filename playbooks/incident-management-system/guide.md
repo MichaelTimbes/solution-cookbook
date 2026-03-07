@@ -28,28 +28,28 @@ Typical examples include platform operations incident response, IT operations ma
 ## Archetype
 
 Primary archetype:
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
 
 Related archetypes:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
-- [Analytics Portal](../../cookbook-v1/archetypes/analytics-portal.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
+- [Analytics Portal](../../cookbook/archetypes/analytics-portal.md)
 
 ## Foundational Patterns
 
-- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
-- [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
-- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
-- [Reliability Under Retry (Idempotency / Outbox)](../../cookbook-v1/foundational-patterns/reliability-under-retry.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Workflow / Stateful Progression](../../cookbook/foundational-patterns/workflow-stateful-progression.md)
+- [Operational Visibility (Observability)](../../cookbook/foundational-patterns/operational-visibility-observability.md)
+- [Human Communication & Coordination](../../cookbook/foundational-patterns/human-communication-coordination.md)
+- [Reliability Under Retry (Idempotency / Outbox)](../../cookbook/foundational-patterns/reliability-under-retry.md)
+- [Auditability / Traceability](../../cookbook/foundational-patterns/auditability-traceability.md)
 
 ## Required Capabilities
 
-- [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
-- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
+- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 
 ## Reference Architecture
 

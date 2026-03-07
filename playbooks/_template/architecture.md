@@ -3,8 +3,8 @@
 Use this file to elaborate on the logical architecture for a playbook.
 
 Authoring references:
-- Capabilities index: [../../cookbook-v1/capabilities](../../cookbook-v1/capabilities)
-- Patterns index: [../../cookbook-v1/foundational-patterns/README.md](../../cookbook-v1/foundational-patterns/README.md)
+- Capabilities index: [../../cookbook/capabilities](../../cookbook/capabilities)
+- Patterns index: [../../cookbook/foundational-patterns/README.md](../../cookbook/foundational-patterns/README.md)
 
 ## Architecture Intent
 
@@ -27,8 +27,8 @@ Template:
 Map components to capabilities.
 
 Template:
-- <Component A> -> [<capability-1>](../../cookbook-v1/capabilities/<capability-1>.md)
-- <Component B> -> [<capability-2>](../../cookbook-v1/capabilities/<capability-2>.md)
+- <Component A> -> [<capability-1>](../../cookbook/capabilities/<capability-1>.md)
+- <Component B> -> [<capability-2>](../../cookbook/capabilities/<capability-2>.md)
 
 ## Boundary Principles
 

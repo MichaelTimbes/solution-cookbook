@@ -8,7 +8,7 @@ Solution Cookbook is a reference repository for composing enterprise systems fro
 
 ## Start Here
 
-- Cookbook v1 index: [cookbook-v1/README.md](cookbook-v1/README.md)
+- Cookbook index: [cookbook/README.md](cookbook/README.md)
 - System playbooks index: [playbooks/index.md](playbooks/index.md)
 - Research report: [deep-research-report-solution-cookbook.md](deep-research-report-solution-cookbook.md)
 

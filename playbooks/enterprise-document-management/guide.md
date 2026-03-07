@@ -26,28 +26,28 @@ Enterprise document management systems provide governed storage, indexing, acces
 ## Archetype
 
 Primary archetype:
-- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+- [Document Management System](../../cookbook/archetypes/document-management-system.md)
 
 Related archetypes:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
-- [CMS / Wiki / Knowledge Base](../../cookbook-v1/archetypes/cms-wiki-kb.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
+- [CMS / Wiki / Knowledge Base](../../cookbook/archetypes/cms-wiki-kb.md)
 
 ## Foundational Patterns
 
-- [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
-- [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
-- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
-- [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
-- [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
+- [Discoverability (Search & Queryability)](../../cookbook/foundational-patterns/discoverability-search-queryability.md)
+- [Auditability / Traceability](../../cookbook/foundational-patterns/auditability-traceability.md)
+- [Human Communication & Coordination](../../cookbook/foundational-patterns/human-communication-coordination.md)
+- [Workflow / Stateful Progression](../../cookbook/foundational-patterns/workflow-stateful-progression.md)
+- [Data Movement (Import / Export)](../../cookbook/foundational-patterns/data-movement.md)
 
 ## Required Capabilities
 
-- [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
-- [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
-- [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
-- [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
+- [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
+- [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 
 ## Reference Architecture
 

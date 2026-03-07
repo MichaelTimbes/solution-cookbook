@@ -5,12 +5,12 @@
 This playbook composes the Workflow / BPM archetype for decision-centric operations where policy-governed approvals, escalation control, and immutable decision traceability are primary concerns.
 
 Primary archetype:
-- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
+- [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
 
 Related archetypes:
-- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
-- [Identity / Access (CIAM)](../../cookbook-v1/archetypes/identity-access-ciam.md)
-- [Document Management System](../../cookbook-v1/archetypes/document-management-system.md)
+- [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
+- [Identity / Access (CIAM)](../../cookbook/archetypes/identity-access-ciam.md)
+- [Document Management System](../../cookbook/archetypes/document-management-system.md)
 
 ## Logical Components
 
@@ -26,12 +26,12 @@ Related archetypes:
 
 ## Capability Mapping
 
-- Request capture and qualification -> [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md), [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
-- Policy routing controls -> [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md), [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
-- Queue visibility -> [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
-- Escalation communication -> [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
-- Callback reliability -> [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
-- Decision forensics -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- Request capture and qualification -> [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md), [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
+- Policy routing controls -> [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md), [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
+- Queue visibility -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Escalation communication -> [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
+- Callback reliability -> [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
+- Decision forensics -> [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## Boundary Principles
 
