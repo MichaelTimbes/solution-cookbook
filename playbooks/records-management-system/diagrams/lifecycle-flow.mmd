@@ -1,0 +1,11 @@
+flowchart LR
+    Create[Create]
+    Classify[Classify]
+    Retain[Retain]
+    Hold[Legal Hold?]
+    Dispose[Dispose]
+    Archive[Archive]
+
+    Create --> Classify --> Retain --> Hold --> Dispose
+    Hold -->|Hold active| Retain
+    Dispose --> Archive

@@ -1,0 +1,11 @@
+flowchart LR
+    RecordsTeam[Records Team]
+    Compliance[Compliance Team]
+    System[Records Management]
+    Archive[Archive Systems]
+    Regulator[Regulatory Consumers]
+
+    RecordsTeam --> System
+    Compliance --> System
+    System --> Archive
+    System --> Regulator

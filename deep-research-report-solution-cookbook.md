@@ -586,7 +586,7 @@ A page is “done” only if all checks pass:
 5. Publish with version tag
 
 **Versioning:**
-- Use semantic content versions (e.g., `cookbook-v1.0`, `v1.1`)
+- Use semantic content versions (e.g., `cookbook.0`, `v1.1`)
 - Maintain a “breaking guidance changes” log for renamed sections or taxonomy shifts
 
 ---

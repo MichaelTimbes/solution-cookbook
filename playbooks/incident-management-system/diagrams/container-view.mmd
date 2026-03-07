@@ -1,0 +1,15 @@
+flowchart TB
+    API[Incident API]
+    Ingest[Alert Ingestion]
+    Domain[Incident Domain]
+    Escalation[Escalation Service]
+    Timeline[Timeline and Audit]
+    Notify[Notification Service]
+    Search[Search and Ops Query]
+    Store[(Incident Store)]
+    Index[(Incident Index)]
+
+    API --> Ingest --> Domain --> Store
+    Domain --> Escalation --> Notify
+    Domain --> Timeline
+    Domain --> Search --> Index

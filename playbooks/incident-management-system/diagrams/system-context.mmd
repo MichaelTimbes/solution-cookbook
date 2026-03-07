@@ -1,0 +1,13 @@
+flowchart LR
+    Monitoring[Monitoring Systems]
+    OnCall[On-Call Responders]
+    Commander[Incident Commander]
+    System[Incident Management Platform]
+    Comms[Status Communication Channels]
+    Analytics[Reliability Analytics]
+
+    Monitoring --> System
+    OnCall --> System
+    Commander --> System
+    System --> Comms
+    System --> Analytics

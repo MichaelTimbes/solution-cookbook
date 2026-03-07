@@ -1,0 +1,22 @@
+%% Template diagram: system context
+%% Purpose:
+%% - Show actors and external systems interacting with the target system.
+%% - Keep it at context level (no internal implementation detail).
+%%
+%% Authoring notes:
+%% - Add primary actor groups.
+%% - Add the target system boundary.
+%% - Add external systems and key inbound/outbound interactions.
+
+flowchart LR
+    %% Replace placeholders below with your context nodes and interactions.
+    ActorA[<Actor A>]
+    ActorB[<Actor B>]
+    System[<Target System>]
+    ExternalA[<External System A>]
+    ExternalB[<External System B>]
+
+    ActorA --> System
+    ActorB --> System
+    System --> ExternalA
+    System --> ExternalB

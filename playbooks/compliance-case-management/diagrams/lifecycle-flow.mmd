@@ -1,0 +1,10 @@
+flowchart LR
+    Intake[Intake]
+    Assess[Assess]
+    Investigate[Investigate]
+    Remediate[Remediate]
+    Verify[Verify]
+    Close[Close]
+
+    Intake --> Assess --> Investigate --> Remediate --> Verify --> Close
+    Verify -->|Insufficient remediation| Remediate

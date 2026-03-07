@@ -1,0 +1,10 @@
+flowchart LR
+    Start[Start]
+    Assess[Assess]
+    Attest[Attest]
+    Remediate[Remediate]
+    Verify[Verify]
+    Close[Close]
+
+    Start --> Assess --> Attest --> Remediate --> Verify --> Close
+    Verify -->|Fail| Remediate

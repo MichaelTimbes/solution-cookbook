@@ -1,0 +1,26 @@
+%% Case / Ticket system context
+%% Shows actors and external systems interacting with the case-ticket platform.
+flowchart LR
+    Requester[Requester]
+    Agent[Agent]
+    Supervisor[Supervisor]
+    Admin[Operations Administrator]
+
+    CTS[Case and Ticket Platform]
+
+    Identity[Identity and Access Provider]
+    Channels[Communication Channels]
+    CRM[Customer Context Systems]
+    KB[Knowledge and Content Systems]
+    Analytics[Analytics and Reporting Consumers]
+
+    Requester --> CTS
+    Agent --> CTS
+    Supervisor --> CTS
+    Admin --> CTS
+
+    CTS --> Identity
+    CTS --> Channels
+    CTS --> CRM
+    CTS --> KB
+    CTS --> Analytics

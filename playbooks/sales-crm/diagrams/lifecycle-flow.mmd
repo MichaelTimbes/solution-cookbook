@@ -1,0 +1,16 @@
+%% Sales CRM lifecycle flow
+%% Shows progression from lead intake through opportunity outcomes.
+flowchart LR
+    Lead[Lead Intake]
+    Qualify[Qualification]
+    Create[Opportunity Creation]
+    Progress[Stage Progression]
+    Approvals[Approval or Exception]
+    Commit[Commit Decision]
+    Won[Closed Won]
+    Lost[Closed Lost]
+
+    Lead --> Qualify --> Create --> Progress --> Commit
+    Progress --> Approvals --> Progress
+    Commit --> Won
+    Commit --> Lost

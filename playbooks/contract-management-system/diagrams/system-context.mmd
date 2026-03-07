@@ -1,0 +1,24 @@
+%% Contract Management system context
+%% Shows contract actors and adjacent systems around the contract platform.
+flowchart LR
+    Legal[Legal Team]
+    Commercial[Commercial Team]
+    Procurement[Procurement Team]
+
+    CMS[Contract Management Platform]
+
+    Identity[Identity and Access Provider]
+    Signature[E-Signature Platform]
+    CRM[CRM Context]
+    ERP[ERP and Billing Systems]
+    Analytics[Compliance and Risk Analytics]
+
+    Legal --> CMS
+    Commercial --> CMS
+    Procurement --> CMS
+
+    CMS --> Identity
+    CMS --> Signature
+    CMS --> CRM
+    CMS --> ERP
+    CMS --> Analytics

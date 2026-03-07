@@ -1,0 +1,15 @@
+%% Case / Ticket lifecycle flow
+%% Shows progression from intake through closure with reopen and escalation paths.
+flowchart LR
+    Intake[Request Intake]
+    Classify[Classification and Prioritization]
+    Queue[Queue Assignment]
+    Active[Active Work]
+    Escalate[Escalation or Approval]
+    Resolve[Resolution]
+    Confirm[Requester Confirmation]
+    Close[Closure]
+
+    Intake --> Classify --> Queue --> Active --> Resolve --> Confirm --> Close
+    Active --> Escalate --> Active
+    Close -->|Reopened| Active

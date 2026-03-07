@@ -1,0 +1,10 @@
+flowchart LR
+    Model[Model]
+    Deploy[Deploy]
+    Start[Start]
+    Execute[Execute]
+    Retry[Retry/Compensate]
+    Complete[Complete]
+
+    Model --> Deploy --> Start --> Execute --> Complete
+    Execute -->|Failure| Retry --> Execute

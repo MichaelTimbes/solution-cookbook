@@ -1,0 +1,11 @@
+flowchart LR
+    Staff[Business Staff]
+    Admin[Records Admin]
+    System[Enterprise DMS]
+    Apps[Enterprise Systems]
+    Archive[Archive/Compliance]
+
+    Staff --> System
+    Admin --> System
+    Apps --> System
+    System --> Archive

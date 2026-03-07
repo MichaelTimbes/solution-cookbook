@@ -1,0 +1,14 @@
+flowchart TB
+    API[DMS API]
+    Ingest[Ingestion Service]
+    Meta[Metadata Service]
+    Repo[Repository Service]
+    Search[Search Service]
+    Lifecycle[Lifecycle Workflow]
+    Audit[Audit Service]
+    Store[(Document Store)]
+
+    API --> Ingest --> Meta --> Repo --> Store
+    Repo --> Search
+    Repo --> Lifecycle
+    API --> Audit

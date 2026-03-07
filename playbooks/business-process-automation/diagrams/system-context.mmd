@@ -1,0 +1,9 @@
+flowchart LR
+    Operator[Process Operator]
+    System[BPA Platform]
+    LOB[Business Systems]
+    Events[Messaging Systems]
+
+    Operator --> System
+    System --> LOB
+    System --> Events

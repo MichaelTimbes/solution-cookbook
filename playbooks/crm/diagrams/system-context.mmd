@@ -1,0 +1,26 @@
+%% CRM system context
+%% Shows principal actors and external systems interacting with the CRM platform.
+flowchart LR
+    Sales[Sales Representative]
+    Manager[Sales Manager]
+    Support[Support Agent]
+    Admin[CRM Administrator]
+
+    CRM[CRM Platform]
+
+    Identity[Identity and Access Provider]
+    Comms[Email and Communication Systems]
+    Billing[Billing and Order Systems]
+    Marketing[Marketing Automation Systems]
+    Analytics[Analytics and Reporting Consumers]
+
+    Sales --> CRM
+    Manager --> CRM
+    Support --> CRM
+    Admin --> CRM
+
+    CRM --> Identity
+    CRM --> Comms
+    CRM --> Billing
+    CRM --> Marketing
+    CRM --> Analytics

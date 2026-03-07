@@ -1,0 +1,14 @@
+%% Workflow / BPM lifecycle flow
+%% Shows process definition to runtime completion with escalation and compensation paths.
+flowchart LR
+    Model[Model Process]
+    Deploy[Deploy Version]
+    Start[Start Instance]
+    Route[Route Tasks and Decisions]
+    Wait[Wait for Signals and Timers]
+    Complete[Complete Workflow]
+    Compensate[Compensation Path]
+
+    Model --> Deploy --> Start --> Route --> Wait --> Complete
+    Wait -->|Timeout or exception| Route
+    Route -->|Failure requiring rollback| Compensate --> Complete

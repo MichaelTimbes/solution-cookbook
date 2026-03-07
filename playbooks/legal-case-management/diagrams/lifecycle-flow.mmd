@@ -1,0 +1,10 @@
+flowchart LR
+    Intake[Intake]
+    Classify[Classify]
+    Review[Legal Review]
+    Approve[Approval]
+    File[File]
+    Close[Close]
+
+    Intake --> Classify --> Review --> Approve --> File --> Close
+    Review -->|Needs revision| Review

@@ -1,0 +1,44 @@
+%% Workflow / BPM container view
+%% Shows major services, stores, and interaction paths.
+flowchart TB
+    UI[Process and Task Interface]
+    API[Workflow API Boundary]
+
+    Definition[Process Definition Service]
+    Engine[Execution Engine]
+    Tasks[Task Orchestration Service]
+    Decision[Decisioning Service]
+    Scheduler[Scheduler and Timer Service]
+    Signals[Signal and Notification Service]
+    Integrations[Integration and Side-Effect Service]
+    Search[Operations Query Service]
+    Audit[Audit and Observability Service]
+
+    State[(Workflow State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    UI --> API
+    API --> Definition
+    API --> Engine
+    API --> Search
+
+    Definition --> Engine
+    Engine --> State
+    Engine --> Events
+
+    Events --> Tasks
+    Events --> Scheduler
+    Events --> Signals
+    Events --> Integrations
+
+    Tasks --> Decision
+    Decision --> Engine
+    Scheduler --> Engine
+
+    Engine --> Index
+    Search --> Index
+
+    API --> Audit
+    Engine --> Audit
+    Integrations --> Audit

@@ -1,0 +1,40 @@
+%% Approval Workflow container view
+%% Shows major services, stores, and interaction paths.
+flowchart TB
+    Portal[Approval Operations UI]
+    API[Approval API Boundary]
+
+    Intake[Request Intake and Validation Service]
+    Policy[Policy Evaluation Service]
+    Routing[Approval Routing Service]
+    Workflow[Workflow and Escalation Orchestration Service]
+    Notify[Notification and Messaging Service]
+    Search[Search and Query Service]
+    Audit[Audit and Provenance Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Repository/Core State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    Portal --> API
+    API --> Intake
+    API --> Policy
+    API --> Search
+
+    Intake --> Routing
+    Policy --> Routing
+    Routing --> State
+    Routing --> Events
+
+    Events --> Workflow
+    Workflow --> Notify
+    Events --> Integrations
+
+    Routing --> Index
+    Search --> Index
+
+    API --> Audit
+    Routing --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

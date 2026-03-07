@@ -1,0 +1,41 @@
+%% Sales CRM container view
+%% Shows major sales CRM services, stores, and interaction paths.
+flowchart TB
+    Web[Sales CRM UI]
+    API[CRM API Boundary]
+
+    Intake[Lead Intake and Qualification Service]
+    Relationships[Account and Contact Service]
+    Opportunity[Opportunity Lifecycle Service]
+    Workflow[Workflow and Approval Orchestration Service]
+    Notify[Notification and Messaging Service]
+    Search[Search and Query Service]
+    Audit[Audit and Provenance Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Repository/Core State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    Web --> API
+    API --> Intake
+    API --> Relationships
+    API --> Opportunity
+    API --> Search
+
+    Intake --> Relationships
+    Relationships --> Opportunity
+    Opportunity --> State
+    Opportunity --> Events
+
+    Events --> Workflow
+    Workflow --> Notify
+    Events --> Integrations
+
+    Opportunity --> Index
+    Search --> Index
+
+    API --> Audit
+    Opportunity --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

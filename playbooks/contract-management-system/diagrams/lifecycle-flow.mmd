@@ -1,0 +1,13 @@
+%% Contract Management lifecycle flow
+%% Shows progression from draft through execution and renewal decisions.
+flowchart LR
+    Draft[Draft Authoring]
+    Review[Review and Negotiation]
+    Approve[Approval]
+    Execute[Execution]
+    Track[Obligation Tracking]
+    Decision[Renew/Amend/Terminate Decision]
+
+    Draft --> Review --> Approve --> Execute --> Track --> Decision
+    Review -->|Revision| Draft
+    Decision -->|Amend| Draft

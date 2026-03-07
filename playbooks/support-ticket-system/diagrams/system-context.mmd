@@ -1,0 +1,26 @@
+%% Support Ticket system context
+%% Shows support actors and adjacent systems interacting with the support ticket platform.
+flowchart LR
+    Requester[Requester]
+    Agent[Support Agent]
+    Supervisor[Support Supervisor]
+    Admin[Support Administrator]
+
+    STS[Support Ticket Platform]
+
+    Identity[Identity and Access Provider]
+    CRM[CRM and Account Context]
+    Channels[Communication Channels]
+    Knowledge[Knowledge Base]
+    Analytics[Support Analytics Consumers]
+
+    Requester --> STS
+    Agent --> STS
+    Supervisor --> STS
+    Admin --> STS
+
+    STS --> Identity
+    STS --> CRM
+    STS --> Channels
+    STS --> Knowledge
+    STS --> Analytics

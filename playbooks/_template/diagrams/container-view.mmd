@@ -1,0 +1,34 @@
+%% Template diagram: container view
+%% Purpose:
+%% - Show high-level internal services and data stores.
+%% - Show major interaction paths between containers.
+%%
+%% Suggested container types:
+%% - API boundary
+%% - Core repository service
+%% - Search/query service
+%% - Workflow/orchestration service
+%% - Notification/messaging service
+%% - Audit/provenance service
+%% - Storage/index stores
+
+flowchart TB
+    %% Replace placeholders below with your container architecture.
+    UI[<Client / UI>]
+    API[<API Boundary>]
+    Repo[<Repository Service>]
+    Search[<Search Service>]
+    Workflow[<Workflow Service>]
+    Notify[<Notification Service>]
+    Audit[<Audit Service>]
+    Store[(<Primary Storage>)]
+    Index[(<Search Index>)]
+
+    UI --> API
+    API --> Repo
+    API --> Search
+    Repo --> Store
+    Search --> Index
+    Repo --> Workflow
+    Workflow --> Notify
+    API --> Audit

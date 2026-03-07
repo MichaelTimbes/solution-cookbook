@@ -1,0 +1,14 @@
+%% CRM lifecycle flow
+%% Shows progression from lead intake through opportunity lifecycle and downstream synchronization.
+flowchart LR
+    Intake[Lead Intake]
+    Qualify[Qualification and Scoring]
+    Convert[Lead Conversion]
+    Pipeline[Opportunity Stage Progression]
+    Approve[Approval or Exception Handling]
+    Close[Close Won or Lost]
+    Sync[Export and External Synchronization]
+
+    Intake --> Qualify --> Convert --> Pipeline --> Close --> Sync
+    Pipeline --> Approve --> Pipeline
+    Qualify -->|Disqualified| Intake

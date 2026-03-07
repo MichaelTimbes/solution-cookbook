@@ -1,0 +1,45 @@
+%% Case / Ticket container view
+%% Shows major services, stores, and interaction paths.
+flowchart TB
+    Portal[Requester Portal]
+    AgentUI[Agent Operations UI]
+    API[Case/Ticket API Boundary]
+
+    Intake[Intake and Classification Service]
+    Domain[Ticket Lifecycle Service]
+    Queue[Queue and Assignment Service]
+    SLA[SLA and Policy Service]
+    Workflow[Workflow and Escalation Service]
+    Notify[Notification Service]
+    Search[Search and Query Service]
+    Audit[Audit and Observability Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Canonical Ticket State Store)]
+    Index[(Search Projection Store)]
+    Events[(Event and Messaging Channel)]
+
+    Portal --> API
+    AgentUI --> API
+
+    API --> Intake
+    API --> Domain
+    API --> Search
+
+    Intake --> Queue
+    Queue --> Domain
+    Domain --> State
+    Domain --> Events
+
+    Events --> SLA
+    Events --> Workflow
+    Workflow --> Notify
+    Events --> Integrations
+
+    Domain --> Index
+    Search --> Index
+
+    API --> Audit
+    Domain --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

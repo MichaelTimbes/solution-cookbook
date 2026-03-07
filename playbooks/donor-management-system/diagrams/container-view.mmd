@@ -1,0 +1,14 @@
+flowchart TB
+    API[Donor API]
+    DonorSvc[Donor Profile Service]
+    CampaignSvc[Campaign Service]
+    PledgeSvc[Pledge Service]
+    Comms[Comms and Receipts]
+    Audit[Audit Service]
+    Store[(Donor Store)]
+
+    API --> DonorSvc --> Store
+    DonorSvc --> CampaignSvc
+    CampaignSvc --> PledgeSvc
+    PledgeSvc --> Comms
+    API --> Audit
