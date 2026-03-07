@@ -2,6 +2,7 @@
 playbook: Compliance Case Management System
 archetype: case-ticket-system
 required-capabilities:
+  - human-communication-coordination
   - rules-engine-decisioning
   - approval-workflows-human-in-the-loop
   - audit-log-provenance
@@ -34,6 +35,7 @@ Related archetypes:
 ## Foundational Patterns
 
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
@@ -41,6 +43,7 @@ Related archetypes:
 ## Required Capabilities
 
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)

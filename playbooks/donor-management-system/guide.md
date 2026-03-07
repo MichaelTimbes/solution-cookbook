@@ -2,6 +2,7 @@
 playbook: Donor Management System
 archetype: crm
 required-capabilities:
+  - human-communication-coordination
   - search-filters-saved-views
   - rules-engine-decisioning
   - notification-messaging-system
@@ -35,12 +36,14 @@ Related archetypes:
 
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Generated Artifacts (Document / Template Generation)](../../cookbook-v1/foundational-patterns/generated-artifacts-document-template-generation.md)
 
 ## Required Capabilities
 
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
 - [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)

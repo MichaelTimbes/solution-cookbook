@@ -2,6 +2,7 @@
 playbook: Vendor Management System
 archetype: crm
 required-capabilities:
+  - human-communication-coordination
   - search-filters-saved-views
   - rules-engine-decisioning
   - approval-workflows-human-in-the-loop
@@ -35,12 +36,14 @@ Related archetypes:
 
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Identity & Access Control](../../cookbook-v1/foundational-patterns/identity-access-control.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
 
 ## Required Capabilities
 
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)

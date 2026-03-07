@@ -2,6 +2,7 @@
 playbook: Incident Management System
 archetype: case-ticket-system
 required-capabilities:
+  - human-communication-coordination
   - rules-engine-decisioning
   - notification-messaging-system
   - search-filters-saved-views
@@ -37,12 +38,14 @@ Related archetypes:
 
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Reliability Under Retry (Idempotency / Outbox)](../../cookbook-v1/foundational-patterns/reliability-under-retry.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 
 ## Required Capabilities
 
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)

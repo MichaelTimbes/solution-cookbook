@@ -9,10 +9,6 @@ Each playbook includes:
 - common failure modes
 - diagrams
 
-## Reusable Review Prompt
-
-- [Playbook Consistency Review Prompt](consistency-review-prompt.md)
-
 ## Reference vs Variant
 
 - **Reference playbooks** define the baseline architecture for each core archetype.

@@ -3,6 +3,7 @@ playbook: Enterprise Document Management System
 archetype: document-management-system
 required-capabilities:
   - search-filters-saved-views
+  - human-communication-coordination
   - audit-log-provenance
   - import-export-pipelines
   - approval-workflows-human-in-the-loop
@@ -35,12 +36,14 @@ Related archetypes:
 
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
 - [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
 
 ## Required Capabilities
 
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
 - [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)

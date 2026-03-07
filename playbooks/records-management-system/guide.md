@@ -2,6 +2,7 @@
 playbook: Records Management System
 archetype: document-management-system
 required-capabilities:
+  - human-communication-coordination
   - audit-log-provenance
   - search-filters-saved-views
   - approval-workflows-human-in-the-loop
@@ -34,6 +35,7 @@ Related archetypes:
 ## Foundational Patterns
 
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Data Movement (Import / Export)](../../cookbook-v1/foundational-patterns/data-movement.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
@@ -41,6 +43,7 @@ Related archetypes:
 ## Required Capabilities
 
 - [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)

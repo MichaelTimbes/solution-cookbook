@@ -4,6 +4,7 @@ archetype: workflow-bpm-system
 required-capabilities:
   - search-filters-saved-views
   - custom-fields-extensible-attributes
+  - human-communication-coordination
   - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
   - notification-preferences-routing
@@ -54,6 +55,7 @@ Key patterns shaping approval workflow architecture:
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
 
@@ -64,6 +66,7 @@ These patterns are essential because approvals demand strict transition control,
 Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
 - [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
@@ -76,6 +79,7 @@ Core capability pages:
 How capabilities participate:
 - Custom fields and dynamic evaluation drive policy-aware request capture.
 - Rules and approval workflows govern approver routing and decision checkpoints.
+- Human communication capability supports threaded collaboration, mentions, and contextual handoffs during decision cycles.
 - Notification and routing coordinate decision deadlines and escalations.
 - Search supports queue operations and SLA management.
 - Audit, import/export, and idempotency maintain trusted lifecycle evidence and integration stability.

@@ -4,6 +4,7 @@ archetype: crm
 required-capabilities:
   - search-filters-saved-views
   - custom-fields-extensible-attributes
+  - human-communication-coordination
   - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
   - notification-preferences-routing
@@ -54,6 +55,7 @@ Key patterns shaping sales CRM architecture:
 - [Auditability / Traceability](../../cookbook-v1/foundational-patterns/auditability-traceability.md)
 - [Discoverability (Search & Queryability)](../../cookbook-v1/foundational-patterns/discoverability-search-queryability.md)
 - [Workflow / Stateful Progression](../../cookbook-v1/foundational-patterns/workflow-stateful-progression.md)
+- [Human Communication & Coordination](../../cookbook-v1/foundational-patterns/human-communication-coordination.md)
 - [Policy-Driven Behavior (Rules / Decisioning)](../../cookbook-v1/foundational-patterns/policy-driven-behavior.md)
 - [Operational Visibility (Observability)](../../cookbook-v1/foundational-patterns/operational-visibility-observability.md)
 
@@ -64,6 +66,7 @@ These patterns are essential because sales operations require controlled stage t
 Core capability pages:
 - [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
 - [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- [Human Communication / Collaboration Layer](../../cookbook-v1/capabilities/human-communication-coordination.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md)
 - [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md)
@@ -77,6 +80,7 @@ How capabilities participate:
 - Search and custom fields support segmentation and pipeline visibility.
 - Rules and dynamic evaluation govern qualification, scoring, and assignment.
 - Approval workflows enforce policy for discounts, stage overrides, and exceptions.
+- Human communication capability anchors discussion threads, mentions, and handoff context directly on account and opportunity records.
 - Notification and messaging coordinate rep, manager, and stakeholder communication.
 - Audit, import/export, and idempotency preserve trustworthy CRM lifecycle history.
 
