@@ -1,0 +1,12 @@
+flowchart TB
+    API[Task API]
+    Graph[Dependency Graph Service]
+    Scheduler[Scheduler]
+    Executor[Execution Service]
+    Events[Event Service]
+    Audit[Audit Service]
+    Store[(Task State Store)]
+
+    API --> Graph --> Scheduler --> Executor --> Store
+    Executor --> Events
+    Executor --> Audit

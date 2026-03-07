@@ -1,0 +1,26 @@
+%% Workflow / BPM system context
+%% Shows actors and external systems interacting with the workflow platform.
+flowchart LR
+    Requester[Process Requester]
+    Approver[Approver]
+    Operator[Operations Operator]
+    Admin[Process Administrator]
+
+    BPM[Workflow and BPM Platform]
+
+    Identity[Identity and Access Provider]
+    LOB[Line of Business Systems]
+    Messaging[Messaging and Notification Systems]
+    Rules[Decision and Policy Systems]
+    Analytics[Analytics and Reporting Consumers]
+
+    Requester --> BPM
+    Approver --> BPM
+    Operator --> BPM
+    Admin --> BPM
+
+    BPM --> Identity
+    BPM --> LOB
+    BPM --> Messaging
+    BPM --> Rules
+    BPM --> Analytics

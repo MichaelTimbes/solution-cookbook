@@ -1,0 +1,11 @@
+flowchart LR
+    Analyst[Compliance Analyst]
+    Reviewer[Reviewer]
+    System[Compliance Process Tracker]
+    Sources[Control Systems]
+    Reporting[Regulatory Reporting]
+
+    Analyst --> System
+    Reviewer --> System
+    Sources --> System
+    System --> Reporting

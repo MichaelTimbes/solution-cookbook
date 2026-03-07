@@ -1,0 +1,61 @@
+# CRM Architecture Composition
+
+## Composition Intent
+
+This playbook composes the CRM archetype with cross-cutting capabilities to produce a governed system for customer lifecycle, pipeline progression, and account-centric collaboration.
+
+Primary archetype:
+- [CRM](../../cookbook-v1/archetypes/crm.md)
+
+Related archetypes:
+- [Case / Ticket System](../../cookbook-v1/archetypes/case-ticket-system.md)
+- [Workflow / BPM System](../../cookbook-v1/archetypes/workflow-bpm-system.md)
+- [Analytics Portal](../../cookbook-v1/archetypes/analytics-portal.md)
+
+## Logical Components
+
+- Input boundary service: accepts user and integration-originated changes.
+- Customer domain service: manages accounts, contacts, relationships, and ownership.
+- Pipeline domain service: manages leads, opportunities, stage transitions, and qualification outcomes.
+- Activity timeline service: captures tasks, meetings, calls, and interaction history.
+- Case linkage service: links service interactions to account and opportunity context.
+- Rules and decisioning service: evaluates assignment, scoring, transition, and policy rules.
+- Workflow orchestration service: coordinates approvals, escalations, and exception paths.
+- Search/query service: provides indexed retrieval, filtering, and saved operational views.
+- Notification service: publishes assignment and lifecycle events with routing controls.
+- Audit/provenance service: records immutable actor-action-object change history.
+- Data movement service: handles imports, exports, and reconciliation with external boundaries.
+
+## Capability Mapping
+
+- Customer and pipeline domain services -> [Custom Fields / Extensible Attributes](../../cookbook-v1/capabilities/custom-fields-extensible-attributes.md)
+- Pipeline domain and rules services -> [Dynamic Evaluation / Survey Engine](../../cookbook-v1/capabilities/dynamic-evaluation-survey-engine.md), [Rules Engine / Decisioning](../../cookbook-v1/capabilities/rules-engine-decisioning.md)
+- Search/query service -> [Search / Filters / Saved Views](../../cookbook-v1/capabilities/search-filters-saved-views.md)
+- Workflow orchestration -> [Approval Workflows / Human-In-The-Loop](../../cookbook-v1/capabilities/approval-workflows-human-in-the-loop.md)
+- Notification service -> [Notification Preferences and Routing](../../cookbook-v1/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook-v1/capabilities/notification-messaging-system.md)
+- Data movement service -> [Import / Export Pipelines](../../cookbook-v1/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook-v1/capabilities/idempotency-outbox-retries-dlq.md)
+- Audit/provenance service -> [Audit Log + Provenance](../../cookbook-v1/capabilities/audit-log-provenance.md)
+
+## Boundary Principles
+
+- Keep authoritative record state separate from read-optimized query and search projections.
+- Keep workflow orchestration separate from core domain state management.
+- Keep rule evaluation explicit and versioned to avoid hidden behavior drift.
+- Keep audit events immutable and independently queryable.
+- Keep integration boundaries idempotent and observable.
+- Keep notification generation separate from delivery policy and channel routing.
+
+## Interaction Flow
+
+- Requests enter through the input boundary and are validated against policy and schema rules.
+- Domain services persist canonical state changes and publish lifecycle events.
+- Workflow and rules services consume state events and produce governed transition outcomes.
+- Search projections and analytics views update asynchronously from canonical change streams.
+- Notification and integration services react to events and update external boundaries.
+- Audit and observability capture all critical transitions for forensics and operations.
+
+## Diagram Links
+
+- [System context](diagrams/system-context.mmd)
+- [Container view](diagrams/container-view.mmd)
+- [Lifecycle flow](diagrams/lifecycle-flow.mmd)

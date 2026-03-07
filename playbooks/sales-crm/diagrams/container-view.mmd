@@ -1,0 +1,14 @@
+flowchart TB
+    UI[CRM UI]
+    API[CRM API]
+    Lead[Lead Service]
+    Pipeline[Pipeline Service]
+    Quote[Quote and Approval]
+    Search[Search Service]
+    Audit[Audit Service]
+    Store[(CRM Store)]
+
+    UI --> API --> Lead --> Pipeline --> Store
+    Pipeline --> Quote
+    Pipeline --> Search
+    API --> Audit

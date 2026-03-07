@@ -1,0 +1,13 @@
+flowchart TB
+    Intake[Intake Service]
+    Policy[Policy Mapping Service]
+    Domain[Compliance Case Service]
+    Workflow[Remediation Workflow]
+    Evidence[Evidence Service]
+    Audit[Audit Service]
+    Store[(Case Store)]
+
+    Intake --> Policy --> Domain --> Store
+    Domain --> Workflow
+    Domain --> Evidence
+    Domain --> Audit

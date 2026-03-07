@@ -1,0 +1,11 @@
+flowchart LR
+    Detect[Detect]
+    Correlate[Correlate]
+    Open[Open Incident]
+    Escalate[Escalate]
+    Mitigate[Mitigate]
+    Resolve[Resolve]
+    Review[Review]
+
+    Detect --> Correlate --> Open --> Escalate --> Mitigate --> Resolve --> Review
+    Escalate -->|Severity change| Escalate

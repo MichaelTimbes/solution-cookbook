@@ -1,0 +1,10 @@
+flowchart LR
+    Draft[Draft]
+    Review[Review]
+    Approve[Approve]
+    Execute[Execute]
+    Monitor[Monitor Obligations]
+    Renew[Renew/Amend]
+
+    Draft --> Review --> Approve --> Execute --> Monitor --> Renew
+    Review -->|Revision| Draft

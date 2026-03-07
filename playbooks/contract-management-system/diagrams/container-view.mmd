@@ -1,0 +1,13 @@
+flowchart TB
+    API[Contract API]
+    Draft[Drafting Service]
+    Clause[Clause Library]
+    Review[Review Workflow]
+    Execute[Execution Service]
+    Audit[Audit Service]
+    Store[(Contract Store)]
+
+    API --> Draft --> Store
+    Draft --> Clause
+    Draft --> Review --> Execute
+    API --> Audit

@@ -1,0 +1,13 @@
+flowchart LR
+    Requester[Requester]
+    Agent[Support Agent]
+    Supervisor[Support Supervisor]
+    System[Support Ticket Platform]
+    CRM[CRM Context]
+    Channels[Communication Channels]
+
+    Requester --> System
+    Agent --> System
+    Supervisor --> System
+    System --> CRM
+    System --> Channels

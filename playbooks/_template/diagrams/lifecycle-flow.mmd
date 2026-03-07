@@ -1,0 +1,18 @@
+%% Template diagram: lifecycle flow
+%% Purpose:
+%% - Show lifecycle/workflow progression of the key domain object.
+%% - Include normal path and at least one exception/rework path.
+%%
+%% Example shape (generic only):
+%% - intake -> classification -> storage -> retrieval/use -> archival/closure
+
+flowchart LR
+    %% Replace placeholders below with your lifecycle states and transitions.
+    Stage1[<Intake>]
+    Stage2[<Classification>]
+    Stage3[<Persisted State>]
+    Stage4[<Active Use / Retrieval>]
+    Stage5[<Archive / Close>]
+
+    Stage1 --> Stage2 --> Stage3 --> Stage4 --> Stage5
+    Stage4 -->|<Revision or exception path>| Stage2

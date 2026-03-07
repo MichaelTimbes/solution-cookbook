@@ -1,0 +1,16 @@
+flowchart TB
+    UI[Support UI]
+    API[Ticket API]
+    Intake[Intake Service]
+    Domain[Ticket Domain Service]
+    Routing[Routing and SLA Service]
+    Search[Search Service]
+    Notify[Notification Service]
+    Audit[Audit Service]
+    Store[(Ticket Store)]
+    Index[(Search Index)]
+
+    UI --> API --> Intake --> Domain --> Store
+    Domain --> Routing --> Notify
+    Domain --> Search --> Index
+    API --> Audit

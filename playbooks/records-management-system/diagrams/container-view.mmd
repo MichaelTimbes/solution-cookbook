@@ -1,0 +1,13 @@
+flowchart TB
+    API[Records API]
+    Classify[Classification Service]
+    Policy[Retention/Hold Policy]
+    Repo[Records Repository]
+    Workflow[Disposition Workflow]
+    Audit[Audit Service]
+    Store[(Records Store)]
+
+    API --> Classify --> Repo --> Store
+    Repo --> Policy
+    Repo --> Workflow
+    API --> Audit

@@ -1,0 +1,9 @@
+flowchart LR
+    Requester[Requester]
+    Approver[Approver]
+    System[Approval Workflow]
+    Business[Business Systems]
+
+    Requester --> System
+    Approver --> System
+    System --> Business

@@ -1,0 +1,12 @@
+flowchart TB
+    API[Process API]
+    Def[Definition Service]
+    Engine[Execution Engine]
+    Integrations[Integration Service]
+    Retry[Retry/DLQ Service]
+    Audit[Audit/Observability]
+    Store[(State Store)]
+
+    API --> Def --> Engine --> Store
+    Engine --> Integrations --> Retry
+    Engine --> Audit

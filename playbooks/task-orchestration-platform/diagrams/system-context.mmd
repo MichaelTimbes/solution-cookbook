@@ -1,0 +1,9 @@
+flowchart LR
+    Operator[Ops Operator]
+    System[Task Orchestration Platform]
+    Workers[Execution Workers]
+    External[External Systems]
+
+    Operator --> System
+    System --> Workers
+    Workers --> External

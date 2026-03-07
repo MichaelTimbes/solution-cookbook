@@ -1,0 +1,12 @@
+flowchart LR
+    Intake[Ticket Intake]
+    Triage[Triage]
+    Assigned[Assigned]
+    InProgress[In Progress]
+    Escalated[Escalated]
+    Resolved[Resolved]
+    Closed[Closed]
+
+    Intake --> Triage --> Assigned --> InProgress --> Resolved --> Closed
+    InProgress --> Escalated --> InProgress
+    Closed -->|Reopen| InProgress

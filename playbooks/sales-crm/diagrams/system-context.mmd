@@ -1,0 +1,11 @@
+flowchart LR
+    SalesRep[Sales Rep]
+    Manager[Sales Manager]
+    System[Sales CRM]
+    Marketing[Marketing Systems]
+    Billing[Billing Systems]
+
+    SalesRep --> System
+    Manager --> System
+    System --> Marketing
+    System --> Billing

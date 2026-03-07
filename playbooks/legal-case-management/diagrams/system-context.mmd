@@ -1,0 +1,13 @@
+flowchart LR
+    Requester[Legal Requester]
+    Counsel[Legal Counsel]
+    Reviewer[Approver]
+    System[Legal Case Platform]
+    DMS[Document Systems]
+    External[Regulatory or Court Systems]
+
+    Requester --> System
+    Counsel --> System
+    Reviewer --> System
+    System --> DMS
+    System --> External

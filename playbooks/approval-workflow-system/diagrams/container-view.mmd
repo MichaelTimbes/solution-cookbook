@@ -1,0 +1,12 @@
+flowchart TB
+    API[Approval API]
+    Policy[Policy Service]
+    Routing[Routing Service]
+    Escalation[Escalation Service]
+    Notify[Notification]
+    Audit[Audit Service]
+    Store[(Approval Store)]
+
+    API --> Policy --> Routing --> Store
+    Routing --> Escalation --> Notify
+    API --> Audit

@@ -1,0 +1,39 @@
+%% CRM container view
+%% Shows major services, stores, and interaction paths.
+flowchart TB
+    UI[CRM User Interface]
+    API[CRM API Boundary]
+
+    Intake[Input Boundary Service]
+    Domain[Customer and Pipeline Domain Services]
+    Workflow[Workflow and Rules Services]
+    Search[Search and Query Service]
+    Notify[Notification Service]
+    Audit[Audit and Observability Service]
+    Integrations[Integration and Data Movement Service]
+
+    State[(Authoritative State Store)]
+    Index[(Search Projection Store)]
+    Queue[(Event and Messaging Channel)]
+
+    UI --> API
+    API --> Intake
+    API --> Domain
+    API --> Search
+
+    Intake --> Domain
+    Domain --> State
+    Domain --> Queue
+
+    Queue --> Workflow
+    Workflow --> Queue
+    Queue --> Notify
+    Queue --> Integrations
+
+    Search --> Index
+    Domain --> Index
+
+    API --> Audit
+    Domain --> Audit
+    Workflow --> Audit
+    Integrations --> Audit

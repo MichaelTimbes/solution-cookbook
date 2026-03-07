@@ -1,0 +1,10 @@
+flowchart LR
+    Submit[Submit]
+    Evaluate[Evaluate]
+    Route[Route]
+    Approve[Approve/Reject]
+    Escalate[Escalate]
+    Complete[Complete]
+
+    Submit --> Evaluate --> Route --> Approve --> Complete
+    Route -->|Timeout| Escalate --> Route
