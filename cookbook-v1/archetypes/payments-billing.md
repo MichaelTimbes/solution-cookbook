@@ -68,6 +68,7 @@
 - Approval workflows and human-in-the-loop
 - Template and merge fields document generation
 - Notification preferences and routing
+- Notification / messaging system
 - Search, filters, and saved views
 - Audit log and provenance
 - Rules engine and decisioning

@@ -66,6 +66,7 @@
 
 ## Embedded capabilities
 - Notification preferences and routing
+- Notification / messaging system
 - Approval workflows and human-in-the-loop
 - Dynamic evaluation and survey engine
 - Search, filters, and saved views

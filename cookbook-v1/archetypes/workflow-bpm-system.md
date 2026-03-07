@@ -69,6 +69,7 @@
 - Dynamic evaluation and survey engine
 - Rules engine and decisioning
 - Notification preferences and routing
+- Notification / messaging system
 - Audit log and provenance
 - Idempotency, outbox, retries, and DLQ
 - Import and export pipelines

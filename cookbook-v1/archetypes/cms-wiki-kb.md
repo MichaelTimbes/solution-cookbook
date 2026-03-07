@@ -71,6 +71,7 @@
 - Rules engine and decisioning
 - Audit log and provenance
 - Notification preferences and routing
+- Notification / messaging system
 - Import and export pipelines
 - Custom fields and extensible attributes
 

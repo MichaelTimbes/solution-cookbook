@@ -69,6 +69,7 @@
 - Dynamic evaluation and survey engine
 - Audit log and provenance
 - Notification preferences and routing
+- Notification / messaging system
 - Rules engine and decisioning
 - Import and export pipelines
 - Search, filters, and saved views

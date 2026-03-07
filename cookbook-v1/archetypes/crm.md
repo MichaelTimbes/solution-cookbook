@@ -72,6 +72,7 @@
 - Search, filters, and saved views
 - Approval workflows and human-in-the-loop
 - Notification preferences and routing
+- Notification / messaging system
 - Import and export pipelines
 - Audit log and provenance
 - Rules engine and decisioning

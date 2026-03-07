@@ -72,6 +72,7 @@
 - Import and export pipelines
 - Rules engine and decisioning
 - Notification preferences and routing
+- Notification / messaging system
 - Audit log and provenance
 - Approval workflows and human-in-the-loop
 - Idempotency, outbox, retries, and DLQ

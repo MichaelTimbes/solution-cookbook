@@ -70,6 +70,7 @@
 - Search, filters, and saved views
 - Approval workflows and human-in-the-loop
 - Notification preferences and routing
+- Notification / messaging system
 - Import and export pipelines
 - Rules engine and decisioning
 - Custom fields and extensible attributes

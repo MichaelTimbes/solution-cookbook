@@ -69,6 +69,7 @@
 - Dynamic evaluation and survey engine
 - Template and merge fields document generation
 - Notification preferences and routing
+- Notification / messaging system
 - Rules engine and decisioning
 - Import and export pipelines
 - Audit log and provenance
