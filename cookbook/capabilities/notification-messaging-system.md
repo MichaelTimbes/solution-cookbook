@@ -1,5 +1,8 @@
 # Notification / Messaging System
 
+primary-role: execution-transport
+secondary-role: governance-trust
+
 ## What this capability is
 - durable, policy-aware, traceable message delivery with failure isolation.
 

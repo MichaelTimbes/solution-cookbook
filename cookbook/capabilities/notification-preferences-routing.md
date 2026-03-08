@@ -1,5 +1,8 @@
 # Notification Preferences and Routing
 
+primary-role: policy-control
+secondary-role: interaction
+
 ## What this capability is
 - policy-correct delivery with traceable opt-in and opt-out behavior.
 

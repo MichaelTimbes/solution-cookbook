@@ -1,5 +1,14 @@
 # Search / Filters / Saved Views
 
+> Legacy capability page
+>
+> This capability has been split into more focused capabilities.
+> See the following instead:
+>
+> - query-filtering
+> - saved-views
+> - search-index
+
 ## Problem / when to use
 - Use when users must repeatedly locate and act on subsets of large record sets.
 - Required for CRM pipelines, ticket queues, inventory operations, and analytics worklists.

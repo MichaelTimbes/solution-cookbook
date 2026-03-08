@@ -1,5 +1,14 @@
 # Human Communication / Collaboration Layer
 
+> Legacy capability page
+>
+> This capability has been split into more focused capabilities.
+> See the following instead:
+>
+> - human-communication
+> - notification-preferences-routing
+> - notification-messaging-system
+
 ## Problem / when to use
 - Use when people must communicate with other people in the context of shared work objects.
 - Apply when discussion history, mentions, handoffs, and escalation communication must remain attached to records, not externalized into disconnected tools.

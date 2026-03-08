@@ -1,5 +1,7 @@
 # Saved Views
 
+primary-role: interaction
+
 ## What this capability is
 - Persists reusable query and layout configurations so teams can return to high-value operational views quickly.
 

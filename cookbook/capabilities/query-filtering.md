@@ -1,5 +1,8 @@
 # Query Filtering
 
+primary-role: interaction
+secondary-role: execution-transport
+
 ## What this capability is
 - Provides consistent filtering semantics so users and services can narrow result sets safely and predictably.
 

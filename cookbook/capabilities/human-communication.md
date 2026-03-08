@@ -1,5 +1,8 @@
 # Human Communication
 
+primary-role: interaction
+secondary-role: governance-trust
+
 ## What this capability is
 - contextual, durable, audience-aware human collaboration with clear visibility, acknowledgement, and accountability boundaries.
 

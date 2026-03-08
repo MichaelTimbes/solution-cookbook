@@ -1,5 +1,8 @@
 # Search Index
 
+primary-role: execution-transport
+secondary-role: interaction
+
 ## What this capability is
 - Builds and maintains searchable indexes so large datasets can be retrieved with acceptable latency and relevance.
 
