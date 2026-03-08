@@ -2,9 +2,11 @@
 playbook: Case and Ticket Management System
 archetype: case-ticket-system
 required-capabilities:
-  - search-filters-saved-views
+- query-filtering
+- saved-views
+- search-index
   - custom-fields-extensible-attributes
-  - human-communication-coordination
+  - human-communication
   - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
   - template-merge-fields-document-generation
@@ -69,8 +71,10 @@ These forces are central because ticket systems must apply trust boundaries, pre
 ## Required Capabilities
 
 Core capability pages:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
 - [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)

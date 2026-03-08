@@ -10,7 +10,7 @@ Primary archetype:
 Related archetypes:
 - [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
 - [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
-- [Analytics Portal](../../cookbook/archetypes/analytics-portal.md)
+- [Analytics Platform](../../cookbook/archetypes/analytics-platform.md)
 
 ## Logical Components
 
@@ -31,7 +31,7 @@ Related archetypes:
 
 - Customer and pipeline domain services -> [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 - Pipeline domain and rules services -> [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md), [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
-- Search/query service -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Search/query service -> [Query Filtering](../../cookbook/capabilities/query-filtering.md), [Saved Views](../../cookbook/capabilities/saved-views.md), [Search Index](../../cookbook/capabilities/search-index.md)
 - Workflow orchestration -> [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - Notification service -> [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md), [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - Data movement service -> [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md), [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)

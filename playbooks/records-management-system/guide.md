@@ -2,9 +2,11 @@
 playbook: Records Management System
 archetype: document-management-system
 required-capabilities:
-  - human-communication-coordination
+  - human-communication
   - audit-log-provenance
-  - search-filters-saved-views
+- query-filtering
+- saved-views
+- search-index
   - approval-workflows-human-in-the-loop
   - rules-engine-decisioning
   - import-export-pipelines
@@ -43,8 +45,10 @@ Related archetypes:
 ## Required Capabilities
 
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)

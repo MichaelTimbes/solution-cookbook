@@ -24,7 +24,9 @@ Capabilities involved:
 4. Reassignment and escalation paths apply when thresholds are met.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
@@ -65,5 +67,7 @@ Capabilities involved:
 Capabilities involved:
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

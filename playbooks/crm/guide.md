@@ -5,8 +5,10 @@ required-capabilities:
   - custom-fields-extensible-attributes
   - dynamic-evaluation-survey-engine
   - template-merge-fields-document-generation
-  - human-communication-coordination
-  - search-filters-saved-views
+  - human-communication
+- query-filtering
+- saved-views
+- search-index
   - audit-log-provenance
   - approval-workflows-human-in-the-loop
   - notification-preferences-routing
@@ -45,13 +47,13 @@ Primary archetype:
 Related archetypes:
 - [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
 - [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
-- [Analytics Portal](../../cookbook/archetypes/analytics-portal.md)
+- [Analytics Platform](../../cookbook/archetypes/analytics-platform.md)
 
 Interaction model:
 - CRM owns customer-facing pipeline and relationship state.
 - Case/Ticket systems manage service interactions and escalation flows, linked to account context.
 - Workflow/BPM governs approval and transition logic for sensitive changes.
-- Analytics portals consume CRM data for forecasting, conversion analysis, and operational reporting.
+- Analytics Platforms consume CRM data for forecasting, conversion analysis, and operational reporting.
 
 ## Foundational Patterns
 
@@ -72,8 +74,10 @@ Core capability pages:
 - [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
 - [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)

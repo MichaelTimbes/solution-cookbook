@@ -2,8 +2,10 @@
 playbook: Clinical Document Management System
 archetype: document-management-system
 required-capabilities:
-  - search-filters-saved-views
-  - human-communication-coordination
+- query-filtering
+- saved-views
+- search-index
+  - human-communication
   - audit-log-provenance
   - approval-workflows-human-in-the-loop
   - notification-messaging-system
@@ -41,9 +43,10 @@ Related archetypes:
 - [Discoverability (Search & Queryability)](../../cookbook/foundational-patterns/discoverability-search-queryability.md)
 
 ## Required Capabilities
-
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)

@@ -4,14 +4,16 @@ archetype: workflow-bpm-system
 required-capabilities:
   - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
-  - human-communication-coordination
+  - human-communication
   - rules-engine-decisioning
   - notification-preferences-routing
   - notification-messaging-system
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
   - import-export-pipelines
-  - search-filters-saved-views
+- query-filtering
+- saved-views
+- search-index
   - custom-fields-extensible-attributes
   - template-merge-fields-document-generation
 optional-capabilities:
@@ -71,14 +73,16 @@ These patterns matter because process systems must enforce deterministic transit
 Core capability pages:
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 
 How capabilities participate:

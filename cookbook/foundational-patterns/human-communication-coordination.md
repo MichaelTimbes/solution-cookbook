@@ -32,7 +32,7 @@ Without this pattern, systems force coordination into external channels and lose
 - Users cannot determine who has acknowledged critical updates.
 
 ## Typical implementation capabilities
-- [Human Communication / Collaboration Layer](../capabilities/human-communication-coordination.md)
+- [Human Communication](../capabilities/human-communication.md)
 - [Notification Preferences and Routing](../capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../capabilities/audit-log-provenance.md)

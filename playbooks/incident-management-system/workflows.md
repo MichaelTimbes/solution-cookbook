@@ -18,8 +18,9 @@ Capabilities:
 
 Capabilities:
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 ## 3) Mitigation and Recovery
 
 1. Runbook steps execute.

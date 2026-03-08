@@ -2,9 +2,11 @@
 playbook: Contract Management System
 archetype: document-management-system
 required-capabilities:
-  - search-filters-saved-views
+- query-filtering
+- saved-views
+- search-index
   - custom-fields-extensible-attributes
-  - human-communication-coordination
+  - human-communication
   - approval-workflows-human-in-the-loop
   - dynamic-evaluation-survey-engine
   - notification-preferences-routing
@@ -64,9 +66,11 @@ These patterns are essential because contract operations require controlled stat
 ## Required Capabilities
 
 Core capability pages:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)

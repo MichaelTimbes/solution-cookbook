@@ -32,7 +32,7 @@ Related archetypes:
 - Decisioning service -> [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md), [Dynamic Evaluation / Survey Engine](../../cookbook/capabilities/dynamic-evaluation-survey-engine.md)
 - Notification and signal service -> [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md), [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - Integration service -> [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md), [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
-- Operations query service -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Operations query service -> [Query Filtering](../../cookbook/capabilities/query-filtering.md), [Saved Views](../../cookbook/capabilities/saved-views.md), [Search Index](../../cookbook/capabilities/search-index.md)
 - Process configurability -> [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 - Audit and forensics -> [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 

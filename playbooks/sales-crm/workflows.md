@@ -23,7 +23,9 @@ Capabilities involved:
 4. Pipeline and forecast views refresh from lifecycle projections.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
@@ -51,7 +53,9 @@ Capabilities involved:
 Capabilities involved:
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
 ## 5) Export and Integration Synchronization

@@ -27,7 +27,7 @@ Supporting archetypal interactions:
 
 - Repository / Core State Store service -> [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - Metadata and classification service -> [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
-- Search/query service -> [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- Search/query service -> [Query Filtering](../../cookbook/capabilities/query-filtering.md), [Saved Views](../../cookbook/capabilities/saved-views.md), [Search Index](../../cookbook/capabilities/search-index.md)
 - Notification and Messaging service -> [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - Audit and Provenance service -> [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - Data movement service -> [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)

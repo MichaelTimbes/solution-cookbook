@@ -30,6 +30,23 @@ Guidance:
 - Describe the operational and governance pains it addresses.
 - Keep language general so future authors can fill in domain specifics.
 
+## System Forces
+
+Describe the forces that influence the architecture of this system.
+
+Examples:
+- scale pressure
+- data consistency requirements
+- human workflow complexity
+- compliance and audit requirements
+- integration surface area
+- operational reliability needs
+
+Guidelines:
+- keep this section concise
+- explain *why the architecture exists*, not just how it works
+- focus on recurring forces seen across implementations
+
 ## Archetype
 
 Identify the primary archetype and any related archetypes.

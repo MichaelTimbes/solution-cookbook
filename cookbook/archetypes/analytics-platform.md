@@ -1,4 +1,4 @@
-# Analytics Portal Archetype
+# Analytics Platform Archetype
 
 ## What this archetype is / is not
 - A system for governed data exploration, chart authoring, dashboard sharing, and metric consumption.

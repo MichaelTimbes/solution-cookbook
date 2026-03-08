@@ -12,7 +12,7 @@ As systems scale and decouple, correctness and reliability cannot be inferred fr
 - [Notification / Messaging System](../capabilities/notification-messaging-system.md)
 
 ## Example archetypes that rely on it
-- [Analytics Portal](../archetypes/analytics-portal.md)
+- [Analytics Platform](../archetypes/analytics-platform.md)
 - [Workflow / BPM System](../archetypes/workflow-bpm-system.md)
 - [Identity / Access (CIAM)](../archetypes/identity-access-ciam.md)
 

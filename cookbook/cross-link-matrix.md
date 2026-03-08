@@ -13,41 +13,46 @@ This matrix maps each Level 1 archetype page to the Level 2 capabilities current
 - **NMS**: [Notification / Messaging System](capabilities/notification-messaging-system.md)
 - **NPR**: [Notification Preferences and Routing](capabilities/notification-preferences-routing.md)
 - **RED**: [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md)
-- **SFV**: [Search / Filters / Saved Views](capabilities/search-filters-saved-views.md)
+- **QF**: [Query Filtering](capabilities/query-filtering.md)
+- **SV**: [Saved Views](capabilities/saved-views.md)
+- **SI**: [Search Index](capabilities/search-index.md)
 - **TMG**: [Template / Merge Fields Document Generation](capabilities/template-merge-fields-document-generation.md)
 
 ## Matrix
 
 Legend: `✓` = listed in the archetype page’s Embedded capabilities.
 
-| Archetype | AWH | ALP | CFEA | DESE | IORD | IEP | NMS | NPR | RED | SFV | TMG |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [CRM](archetypes/crm.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Case / Ticket System](archetypes/case-ticket-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Payments / Billing](archetypes/payments-billing.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Document Management System](archetypes/document-management-system.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Workflow / BPM System](archetypes/workflow-bpm-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| [Inventory / Catalog](archetypes/inventory-catalog.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [CMS / Wiki / Knowledge Base](archetypes/cms-wiki-kb.md) | ✓ | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Scheduling / Rostering](archetypes/scheduling-rostering.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| [Analytics Portal](archetypes/analytics-portal.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
-| [Identity / Access (CIAM)](archetypes/identity-access-ciam.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| Archetype | AWH | ALP | CFEA | DESE | IORD | IEP | NMS | NPR | RED | QF | SV | SI | TMG |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| [CRM](archetypes/crm.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Case / Ticket System](archetypes/case-ticket-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Payments / Billing](archetypes/payments-billing.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Document Management System](archetypes/document-management-system.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Workflow / BPM System](archetypes/workflow-bpm-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| [Inventory / Catalog](archetypes/inventory-catalog.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [CMS / Wiki / Knowledge Base](archetypes/cms-wiki-kb.md) | ✓ | ✓ | ✓ |  |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Scheduling / Rostering](archetypes/scheduling-rostering.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| [Analytics Platform](archetypes/analytics-platform.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| [Master Data Management](archetypes/master-data-management.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
+| [Identity / Access (CIAM)](archetypes/identity-access-ciam.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |  |
 
 ## Reverse coverage view
 
 | Capability | Coverage | Archetypes |
 |---|---:|---|
-| AWH | 10/10 | All archetypes |
-| ALP | 10/10 | All archetypes |
-| CFEA | 10/10 | All archetypes |
-| DESE | 6/10 | CRM, Case / Ticket System, Workflow / BPM System, Scheduling / Rostering, Analytics Portal, Identity / Access (CIAM) |
-| IORD | 9/10 | All except CMS / Wiki / Knowledge Base |
-| IEP | 10/10 | All archetypes |
-| NMS | 10/10 | All archetypes |
-| NPR | 10/10 | All archetypes |
-| RED | 10/10 | All archetypes |
-| SFV | 10/10 | All archetypes |
-| TMG | 6/10 | CRM, Case / Ticket System, Payments / Billing, Document Management System, Inventory / Catalog, CMS / Wiki / Knowledge Base |
+| AWH | 11/11 | All archetypes |
+| ALP | 11/11 | All archetypes |
+| CFEA | 11/11 | All archetypes |
+| DESE | 7/11 | CRM, Case / Ticket System, Workflow / BPM System, Scheduling / Rostering, Analytics Platform, Master Data Management, Identity / Access (CIAM) |
+| IORD | 10/11 | All except CMS / Wiki / Knowledge Base |
+| IEP | 11/11 | All archetypes |
+| NMS | 11/11 | All archetypes |
+| NPR | 11/11 | All archetypes |
+| RED | 11/11 | All archetypes |
+| QF | 11/11 | All archetypes |
+| SV | 11/11 | All archetypes |
+| SI | 11/11 | All archetypes |
+| TMG | 6/11 | CRM, Case / Ticket System, Payments / Billing, Document Management System, Inventory / Catalog, CMS / Wiki / Knowledge Base |
 
 ## Suggested next normalization pass
 

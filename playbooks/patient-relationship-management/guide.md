@@ -2,8 +2,10 @@
 playbook: Patient Relationship Management System
 archetype: crm
 required-capabilities:
-  - human-communication-coordination
-  - search-filters-saved-views
+  - human-communication
+- query-filtering
+- saved-views
+- search-index
   - notification-messaging-system
   - rules-engine-decisioning
   - audit-log-provenance
@@ -41,9 +43,10 @@ Related archetypes:
 - [Discoverability (Search & Queryability)](../../cookbook/foundational-patterns/discoverability-search-queryability.md)
 
 ## Required Capabilities
-
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

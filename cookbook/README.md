@@ -66,10 +66,12 @@ If you are building a document platform, start with the Document Management arch
 	- [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md)
 	- [Template / Merge Fields Document Generation](capabilities/template-merge-fields-document-generation.md)
 	- [Import / Export Pipelines](capabilities/import-export-pipelines.md)
-	- [Search / Filters / Saved Views](capabilities/search-filters-saved-views.md)
+- [Query Filtering](capabilities/query-filtering.md)
+- [Saved Views](capabilities/saved-views.md)
+- [Search Index](capabilities/search-index.md)
 - Newly scaffolded as missing foundational capability:
 	- [Notification / Messaging System](capabilities/notification-messaging-system.md)
-	- [Human Communication / Collaboration Layer](capabilities/human-communication-coordination.md)
+	- [Human Communication](capabilities/human-communication.md)
 
 - Newly scaffolded as recurring foundational pattern:
 	- [Human Communication & Coordination](foundational-patterns/human-communication-coordination.md)

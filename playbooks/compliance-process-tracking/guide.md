@@ -3,10 +3,12 @@ playbook: Compliance Process Tracking System
 archetype: workflow-bpm-system
 required-capabilities:
   - approval-workflows-human-in-the-loop
-  - human-communication-coordination
+  - human-communication
   - rules-engine-decisioning
   - audit-log-provenance
-  - search-filters-saved-views
+- query-filtering
+- saved-views
+- search-index
   - notification-messaging-system
 optional-capabilities:
   - template-merge-fields-document-generation
@@ -30,7 +32,7 @@ Primary archetype:
 
 Related archetypes:
 - [Case / Ticket System](../../cookbook/archetypes/case-ticket-system.md)
-- [Analytics Portal](../../cookbook/archetypes/analytics-portal.md)
+- [Analytics Platform](../../cookbook/archetypes/analytics-platform.md)
 
 ## Foundational Patterns
 
@@ -43,8 +45,10 @@ Related archetypes:
 ## Required Capabilities
 
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)

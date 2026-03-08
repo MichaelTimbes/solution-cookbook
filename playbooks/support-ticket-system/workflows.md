@@ -23,7 +23,9 @@ Capabilities involved:
 4. Saved views surface pending, aging, and blocked workloads.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Notification Preferences and Routing](../../cookbook/capabilities/notification-preferences-routing.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
@@ -64,5 +66,7 @@ Capabilities involved:
 Capabilities involved:
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

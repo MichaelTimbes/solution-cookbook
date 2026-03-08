@@ -3,8 +3,10 @@ playbook: Task Orchestration Platform
 archetype: workflow-bpm-system
 required-capabilities:
   - rules-engine-decisioning
-  - search-filters-saved-views
-  - human-communication-coordination
+- query-filtering
+- saved-views
+- search-index
+  - human-communication
   - notification-messaging-system
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
@@ -39,8 +41,10 @@ Primary archetype:
 ## Required Capabilities
 
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)

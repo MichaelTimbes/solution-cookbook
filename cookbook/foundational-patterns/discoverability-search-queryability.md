@@ -7,12 +7,14 @@ Discoverability ensures users and systems can efficiently locate relevant record
 As data volume grows, value depends on retrieval speed and precision. Operational work degrades when information is technically present but practically inaccessible.
 
 ## Typical implementation capabilities
-- [Search / Filters / Saved Views](../capabilities/search-filters-saved-views.md)
+- [Query Filtering](../capabilities/query-filtering.md)
+- [Saved Views](../capabilities/saved-views.md)
+- [Search Index](../capabilities/search-index.md)
 - [Import / Export Pipelines](../capabilities/import-export-pipelines.md)
 - [Custom Fields / Extensible Attributes](../capabilities/custom-fields-extensible-attributes.md)
 
 ## Example archetypes that rely on it
-- [Analytics Portal](../archetypes/analytics-portal.md)
+- [Analytics Platform](../archetypes/analytics-platform.md)
 - [Case / Ticket System](../archetypes/case-ticket-system.md)
 - [Document Management System](../archetypes/document-management-system.md)
 

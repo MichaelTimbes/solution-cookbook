@@ -94,8 +94,8 @@ Even combined, this bundle still leaves major gaps: cross-archetype product blue
 | Cal.com API + repo | Scheduling archetype | OSS product + API docs | active | Scheduling platform with booking APIs; shows recurring booking types; AGPLv3 constraints. citeturn27search10turn28search4turn28search0 | citeturn27search10 | 2 | 1 | 2 | 2 | 1 | 0 | 1 | AGPLv3 impacts reuse in downstream products. citeturn28search0turn28search4 |
 | Timefold employee scheduling docs | Scheduling/rostering | OSS docs + sample | active | Gives explicit input dataset model (shifts + availability), plus examples; good recipe skeleton. citeturn27search1turn28search9 | citeturn27search1 | 1 | 2 | 2 | 2 | 0 | 0 | 3 | Apache-2.0 community edition supports reuse. citeturn28search9 |
 | Kill Bill docs + overdue/dunning | Payments/billing | OSS platform docs | active | Practical billing internals: invoices, payment retries, overdue policies; strong failure-mode guidance. citeturn32search7turn32search3turn32search1 | citeturn32search7 | 2 | 3 | 3 | 2 | 0 | 2 | 3 | Apache-2.0 code; docs generally reusable with attribution norms. citeturn32search1 |
-| Apache Superset security + dashboards docs | Analytics portal | OSS project docs | active | RBAC/permissions + dashboard access patterns; analytics portal archetype reference. citeturn29search0turn29search8turn29search6 | citeturn29search0 | 2 | 1 | 2 | 1 | 1 | 1 | 3 | Apache-2.0. citeturn29search6 |
-| Metabase permissions docs | Analytics portal | OSS/commercial docs | active | Practical permissions model (data vs collection permissions); good admin UX guidance. citeturn29search9turn29search1turn29search15 | citeturn29search9 | 2 | 1 | 2 | 1 | 2 | 0 | 1 | Mixed licensing (AGPL + commercial). citeturn29search15turn29search3 |
+| Apache Superset security + dashboards docs | Analytics Platform | OSS project docs | active | RBAC/permissions + dashboard access patterns; Analytics Platform archetype reference. citeturn29search0turn29search8turn29search6 | citeturn29search0 | 2 | 1 | 2 | 1 | 1 | 1 | 3 | Apache-2.0. citeturn29search6 |
+| Metabase permissions docs | Analytics Platform | OSS/commercial docs | active | Practical permissions model (data vs collection permissions); good admin UX guidance. citeturn29search9turn29search1turn29search15 | citeturn29search9 | 2 | 1 | 2 | 1 | 2 | 0 | 1 | Mixed licensing (AGPL + commercial). citeturn29search15turn29search3 |
 | NIST SP 800-63-4 | Identity/CIAM | Standard | 2025 | Current digital identity guidelines suite covering proofing/auth/federation requirements. citeturn33search3turn33search0 | citeturn33search3 | 1 | 1 | 2 | 0 | 0 | 1 | 2 | Public standard guidance; can be referenced/implemented. citeturn33search3 |
 | OAuth 2.0 + OIDC + SCIM RFCs/specs | Identity/CIAM | Standards | 2012–2015+ | Core protocols for CIAM APIs, auth flows, and provisioning—essential for archetype blueprint & recipes. citeturn33search1turn33search5turn33search2 | citeturn33search1 | 2 | 2 | 1 | 1 | 0 | 0 | 2 | Standards are referenceable; implementers can build compliant systems. citeturn33search1 |
 | Keycloak server admin docs | Identity/CIAM | OSS product docs | 2026 | Shows protocol-based architecture (OIDC/SAML); practical admin-server model. citeturn22search5turn23search2 | citeturn22search5 | 2 | 1 | 2 | 1 | 1 | 1 | 3 | Apache-2.0. citeturn23search2 |
@@ -136,7 +136,7 @@ These ten are the most “cookbook-like,” either because they provide **patter
 **Payments / Billing** — Kill Bill docs (open-source billing product shape); Stripe billing webhooks + invoice lifecycle docs as a “reference SaaS billing shape.” citeturn32search7turn32search10turn32search2  
 **Scheduling / Rostering** — Cal.com booking APIs; Timefold employee shift scheduling data model examples. citeturn27search10turn27search1  
 **Inventory / Catalog** — TM Forum Product Catalog API repo; Saleor product/variant/attribute object model; Medusa inventory module flows; ERPNext item variants/stock ledger patterns. citeturn21search7turn30search0turn30search7turn30search2turn30search11  
-**Analytics portal** — Superset roles/permissions + dashboard access; Metabase data vs collection permissions model. citeturn29search0turn29search8turn29search9turn29search1  
+**Analytics Platform** — Superset roles/permissions + dashboard access; Metabase data vs collection permissions model. citeturn29search0turn29search8turn29search9turn29search1  
 **Identity / Access (CIAM)** — OAuth/OIDC/SCIM specs; NIST identity guidelines; Keycloak admin architecture. citeturn33search1turn33search5turn33search2turn33search3turn22search5
 
 ### Level 2 capabilities coverage
@@ -227,7 +227,7 @@ These align with your examples and also map to strong existing public references
 **Payments/Billing** (Kill Bill + Stripe lifecycle). citeturn32search7turn32search10  
 **Scheduling/Rostering** (Cal.com + Timefold scheduling model). citeturn27search10turn27search1  
 **Inventory/Catalog** (TMF Product Catalog + Saleor/Medusa/ERPNext). citeturn21search7turn30search0turn30search7turn30search2  
-**Analytics portal** (Superset + Metabase permissions models). citeturn29search0turn29search9  
+**Analytics Platform** (Superset + Metabase permissions models). citeturn29search0turn29search9  
 **Identity/Access (CIAM)** (OAuth/OIDC/SCIM + NIST + Keycloak). citeturn33search1turn33search5turn33search2turn33search3turn22search5
 
 #### Mini “recipe-card” outlines for Level 1 archetypes
@@ -314,7 +314,7 @@ Failure modes: oversell; negative inventory; movement reconciliation drift.
 Security/privacy: role separation for finance/stock adjustments.  
 Observability: stock ledger/auditability.
 
-**Analytics portal archetype**  
+**Analytics Platform archetype**  
 Problem: enable exploration + dashboards with governance and permissions. citeturn29search2turn29search9  
 When to use: internal analytics, metrics portals, embedded BI.  
 Ingredients: datasets/semantic layer; permissions model; dashboard ownership; sharing; collections. citeturn29search0turn29search8turn29search1  
@@ -542,7 +542,7 @@ This section operationalizes the recommendations into a publishable v1 plan with
   - Import/export pipelines
 
 #### Wave 3
-- **L1 Archetypes:** CMS/Wiki/KB, Scheduling/Rostering, Analytics Portal, CIAM
+- **L1 Archetypes:** CMS/Wiki/KB, Scheduling/Rostering, Analytics Platform, CIAM
 - **L2 Capabilities:**
   - Dynamic evaluation/survey engine
   - Template/merge fields document generation

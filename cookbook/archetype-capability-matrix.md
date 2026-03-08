@@ -9,19 +9,21 @@ Use it to:
 
 Legend: `✓` = currently mapped in archetype docs.
 
-| Capability | CRM | Ticketing | Workflow | CMS | DMS | Billing | Scheduling | Inventory | CIAM | Analytics |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
-| [Custom Fields / Extensible Attributes](capabilities/custom-fields-extensible-attributes.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Audit Log and Provenance](capabilities/audit-log-provenance.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Approval Workflows / Human-In-The-Loop](capabilities/approval-workflows-human-in-the-loop.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Dynamic Evaluation / Survey Engine](capabilities/dynamic-evaluation-survey-engine.md) | ✓ | ✓ | ✓ |  |  |  | ✓ |  | ✓ | ✓ |
-| [Idempotency, Outbox, Retries, and DLQ](capabilities/idempotency-outbox-retries-dlq.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Search / Filters / Saved Views](capabilities/search-filters-saved-views.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Notification / Messaging System](capabilities/notification-messaging-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Notification Preferences and Routing](capabilities/notification-preferences-routing.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
-| [Template / Merge Fields Document Generation](capabilities/template-merge-fields-document-generation.md) | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |  |  |
-| [Import / Export Pipelines](capabilities/import-export-pipelines.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| Capability | CRM | Ticketing | Workflow | CMS | DMS | Billing | Scheduling | Inventory | CIAM | Analytics | MDM |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| [Custom Fields / Extensible Attributes](capabilities/custom-fields-extensible-attributes.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Audit Log and Provenance](capabilities/audit-log-provenance.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Approval Workflows / Human-In-The-Loop](capabilities/approval-workflows-human-in-the-loop.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Dynamic Evaluation / Survey Engine](capabilities/dynamic-evaluation-survey-engine.md) | ✓ | ✓ | ✓ |  |  |  | ✓ |  | ✓ | ✓ | ✓ |
+| [Idempotency, Outbox, Retries, and DLQ](capabilities/idempotency-outbox-retries-dlq.md) | ✓ | ✓ | ✓ |  | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Query Filtering](capabilities/query-filtering.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Saved Views](capabilities/saved-views.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Search Index](capabilities/search-index.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Rules Engine / Decisioning](capabilities/rules-engine-decisioning.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Notification / Messaging System](capabilities/notification-messaging-system.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Notification Preferences and Routing](capabilities/notification-preferences-routing.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
+| [Template / Merge Fields Document Generation](capabilities/template-merge-fields-document-generation.md) | ✓ | ✓ |  | ✓ | ✓ | ✓ |  | ✓ |  |  |  |
+| [Import / Export Pipelines](capabilities/import-export-pipelines.md) | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ | ✓ |
 
 ## Archetype file mapping
 
@@ -34,7 +36,8 @@ Legend: `✓` = currently mapped in archetype docs.
 - Scheduling → [scheduling-rostering.md](archetypes/scheduling-rostering.md)
 - Inventory → [inventory-catalog.md](archetypes/inventory-catalog.md)
 - CIAM → [identity-access-ciam.md](archetypes/identity-access-ciam.md)
-- Analytics → [analytics-portal.md](archetypes/analytics-portal.md)
+- Analytics → [analytics-platform.md](archetypes/analytics-platform.md)
+- MDM → [master-data-management.md](archetypes/master-data-management.md)
 
 ## High-value capability coverage check
 
@@ -44,7 +47,7 @@ Requested capabilities status:
 2. Notification / Messaging System → [new scaffold](capabilities/notification-messaging-system.md)
 3. Template + Document Generation → [present](capabilities/template-merge-fields-document-generation.md)
 4. Import / Export Pipelines → [present](capabilities/import-export-pipelines.md)
-5. Search / Filters / Saved Views → [present](capabilities/search-filters-saved-views.md)
+5. Query Filtering / Saved Views / Search Index → [present](capabilities/query-filtering.md), [present](capabilities/saved-views.md), [present](capabilities/search-index.md)
 
 ## Composition guidance
 

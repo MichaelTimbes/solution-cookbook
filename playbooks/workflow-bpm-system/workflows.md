@@ -36,7 +36,9 @@ Capabilities involved:
 
 Capabilities involved:
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
@@ -62,6 +64,8 @@ Capabilities involved:
 
 Capabilities involved:
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

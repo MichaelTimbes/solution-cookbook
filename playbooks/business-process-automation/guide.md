@@ -3,7 +3,7 @@ playbook: Business Process Automation System
 archetype: workflow-bpm-system
 required-capabilities:
   - rules-engine-decisioning
-  - human-communication-coordination
+  - human-communication
   - idempotency-outbox-retries-dlq
   - notification-messaging-system
   - audit-log-provenance
@@ -39,7 +39,7 @@ Primary archetype:
 ## Required Capabilities
 
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

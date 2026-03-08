@@ -2,8 +2,10 @@
 playbook: Donor Management System
 archetype: crm
 required-capabilities:
-  - human-communication-coordination
-  - search-filters-saved-views
+  - human-communication
+- query-filtering
+- saved-views
+- search-index
   - rules-engine-decisioning
   - notification-messaging-system
   - audit-log-provenance
@@ -30,7 +32,7 @@ Primary archetype:
 
 Related archetypes:
 - [Workflow / BPM System](../../cookbook/archetypes/workflow-bpm-system.md)
-- [Analytics Portal](../../cookbook/archetypes/analytics-portal.md)
+- [Analytics Platform](../../cookbook/archetypes/analytics-platform.md)
 
 ## Foundational Patterns
 
@@ -41,9 +43,10 @@ Related archetypes:
 - [Generated Artifacts (Document / Template Generation)](../../cookbook/foundational-patterns/generated-artifacts-document-template-generation.md)
 
 ## Required Capabilities
-
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
-- [Human Communication / Collaboration Layer](../../cookbook/capabilities/human-communication-coordination.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
+- [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)

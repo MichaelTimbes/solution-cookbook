@@ -52,7 +52,9 @@ Capabilities involved:
 4. Query and action events are recorded for governance and observability.
 
 Capabilities involved:
-- [Search / Filters / Saved Views](../../cookbook/capabilities/search-filters-saved-views.md)
+- [Query Filtering](../../cookbook/capabilities/query-filtering.md)
+- [Saved Views](../../cookbook/capabilities/saved-views.md)
+- [Search Index](../../cookbook/capabilities/search-index.md)
 - [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 
