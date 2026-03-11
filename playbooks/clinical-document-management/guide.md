@@ -2,6 +2,7 @@
 playbook: Clinical Document Management System
 archetype: document-management-system
 required-capabilities:
+  - artifact-repository
   - query-filtering
   - saved-views
   - search-index
@@ -46,6 +47,7 @@ Related archetypes:
 - [Query Filtering](../../cookbook/capabilities/query-filtering.md)
 - [Saved Views](../../cookbook/capabilities/saved-views.md)
 - [Search Index](../../cookbook/capabilities/search-index.md)
+- [Artifact Repository](../../cookbook/capabilities/artifact-repository.md)
 - [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
@@ -67,3 +69,4 @@ Phase 5: quality and compliance analytics
 ## Failure Modes
 
 Risks include unauthorized access, missing signature lineage, and delayed care-document availability. See [failure-modes.md](failure-modes.md).
+

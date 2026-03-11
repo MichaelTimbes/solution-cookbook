@@ -2,6 +2,7 @@
 playbook: Document Management System
 archetype: document-management-system
 required-capabilities:
+  - artifact-repository
   - query-filtering
   - saved-views
   - search-index
@@ -62,6 +63,7 @@ Core capability pages:
 - [Query Filtering](../../cookbook/capabilities/query-filtering.md)
 - [Saved Views](../../cookbook/capabilities/saved-views.md)
 - [Search Index](../../cookbook/capabilities/search-index.md)
+- [Artifact Repository](../../cookbook/capabilities/artifact-repository.md)
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 - [Human Communication](../../cookbook/capabilities/human-communication.md)
@@ -71,6 +73,7 @@ Core capability pages:
 
 Role of each capability in the DMS:
 - Search/filters/saved views drives discoverability and operational triage.
+- Artifact repository provides authoritative storage, versioning, and retention-aware management for document binaries.
 - Audit and provenance provides accountability for document state and access changes.
 - Import/export pipelines support migration, partner interchange, and compliance exports.
 - Human communication capability provides review discussions, directed clarifications, and durable decision context around document records.
@@ -123,3 +126,4 @@ Why they occur and mitigations:
 - Search degrades when indexing strategy lags schema growth; define index ownership and freshness SLOs.
 - Duplication emerges when source-of-truth boundaries are unclear; enforce canonical IDs and lifecycle policies.
 - Access control drifts when policy and implementation diverge; centralize authorization and continuously verify.
+

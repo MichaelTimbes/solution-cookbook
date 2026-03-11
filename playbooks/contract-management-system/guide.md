@@ -2,6 +2,7 @@
 playbook: Contract Management System
 archetype: document-management-system
 required-capabilities:
+  - artifact-repository
   - query-filtering
   - saved-views
   - search-index
@@ -69,6 +70,7 @@ Core capability pages:
 - [Query Filtering](../../cookbook/capabilities/query-filtering.md)
 - [Saved Views](../../cookbook/capabilities/saved-views.md)
 - [Search Index](../../cookbook/capabilities/search-index.md)
+- [Artifact Repository](../../cookbook/capabilities/artifact-repository.md)
 - [Custom Fields / Extensible Attributes](../../cookbook/capabilities/custom-fields-extensible-attributes.md)
 - [Human Communication](../../cookbook/capabilities/human-communication.md)
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
@@ -82,12 +84,40 @@ Core capability pages:
 
 How capabilities participate:
 - Search and extensible attributes support clause, obligation, and party discoverability.
+- Artifact repository manages authoritative agreement files (drafts, redlines, signed copies), version lineage, and retrieval controls.
 - Rules, dynamic evaluation, and approvals govern review and exception paths.
 - Human communication capability supports negotiation threads, mentions, and contextual handoffs across legal and business participants.
 - Notification and routing coordinate legal, commercial, and operational participants.
 - Audit and provenance preserve execution and decision evidence.
 - Import/export and idempotency stabilize external signing and downstream synchronization.
 
+
+## Capability Ownership Map
+
+| Capability | Likely Host Module / Boundary | Adjacent Modules / Boundaries | Notes |
+|---|---|---|---|
+| [artifact-repository](../../cookbook/capabilities/artifact-repository.md) | Artifact repository boundary | Contract lifecycle service, ingestion boundary, signing integrations | Owns authoritative artifact metadata, versioned linkage, and artifact retrieval contracts. |
+| [query-filtering](../../cookbook/capabilities/query-filtering.md) | Query API boundary | Domain repository, policy/rules boundary, read models | Owns safe, policy-aware filter semantics for operational contract lists. |
+| [saved-views](../../cookbook/capabilities/saved-views.md) | User workspace/query preferences boundary | Query API boundary, identity/access boundary | Owns persistent user/team list definitions; does not own canonical contract state. |
+| [search-index](../../cookbook/capabilities/search-index.md) | Search projection boundary | Contract lifecycle events, artifact metadata events, query UI boundary | Owns full-text and faceted retrieval projections derived from canonical records. |
+| [human-communication](../../cookbook/capabilities/human-communication.md) | Collaboration thread boundary | Contract version context, approval/workflow boundary | Owns negotiation and review discussion context linked to contract/version entities. |
+| [notification-preferences-routing](../../cookbook/capabilities/notification-preferences-routing.md) | Notification policy boundary | Identity/access boundary, workflow events | Owns recipient intent, routing policy, and channel eligibility decisions. |
+| [notification-messaging-system](../../cookbook/capabilities/notification-messaging-system.md) | Delivery execution boundary | Notification policy boundary, external channel providers | Owns message dispatch, delivery outcomes, and retry behavior. |
+| [approval-workflows-human-in-the-loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md) | Approval orchestration boundary | Contract lifecycle service, rules/policy boundary | Owns approval sequencing and decision capture gates for lifecycle transitions. |
+| [audit-log-provenance](../../cookbook/capabilities/audit-log-provenance.md) | Audit/provenance boundary | Contract lifecycle, approvals, artifact repository, integration boundary | Owns immutable actor-action-object evidence for legal defensibility. |
+| [template-merge-fields-document-generation](../../cookbook/capabilities/template-merge-fields-document-generation.md) | Document generation boundary | Template management, artifact repository, contract metadata boundary | Owns generation of draft/derived contract artifacts from governed templates. |
+
+Guidance:
+- This is a logical ownership aid, not a deployment map.
+- Use it to keep capability boundaries clear during implementation planning.
+
+## Artifact Handling Model
+
+- Authoritative artifact metadata and linkage (artifact id, version, parent contract/version reference, content hash, retention class) are managed in the artifact repository boundary.
+- Binary artifact content typically lives in blob/object storage behind the artifact repository boundary; storage product choice is implementation-specific.
+- Contract lifecycle records remain authoritative for business state, while artifact records remain authoritative for file lineage and retrieval identity.
+- Drafts, redlines, signed agreements, and supporting attachments are represented as artifact instances linked to a specific `ContractVersion` (or explicitly to `Contract` where version-independent).
+- Generated previews/renditions are typically derived artifacts unless explicitly designated canonical by policy.
 ## Reference Architecture
 
 Diagrams:
@@ -125,3 +155,5 @@ Common architectural risks:
 - integration replay causing duplicate execution records
 
 See detailed analysis in [failure-modes.md](failure-modes.md).
+
+

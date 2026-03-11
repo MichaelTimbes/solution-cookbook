@@ -84,6 +84,29 @@ Optional:
 
 For each capability, add a short note describing how it participates in the system.
 
+
+## Capability Ownership Map
+
+Use this section to map capabilities to logical ownership boundaries.
+
+| Capability | Likely Host Module / Boundary | Adjacent Modules / Boundaries | Notes |
+|---|---|---|---|
+| [<capability-1>](../../cookbook/capabilities/<capability-1>.md) | <primary logical owner> | <adjacent collaborators> | <ownership note> |
+| [<capability-2>](../../cookbook/capabilities/<capability-2>.md) | <primary logical owner> | <adjacent collaborators> | <ownership note> |
+
+Guidance:
+- This is not a deployment map.
+- This is not a service topology map.
+- Use it as a lightweight logical ownership aid.
+- Keep entries concise and capability-focused.
+
+## V2 Planning Notes (Optional)
+
+For playbooks that benefit from clearer state and propagation boundaries:
+- use `data-model.md` to document an **Authority Model** (likely canonical vs likely derived state)
+- use `architecture.md` to document **Event / Projection Notes** (common downstream consumers and side effects)
+
+These are planning aids in this cookbook, not mandatory implementation patterns.
 ## Reference Architecture
 
 Provide guidance on a typical architecture using capability-aligned components.
@@ -132,3 +155,5 @@ Examples to consider:
 - Notification storms
 
 See also: [failure-modes.md](failure-modes.md)
+
+

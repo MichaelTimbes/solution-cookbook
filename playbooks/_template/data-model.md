@@ -19,6 +19,44 @@ Guidance:
 - Clarify which entities are projections or read models.
 - Keep naming and scope consistent with capabilities and archetypes.
 
+
+## Authority Model
+
+Use this section to make source-of-truth boundaries explicit in this playbook.
+
+### Canonical / authoritative state
+
+Describe records that are likely the primary source of truth.
+
+Template:
+- <Canonical record A>
+- <Canonical record B>
+
+### Supporting authoritative records
+
+Describe records that are authoritative within their own concern, but are not the primary lifecycle owner.
+
+Template examples:
+- <Artifact metadata/linkage>
+- <Approval decisions>
+- <Obligation records>
+- <Configuration records>
+
+### Derived / projected state
+
+Describe records that are likely derived from canonical state.
+
+Template:
+- <Search index documents>
+- <Read-model projections>
+- <Notification delivery state>
+- <Reporting aggregates>
+- <Cache entries>
+
+### Notes
+
+Implementation details can vary by system and constraints. In this playbook, this distinction is mainly a planning aid to reduce confusion between canonical records and derived views.
+
 ## Canonical Entities (Fill In)
 
 - <Entity 1>: <definition>
@@ -45,3 +83,5 @@ Document governance constraints and lifecycle implications:
 - <retention/legal hold implications>
 - <audit/provenance expectations>
 - <import/export boundaries>
+
+

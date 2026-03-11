@@ -68,6 +68,7 @@
 - Approval workflows and human-in-the-loop
 - Dynamic evaluation and survey engine
 - Template and merge fields document generation
+- Artifact repository (optional for evidence and attachments)
 - Notification preferences and routing
 - Notification / messaging system
 - Rules engine and decisioning
@@ -123,3 +124,4 @@
 - Page content is original synthesis aligned to public OSS and standards references.
 - Include per-source attribution in finalized version.
 - Do not copy restricted vendor text or diagrams directly.
+

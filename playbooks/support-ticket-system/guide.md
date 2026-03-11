@@ -16,6 +16,7 @@ required-capabilities:
   - import-export-pipelines
   - idempotency-outbox-retries-dlq
 optional-capabilities:
+  - artifact-repository
   - template-merge-fields-document-generation
 patterns:
   - identity-access-control
@@ -87,6 +88,7 @@ How capabilities participate:
 - Notification and messaging coordinate requester and agent communications.
 - Audit and provenance maintain accountable service history.
 - Import/export and idempotency stabilize integration and replay behavior.
+- Artifact repository can be added where screenshots, logs, or evidence files must be versioned and retained as authoritative records.
 
 ## Reference Architecture
 
@@ -125,3 +127,4 @@ Common architectural risks:
 - permission leakage via shared views and exports
 
 See detailed analysis in [failure-modes.md](failure-modes.md).
+

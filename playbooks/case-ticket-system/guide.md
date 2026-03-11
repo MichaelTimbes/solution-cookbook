@@ -16,7 +16,8 @@ required-capabilities:
   - audit-log-provenance
   - import-export-pipelines
   - idempotency-outbox-retries-dlq
-optional-capabilities: []
+optional-capabilities:
+  - artifact-repository
 patterns:
   - identity-access-control
   - auditability-traceability
@@ -93,6 +94,7 @@ How capabilities participate:
 - Audit and observability provide compliance-grade process traceability.
 - Import/export and idempotency stabilize ingestion and external synchronization.
 - Extensibility and dynamic evaluation support configurable ticket schemas and intake forms.
+- Artifact repository can be added for attachment-heavy deployments that require authoritative evidence file versioning and retention controls.
 
 ## Reference Architecture
 
@@ -131,3 +133,4 @@ Common architectural risks:
 - permission leakage through shared views and exports
 
 See detailed analysis in [failure-modes.md](failure-modes.md).
+

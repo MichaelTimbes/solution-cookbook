@@ -62,6 +62,36 @@ Purpose:
 - `RenewalEvent` references the parent contract lifecycle and upcoming obligations.
 - `AuditEvent` correlates drafting, review, approval, execution, and renewal actions.
 
+
+## State Authority
+
+### Authoritative state
+
+- `Contract`: canonical agreement lifecycle and ownership state.
+- `ContractVersion`: immutable negotiated version lineage and current-version pointer semantics.
+- `Clause` (or clause-instance model): canonical contractual terms bound to contract/version context.
+- `ApprovalDecision`: canonical gate decisions and decision rationale for lifecycle progression.
+- `Obligation`: canonical commitments, owners, due milestones, and fulfillment status.
+- Artifact metadata and linkage: canonical artifact identity, version linkage, parent references, content hash, and retention class.
+
+### Derived state
+
+- Search documents for full-text and faceted retrieval.
+- Saved-view definitions and resolved list projections.
+- Notification delivery records and channel outcomes.
+- Reporting projections and aggregate KPI views.
+- Preview/rendition records when treated as non-canonical derivatives.
+
+### Projection boundaries
+
+- Canonical contract/version/clause/obligation changes project into operational list read models and reporting aggregates.
+- Contract and artifact metadata changes project into search documents for retrieval and discovery.
+- Approval and lifecycle events project into notification intent and delivery tracking records.
+- Canonical events project into audit-oriented read surfaces; immutable audit evidence remains authoritative in audit storage.
+
+Guidance:
+- Authoritative contract and artifact-linkage state must remain source-of-truth for legal and operational decisions.
+- Derived views should be rebuildable from canonical records and event history where practical.
 ## Invariants
 
 - Only one active `ContractVersion` is current at a time.
@@ -69,3 +99,4 @@ Purpose:
 - Obligations must be mapped to accountable owners and due milestones.
 - Audit and provenance records are immutable and append-only.
 - Replay of integration events is deduplicated via idempotency controls.
+

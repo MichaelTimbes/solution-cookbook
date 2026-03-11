@@ -2,6 +2,7 @@
 playbook: Legal Case Management System
 archetype: case-ticket-system
 required-capabilities:
+  - artifact-repository
   - human-communication
   - approval-workflows-human-in-the-loop
   - audit-log-provenance
@@ -50,6 +51,7 @@ Related archetypes:
 - [Query Filtering](../../cookbook/capabilities/query-filtering.md)
 - [Saved Views](../../cookbook/capabilities/saved-views.md)
 - [Search Index](../../cookbook/capabilities/search-index.md)
+- [Artifact Repository](../../cookbook/capabilities/artifact-repository.md)
 - [Rules Engine / Decisioning](../../cookbook/capabilities/rules-engine-decisioning.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 
@@ -68,3 +70,4 @@ Phase 5: advanced governance and legal analytics
 ## Failure Modes
 
 Risks include evidence lineage gaps, unauthorized access, policy drift in approvals, and incomplete closure records. See [failure-modes.md](failure-modes.md).
+

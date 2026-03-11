@@ -65,6 +65,7 @@
 - Analytics and archival stores
 
 ## Embedded capabilities
+- Artifact repository
 - Audit log and provenance
 - Template and merge fields document generation
 - Search, filters, and saved views
@@ -123,3 +124,4 @@
 - Content is synthesized from standards and OSS ecosystem patterns.
 - Avoid copying vendor documentation text verbatim.
 - Attach source attribution and reuse mode tags on publish.
+
