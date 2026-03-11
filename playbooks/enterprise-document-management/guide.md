@@ -2,9 +2,9 @@
 playbook: Enterprise Document Management System
 archetype: document-management-system
 required-capabilities:
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - human-communication
   - audit-log-provenance
   - import-export-pipelines

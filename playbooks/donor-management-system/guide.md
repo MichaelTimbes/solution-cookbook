@@ -3,9 +3,9 @@ playbook: Donor Management System
 archetype: crm
 required-capabilities:
   - human-communication
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - rules-engine-decisioning
   - notification-messaging-system
   - audit-log-provenance

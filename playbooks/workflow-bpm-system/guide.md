@@ -11,13 +11,12 @@ required-capabilities:
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
   - import-export-pipelines
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - custom-fields-extensible-attributes
   - template-merge-fields-document-generation
-optional-capabilities:
-  []
+optional-capabilities: []
 patterns:
   - workflow-stateful-progression
   - policy-driven-behavior

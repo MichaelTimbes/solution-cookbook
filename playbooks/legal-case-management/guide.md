@@ -5,9 +5,9 @@ required-capabilities:
   - human-communication
   - approval-workflows-human-in-the-loop
   - audit-log-provenance
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - rules-engine-decisioning
   - notification-messaging-system
 optional-capabilities:

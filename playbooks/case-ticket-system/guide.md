@@ -2,9 +2,9 @@
 playbook: Case and Ticket Management System
 archetype: case-ticket-system
 required-capabilities:
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - custom-fields-extensible-attributes
   - human-communication
   - approval-workflows-human-in-the-loop
@@ -16,8 +16,7 @@ required-capabilities:
   - audit-log-provenance
   - import-export-pipelines
   - idempotency-outbox-retries-dlq
-optional-capabilities:
-  []
+optional-capabilities: []
 patterns:
   - identity-access-control
   - auditability-traceability

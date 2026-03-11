@@ -2,17 +2,16 @@
 playbook: Document Management System
 archetype: document-management-system
 required-capabilities:
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - audit-log-provenance
   - import-export-pipelines
   - human-communication
   - template-merge-fields-document-generation
   - notification-messaging-system
   - approval-workflows-human-in-the-loop
-optional-capabilities:
-  []
+optional-capabilities: []
 patterns:
   - identity-access-control
   - auditability-traceability

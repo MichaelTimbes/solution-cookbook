@@ -2,9 +2,9 @@
 playbook: Contract Management System
 archetype: document-management-system
 required-capabilities:
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - custom-fields-extensible-attributes
   - human-communication
   - approval-workflows-human-in-the-loop

@@ -5,9 +5,9 @@ required-capabilities:
   - human-communication
   - rules-engine-decisioning
   - notification-messaging-system
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - audit-log-provenance
   - idempotency-outbox-retries-dlq
 optional-capabilities:

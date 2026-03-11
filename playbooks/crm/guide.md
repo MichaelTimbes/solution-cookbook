@@ -6,9 +6,9 @@ required-capabilities:
   - dynamic-evaluation-survey-engine
   - template-merge-fields-document-generation
   - human-communication
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - audit-log-provenance
   - approval-workflows-human-in-the-loop
   - notification-preferences-routing
@@ -16,8 +16,7 @@ required-capabilities:
   - idempotency-outbox-retries-dlq
   - import-export-pipelines
   - rules-engine-decisioning
-optional-capabilities:
-  []
+optional-capabilities: []
 patterns:
   - identity-access-control
   - auditability-traceability

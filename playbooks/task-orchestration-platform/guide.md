@@ -3,9 +3,9 @@ playbook: Task Orchestration Platform
 archetype: workflow-bpm-system
 required-capabilities:
   - rules-engine-decisioning
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - human-communication
   - notification-messaging-system
   - audit-log-provenance

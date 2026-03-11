@@ -4,9 +4,9 @@ archetype: document-management-system
 required-capabilities:
   - human-communication
   - audit-log-provenance
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - approval-workflows-human-in-the-loop
   - rules-engine-decisioning
   - import-export-pipelines

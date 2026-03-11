@@ -3,9 +3,9 @@ playbook: Vendor Management System
 archetype: crm
 required-capabilities:
   - human-communication
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - rules-engine-decisioning
   - approval-workflows-human-in-the-loop
   - audit-log-provenance

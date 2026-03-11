@@ -6,9 +6,9 @@ required-capabilities:
   - human-communication
   - rules-engine-decisioning
   - audit-log-provenance
-- query-filtering
-- saved-views
-- search-index
+  - query-filtering
+  - saved-views
+  - search-index
   - notification-messaging-system
 optional-capabilities:
   - template-merge-fields-document-generation
