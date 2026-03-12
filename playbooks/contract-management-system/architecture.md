@@ -106,7 +106,7 @@ Guidance:
 
 These projections are commonly derived from canonical lifecycle events. They support operational retrieval and workspace efficiency, but they do not replace authoritative lifecycle records.
 
-### Typical Modular-Monolith Module Boundaries
+## Typical Modular-Monolith Module Boundaries
 
 Common V1 contract systems often organize logical modules such as Contract Lifecycle, Authoring / Intake, Artifact Repository, Review Collaboration, Approval Orchestration, Policy Decisioning, Obligations & Renewals, Query Workspace, Search Projection, Notification Policy & Delivery, Integration Hub, and Audit & Provenance.
 
@@ -114,7 +114,7 @@ These boundaries often exist within one deployable application in a modular-mono
 
 Teams often adjust module boundaries based on scale, team structure, regulatory needs, and organizational context.
 
-### Typical V1 Integration Boundaries
+## Typical V1 Integration Boundaries
 
 Common V1 integration boundaries include an e-signature provider boundary that handles signing ceremonies and callbacks, and a business system integration boundary for ERP, CRM, or procurement systems that receive exports or synchronization updates.
 

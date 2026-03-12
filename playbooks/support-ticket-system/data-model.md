@@ -63,6 +63,14 @@ Purpose:
 - One `Ticket` references one effective `SlaPolicyVersion`.
 - `AuditEvent` correlates intake, assignment, escalation, and resolution actions.
 
+## State Authority
+
+- Authoritative domain state typically lives in `Ticket`, `Requester`, `Agent`, `Queue`, `OwnershipAssignment`, `ResolutionRecord`, `StatusTransition`, and `SlaPolicyVersion`.
+- Supporting authoritative records commonly include `ApprovalDecision`, `EscalationEvent`, `AuditEvent`, and integration checkpoint records within their own concerns.
+- Derived or rebuildable forms often include queue dashboards, aging views, notification delivery views, search documents, and reporting summaries.
+- Artifacts may store screenshots, logs, or evidence files where needed, but those records typically do not own support-ticket lifecycle state.
+- Search indexes, dashboards, and notifications are projections and should remain conceptually rebuildable from canonical support records.
+
 ## Invariants
 
 - Ticket status transitions must follow an allowed transition graph.

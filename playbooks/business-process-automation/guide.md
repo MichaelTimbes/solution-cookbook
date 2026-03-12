@@ -45,6 +45,20 @@ Primary archetype:
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Import / Export Pipelines](../../cookbook/capabilities/import-export-pipelines.md)
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Process definitions and branching rules | Process Definition Service |
+| Execution and task progression | Execution Engine |
+| Rules and decisioning | Policy Decision Service |
+| Human communication | Process Collaboration Boundary |
+| Notification / messaging system | Event and Notification Service |
+| Import / export pipelines and retry controls | Integration Task Service |
+| Audit log + provenance | Audit and Observability Service |
+
 ## System Evolution
 
 Phase 1: modeled process automation  

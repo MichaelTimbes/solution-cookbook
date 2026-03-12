@@ -62,6 +62,14 @@ Purpose:
 - `ApprovalDecision` records are linked to relevant stage or pricing exceptions.
 - `AuditEvent` correlates ownership, stage, and communication transitions.
 
+## State Authority
+
+- Authoritative domain state typically lives in `Lead`, `Account`, `Contact`, `Opportunity`, `Activity`, `OpportunityStage`, `StageTransition`, and `OwnershipAssignment`.
+- Supporting authoritative records commonly include `ApprovalDecision`, `QualificationEvaluation`, `AuditEvent`, and integration checkpoint records within their own concerns.
+- Derived or rebuildable forms often include pipeline dashboards, saved-view materializations, search documents, follow-up reminder views, and reporting summaries.
+- Artifacts may capture quotes, proposals, or generated documents, but those records typically do not own sales lifecycle state.
+- Search indexes, dashboards, and notifications are projections and should remain conceptually rebuildable from canonical sales records.
+
 ## Invariants
 
 - Opportunity stage transitions must follow policy-defined allowed paths.

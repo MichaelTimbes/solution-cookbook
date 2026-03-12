@@ -51,6 +51,40 @@ Related archetypes:
 - Search/reporting projections update asynchronously for operational triage.
 - Audit and provenance captures immutable history for compliance and post-incident review.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow and orchestration commonly manage SLA escalations, approvals, and exception-handling tasks around support tickets.
+- Support ticket lifecycle services typically own canonical mutation of ticket status, assignment, and resolution state.
+- Workflow completion may trigger lifecycle commands such as escalate, reassign, or close, but workflow state does not by itself represent authoritative support-ticket truth.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary ticket, assignment, queue, and SLA policy records.
+- Operational lists, queue boards, and triage dashboards often read from projection or read-model tables tuned for active support work.
+- Search index reads are typically used for discovery, keyword lookup, and cross-ticket retrieval.
+- Reporting and service-level summaries are often served from reporting projections rather than mutable operational tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Intake and Classification
+- Ticket Lifecycle
+- Queue and Assignment
+- SLA Policy
+- Workflow and Orchestration
+- Search and Operations Query
+- Notification and Messaging
+- Audit and Provenance
+- Integration and Data Movement
+
+## Typical V1 Integration Boundaries
+
+- Portal, email, and API intake channels commonly provide request ingress.
+- CRM or account-context systems often enrich requester and entitlement context.
+- Messaging providers commonly handle requester and team communications.
+- Analytics and reporting systems often consume exported or projected service summaries.
+- External adapters typically use idempotent event handling and reconciliation-aware synchronization.
+
 ## Evolution Anchors
 
 - Start with intake, assignment, and canonical ticket state management.

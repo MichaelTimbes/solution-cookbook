@@ -52,6 +52,22 @@ Related archetypes:
 - [Approval Workflows / Human-In-The-Loop](../../cookbook/capabilities/approval-workflows-human-in-the-loop.md)
 - [Notification / Messaging System](../../cookbook/capabilities/notification-messaging-system.md)
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Document identity and lifecycle | Document Repository Service |
+| Metadata and taxonomy control | Metadata and Taxonomy Service |
+| Query filtering and saved views | Search and Query Service |
+| Search index | Search Projection Boundary |
+| Human communication | Collaboration Boundary |
+| Approval workflows / human-in-the-loop | Lifecycle Workflow Service |
+| Notification / messaging system | Notification and Subscription Service |
+| Audit log + provenance | Audit and Retention Policy Service |
+| Import / export pipelines | Enterprise Integration Boundary |
+
 ## Reference Architecture
 
 Includes ingestion boundary, metadata/classification service, repository service, search service, workflow service, and audit/compliance service.

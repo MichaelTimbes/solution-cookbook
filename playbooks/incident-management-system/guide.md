@@ -55,6 +55,22 @@ Related archetypes:
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Idempotency + Outbox + Retries + DLQ](../../cookbook/capabilities/idempotency-outbox-retries-dlq.md)
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Incident lifecycle and severity control | Incident Domain Service |
+| Escalation and runbook coordination | Escalation and Runbook Orchestration Service |
+| Query filtering and saved views | Search and Operations Query Service |
+| Search index | Search Projection Boundary |
+| Human communication | Incident Collaboration Boundary |
+| Notification / messaging system | Communication Bridge |
+| Rules and decisioning | Incident Policy Service |
+| Audit log + provenance | Timeline and Audit Service |
+| Idempotency and retry controls | Integration Boundary |
+
 ## Reference Architecture
 
 Diagrams:
