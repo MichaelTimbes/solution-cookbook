@@ -93,6 +93,23 @@ How capabilities participate:
 - Audit and observability capture complete process history and operational state.
 - Search and extensibility support operational querying and process configurability.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Process definitions and version governance | Process Definition Service |
+| Workflow execution and task progression | Execution Engine |
+| Approval workflows / human-in-the-loop | Task Orchestration Service |
+| Rules and dynamic evaluation | Decisioning Service |
+| Query filtering and saved views | Search and Operations Query Service |
+| Search index | Operations Search Projection Boundary |
+| Notification preferences and routing | Notification Policy Boundary |
+| Notification / messaging system | Notification and Messaging Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines and retry controls | Integration and Side-Effect Service |
+
 ## Reference Architecture
 
 Diagrams:

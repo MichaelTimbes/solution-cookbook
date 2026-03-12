@@ -94,6 +94,23 @@ How capabilities participate:
 - Import/export and idempotency support safe integration with external systems.
 - Extensibility and dynamic evaluation support evolving business models and qualification logic.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Account and relationship lifecycle | Customer Domain Service |
+| Lead and opportunity progression | Pipeline Domain Service |
+| Query filtering and saved views | Search and Query Service |
+| Search index | Search Projection Boundary |
+| Approval workflows / human-in-the-loop | Workflow and Orchestration Service |
+| Notification preferences and routing | Notification Policy Boundary |
+| Notification / messaging system | Notification and Messaging Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines | Data Movement Service |
+| Rules, dynamic evaluation, and extensibility | Pipeline Domain and Rules Services |
+
 ## Reference Architecture
 
 Diagrams:

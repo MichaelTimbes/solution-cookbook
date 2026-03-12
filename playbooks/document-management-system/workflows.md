@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside the broader document lifecycle rather than the full lifecycle itself.
+
+- Document review workflow: routed review tasks, feedback capture, and revision requests.
+- Approval workflow: governed acceptance or rejection before publication or release.
+- Publication workflow: release, sharing, or controlled distribution after lifecycle checks.
+
 ## 1) Ingestion and Classification
 
 1. Document is submitted through ingestion boundary.

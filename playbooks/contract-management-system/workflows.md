@@ -2,6 +2,18 @@
 
 ## Core Workflow Set
 
+### Typical Workflow Units
+
+In contract systems, workflows usually operate at a narrower scope than the full contract lifecycle. They commonly orchestrate tasks and approvals around a particular lifecycle moment, while the canonical lifecycle state remains owned by the contract lifecycle domain.
+
+A review workflow is usually associated with a specific `ContractVersion` because comments, redlines, and review tasks are tied to a particular negotiated draft.
+
+An approval workflow is usually associated with a lifecycle gate such as draft approval, legal approval, or execution approval. It helps determine whether a transition may proceed, but it does not itself become the source of truth for contract lifecycle state.
+
+An amendment workflow is commonly triggered when a new version of an existing contract is created. It coordinates drafting, review, and approval work for the amendment path while the parent `Contract` continues to own the broader agreement lifecycle.
+
+A renewal workflow is commonly triggered by lifecycle dates or obligation deadlines. It helps coordinate reminders, reviews, and renewal decisions, while lifecycle transitions such as renew, expire, or terminate remain the responsibility of the Contract Lifecycle domain.
+
 ## 1) Draft Intake and Template-Driven Authoring
 
 1. Contract request is submitted with contextual metadata.

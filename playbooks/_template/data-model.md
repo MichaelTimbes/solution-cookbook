@@ -20,7 +20,7 @@ Guidance:
 - Keep naming and scope consistent with capabilities and archetypes.
 
 
-## Authority Model
+## State Authority
 
 Use this section to make source-of-truth boundaries explicit in this playbook.
 

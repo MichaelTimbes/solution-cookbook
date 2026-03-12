@@ -54,6 +54,41 @@ Related archetypes:
 - Search and operations projections update asynchronously for dashboards and triage.
 - Audit service captures all transitions, overrides, and policy decisions.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow orchestration commonly manages task routing, approvals, timers, and exception paths for process execution.
+- Process execution and state services typically own canonical mutation of workflow instance, task, transition, and timer state.
+- Task completion, approvals, and signals may trigger domain commands or side effects, but those workflow interactions do not by themselves replace authoritative persisted process state.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary process definition, workflow instance, task, transition, and timer records.
+- Operational backlogs, exception queues, and throughput dashboards often read from projection or read-model tables tuned for active operations work.
+- Search index reads are typically used for instance discovery, task lookup, and operational triage across process populations.
+- Reporting and optimization views are often served from reporting projections rather than mutable execution tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Process API Boundary
+- Process Definition
+- Execution Engine
+- Task Orchestration
+- Decisioning
+- Scheduler and Timer
+- Notification and Messaging
+- Search and Operations Query
+- Audit and Provenance
+- Integration and Side-Effect
+
+## Typical V1 Integration Boundaries
+
+- Identity providers commonly supply actor identity, authorization, and delegation context.
+- Messaging systems commonly provide signal delivery, reminders, and participant notifications.
+- External systems of record often receive callbacks, sync messages, or exported process outcomes.
+- File or document storage may supply artifacts used within workflow steps.
+- Third-party APIs typically connect through adapter boundaries with idempotent event handling, retries, and reconciliation controls.
+
 ## Evolution Anchors
 
 - Start with versioned process definitions, execution state, and task coordination.

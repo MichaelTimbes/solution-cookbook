@@ -96,6 +96,23 @@ How capabilities participate:
 - Extensibility and dynamic evaluation support configurable ticket schemas and intake forms.
 - Artifact repository can be added for attachment-heavy deployments that require authoritative evidence file versioning and retention controls.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Ticket lifecycle and status progression | Ticket Lifecycle Service |
+| Assignment and routing | Queue and Assignment Service |
+| Query filtering and saved views | Search and Operations Query Service |
+| Search index | Search Projection Boundary |
+| Notification preferences and routing | Notification Policy Boundary |
+| Notification / messaging system | Notification and Messaging Service |
+| Approval workflows / human-in-the-loop | Workflow and Orchestration Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines | Integration and Data Movement Service |
+| Dynamic evaluation and custom fields | Classification and Prioritization Service |
+
 ## Reference Architecture
 
 Diagrams:

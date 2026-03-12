@@ -77,8 +77,10 @@ Purpose:
 - Audit records are immutable and append-only.
 - Integration upserts are idempotent within defined deduplication windows.
 
-## Authoritative vs Projection Guidance
+## State Authority
 
-- Authoritative entities: `Ticket`, `Case`, `Requester`, `Queue`, `Agent`, `StatusTransition`, `SlaPolicyVersion`.
-- Projection entities: queue dashboards, SLA summary views, search indexes, reporting snapshots.
-- Keep projection rebuild paths explicit to preserve recoverability and consistency behavior.
+- Authoritative domain state typically lives in Ticket, Case, Requester, Agent, Queue, OwnershipAssignment, StatusTransition, and SlaPolicyVersion.
+- Supporting authoritative records commonly include ApprovalDecision, WorkflowInstanceReference, AuditEvent, and integration checkpoint records within their own concerns.
+- Derived or rebuildable forms often include queue dashboards, SLA summary views, search documents, notification delivery views, and reporting snapshots.
+- Artifacts can store attachments or evidence files where used, but those records typically do not own ticket business lifecycle state.
+- Keeping projection rebuild paths explicit helps preserve recoverability and reduce confusion between canonical ticket truth and operational read views.

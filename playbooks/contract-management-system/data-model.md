@@ -62,6 +62,19 @@ Purpose:
 - `RenewalEvent` references the parent contract lifecycle and upcoming obligations.
 - `AuditEvent` correlates drafting, review, approval, execution, and renewal actions.
 
+### Canonical Contract Domain Model
+
+In typical contract systems, `Contract` represents the legal or business agreement as the primary lifecycle entity. It carries the enduring identity of the agreement across drafting, review, execution, amendment, renewal, and termination.
+
+`ContractVersion` captures the negotiated versions of that agreement. Each version represents a specific draft or negotiated state of the contract terms at a point in time, while the parent `Contract` continues to represent the overall agreement lifecycle.
+
+`ClauseDefinition` represents a reusable clause library entry used during authoring or negotiation. It provides a governed source for standard language, but it does not by itself represent the final clause text that was agreed within a specific contract version.
+
+`ClauseInstance` represents the clause snapshot embedded in a specific `ContractVersion`. A clause instance may originate from a `ClauseDefinition`, but once it is incorporated into a version it becomes version-bound so that negotiated edits, substitutions, or redlines remain tied to that version's agreed language.
+
+`Obligation` represents an operational commitment that must be tracked after execution, such as a deliverable, review date, notice requirement, payment milestone, or renewal-related action. Obligations are commonly derived from executed clause instances rather than from reusable clause definitions alone.
+
+Artifact documents such as PDFs, drafts, and redlines are typically linked to `ContractVersion` records because they evidence a particular negotiated state. They support lifecycle visibility and provenance, but they do not replace the canonical lifecycle state held by `Contract` and `ContractVersion`.
 
 ## State Authority
 
@@ -92,6 +105,7 @@ Purpose:
 Guidance:
 - Authoritative contract and artifact-linkage state must remain source-of-truth for legal and operational decisions.
 - Derived views should be rebuildable from canonical records and event history where practical.
+
 ## Invariants
 
 - Only one active `ContractVersion` is current at a time.
@@ -99,4 +113,3 @@ Guidance:
 - Obligations must be mapped to accountable owners and due milestones.
 - Audit and provenance records are immutable and append-only.
 - Replay of integration events is deduplicated via idempotency controls.
-

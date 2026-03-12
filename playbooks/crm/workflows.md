@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside broader relationship and pipeline lifecycles rather than the full customer lifecycle itself.
+
+- Lead qualification workflow: intake, scoring, routing, and qualification decisions.
+- Opportunity approval workflow: governed stage advancement for sensitive commercial transitions.
+- External synchronization workflow: export, reconciliation, and retry-safe propagation to downstream systems.
+
 ## 1) Lead Intake and Qualification
 
 1. A lead is created from user entry or integration import.

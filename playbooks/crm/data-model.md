@@ -75,8 +75,10 @@ Purpose:
 - Audit records are append-only and immutable.
 - Integration upserts are idempotent within defined deduplication windows.
 
-## Authoritative vs Projection Guidance
+## State Authority
 
-- Authoritative entities: `Account`, `Contact`, `Lead`, `Opportunity`, `Case`, `Activity`, `Quote`.
-- Projection entities: search indexes, saved-view materializations, analytical summaries.
-- Keep projection rebuild pathways explicit to preserve recovery and consistency behavior.
+- Authoritative domain state typically lives in Account, Contact, Lead, Opportunity, Case, Activity, Quote, StageTransition, and AssignmentEvent.
+- Supporting authoritative records commonly include ApprovalDecision, WorkflowInstanceReference, AccessPolicySnapshot, and integration checkpoint records within their own concerns.
+- Derived or rebuildable forms often include search documents, saved-view materializations, pipeline dashboards, forecasting aggregates, notification delivery views, and reporting summaries.
+- Artifacts may exist for quotes or generated documents, but those records typically do not own customer or pipeline lifecycle state.
+- Keeping projection rebuild pathways explicit helps preserve recovery behavior and reduce confusion between canonical CRM records and read-optimized views.

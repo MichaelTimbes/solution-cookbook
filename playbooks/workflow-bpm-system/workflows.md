@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside larger business operations rather than the entire business lifecycle itself.
+
+- Task routing workflow: instance start, assignment, and participant/task dispatch.
+- Approval workflow: human decision capture and governed progression or rejection.
+- Escalation workflow: timers, reminders, retries, and exception-handling paths.
+
 ## 1) Process Modeling and Version Deployment
 
 1. Process model is authored and validated against governance controls.

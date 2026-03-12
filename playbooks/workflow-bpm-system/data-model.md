@@ -76,8 +76,10 @@ Purpose:
 - Audit records are immutable and append-only.
 - External side effects are executed through idempotent integration paths.
 
-## Authoritative vs Projection Guidance
+## State Authority
 
-- Authoritative entities: `ProcessDefinition`, `ProcessVersion`, `WorkflowInstance`, `TaskInstance`, `TransitionRecord`, `TimerEvent`.
-- Projection entities: operations dashboards, queue summaries, process health and SLA aggregates.
-- Keep projection rebuild mechanisms explicit for reliability during replay and recovery operations.
+- Authoritative domain state typically lives in ProcessDefinition, ProcessVersion, WorkflowInstance, TaskInstance, TransitionRecord, TimerEvent, DecisionOutcome, and ApprovalDecision.
+- Supporting authoritative records commonly include RoleAssignment, TaskAssignment, OverrideAction, RetryAttempt, DeadLetterRecord, and integration checkpoint records within their own concerns.
+- Derived or rebuildable forms often include operations dashboards, backlog summaries, search documents, notification delivery views, SLA aggregates, and reporting projections.
+- Artifact or document references may be authoritative for linked files within their own boundary, but they typically do not own workflow execution truth.
+- Keeping projection rebuild mechanisms explicit supports replay, recovery, and clearer separation between canonical execution state and operational views.

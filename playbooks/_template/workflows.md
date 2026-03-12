@@ -13,6 +13,16 @@ For each workflow:
 - Note which capabilities are involved.
 - Identify decision points and policy checks.
 
+## Typical Workflow Units
+
+Use this section to describe the bounded workflow units that commonly exist inside the broader system lifecycle.
+
+Guidance:
+- Keep this lightweight and domain-shaped.
+- Treat workflows as process units, not the entire lifecycle.
+- Name the common units readers would likely implement or orchestrate first.
+
+
 ## Workflow 1: <workflow-name>
 
 Stages:
@@ -54,3 +64,4 @@ Capabilities involved:
 
 Notes:
 - <state transitions, SLAs/SLOs, exception paths>
+

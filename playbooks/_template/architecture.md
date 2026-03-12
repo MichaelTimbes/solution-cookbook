@@ -6,16 +6,16 @@ Authoring references:
 - Capabilities index: [../../cookbook/capabilities](../../cookbook/capabilities)
 - Patterns index: [../../cookbook/foundational-patterns/README.md](../../cookbook/foundational-patterns/README.md)
 
-## Architecture Intent
+## Composition Intent
 
 Describe the composition intent for the target system:
 - What system shape is being composed?
 - Which archetype is primary?
 - Which related archetypes influence the boundaries?
 
-## Principal Components
+## Logical Components
 
-List principal services/components and responsibilities.
+List the principal logical components and responsibilities.
 
 Template:
 - <Component A>: <responsibility>
@@ -35,13 +35,13 @@ Template:
 Document architectural boundary principles.
 
 Include guidance such as:
-- Separate storage concerns from metadata and query concerns.
-- Keep workflow orchestration separate from the core repository.
-- Keep audit/provenance evidence immutable and independently queryable.
-- Keep import/export pathways explicit and policy-governed.
-- Ensure consistent authorization evaluation at all access points.
+- Storage, metadata, and query concerns often benefit from being kept conceptually distinct.
+- Workflow orchestration is typically kept separate from the core lifecycle or repository boundary.
+- Audit/provenance evidence is commonly kept immutable and independently queryable.
+- Import/export pathways are often made explicit and policy-governed.
+- Authorization evaluation is typically kept consistent across access points.
 
-## Interaction Overview
+## Interaction Flow
 
 Describe how components interact at a high level:
 - Request flow
@@ -51,21 +51,7 @@ Describe how components interact at a high level:
 
 
 
-## Event / Projection Notes
 
-Use this section, where relevant, to describe how common canonical state changes often propagate to derived views or side effects.
-
-Suggested optional format:
-
-| Canonical change | Likely downstream consumers | Typical derived outputs |
-|---|---|---|
-| <State change A> | <search index, read models, notifications> | <projected search docs, delivery intents> |
-| <State change B> | <audit/provenance, integrations, reporting> | <timeline entries, sync messages, aggregates> |
-
-Guidance:
-- Keep this lightweight and planning-oriented.
-- Use wording such as likely, common, typical, or often.
-- Do not assume a specific integration style or transport mechanism.
 ## Workflow / Lifecycle Handshake
 
 Clarify responsibility boundaries between orchestration and lifecycle state.
@@ -94,6 +80,35 @@ Guidance:
 - Keep this conceptual and technology-neutral.
 - Distinguish operational reads from indexed retrieval and reporting paths.
 
+## Typical Modular-Monolith Module Boundaries
+
+List the typical in-process logical modules for the playbook.
+
+Template:
+- <Module A>
+- <Module B>
+- <Module C>
+
+Guidance:
+- Treat these as logical boundaries inside one system shape.
+- Do not imply a microservice split.
+- Keep names responsibility-oriented.
+
+## Typical V1 Integration Boundaries
+
+Describe the external boundaries the playbook commonly interacts with.
+
+Examples:
+- identity provider
+- messaging or notification providers
+- external systems of record
+- file or artifact storage
+- third-party APIs
+
+Guidance:
+- Keep this boundary-oriented and technology-neutral.
+- Emphasize adapters, controlled contracts, and idempotent handling where relevant.
+
 ## Communication Boundary Notes
 
 Clarify ownership and intent boundaries for communication-related capabilities:
@@ -103,7 +118,8 @@ Clarify ownership and intent boundaries for communication-related capabilities:
 - workflow comments / approval rationale: decision context attached to lifecycle or approval transitions.
 
 Keep this section short and boundary-focused.
-## Diagram Links
+
+## Diagram References
 
 - [System context](diagrams/system-context.mmd)
 - [Container view](diagrams/container-view.mmd)

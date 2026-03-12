@@ -52,6 +52,40 @@ Related archetypes:
 - SLA evaluation runs continuously against ticket state and policy timelines.
 - Resolution and closure actions trigger communication, audit capture, and export synchronization.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow and orchestration commonly manage approvals, escalations, and exception-handling tasks around ticket work.
+- Ticket lifecycle services typically own canonical mutation of ticket status, assignment state, and closure outcomes.
+- Workflow completion may trigger lifecycle commands such as escalate, reassign, or close, but workflow state does not by itself represent authoritative ticket truth.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary ticket, queue, assignment, and SLA domain records.
+- Operational lists, queue boards, and dashboard views often read from projection or read-model tables tuned for triage and workload visibility.
+- Search index reads are typically used for discovery, keyword retrieval, and cross-ticket lookup.
+- Reporting and compliance summaries are often served from reporting projections rather than mutable operational tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Intake and Classification
+- Ticket Lifecycle
+- Queue and Assignment
+- SLA Policy
+- Workflow and Orchestration
+- Search and Operations Query
+- Notification and Messaging
+- Audit and Provenance
+- Integration and Data Movement
+
+## Typical V1 Integration Boundaries
+
+- Identity providers commonly supply actor identity and authorization context.
+- Messaging, email, or portal channels often provide ticket intake and outbound communication paths.
+- CRM or account-context systems often enrich requester and customer data.
+- Analytics and reporting systems commonly consume exports or projected summaries.
+- Third-party APIs and external operational systems typically connect through adapter boundaries with idempotent event handling and reconciliation awareness.
+
 ## Evolution Anchors
 
 - Start with intake, canonical ticket state, and queue assignment controls.

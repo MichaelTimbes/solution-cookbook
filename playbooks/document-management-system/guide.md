@@ -81,6 +81,23 @@ Role of each capability in the DMS:
 - Notification and messaging coordinates lifecycle events, approvals, and policy alerts.
 - Human-in-the-loop workflows govern high-risk transitions and exceptions.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Document identity and lifecycle | Repository / Core State Store Service |
+| Artifact repository | Repository / Content Boundary |
+| Metadata schema and classification | Metadata and Classification Service |
+| Query filtering and saved views | Search / Query Service |
+| Search index | Search Projection Boundary |
+| Approval workflows / human-in-the-loop | Workflow and Orchestration Service |
+| Notification / messaging system | Notification and Messaging Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines | Data Movement Service |
+| Template / merge fields document generation | Metadata and Classification Service |
+
 ## Reference Architecture
 
 Diagrams:

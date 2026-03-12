@@ -51,8 +51,6 @@ Related archetypes:
 - Search/query projections update for operational and legal retrieval.
 - Audit and provenance captures immutable lifecycle evidence.
 
-
-
 ### Authority Model
 
 In this playbook, canonical contract business state is typically controlled by the Contract Lifecycle boundary.
@@ -81,6 +79,7 @@ Where projection-heavy behavior is relevant, this table can be used as a lightwe
 Guidance:
 - These are common propagation paths, not a required integration framework.
 - Implementations may use different mechanisms (synchronous updates, jobs, or event-oriented flows) depending on system constraints.
+
 ## Workflow / Lifecycle Handshake
 
 - Contract lifecycle state is owned by the document lifecycle service and its canonical transition rules.
@@ -97,12 +96,37 @@ Guidance:
 - Audit views: read from audit/provenance storage or audit-focused projections, not from mutable operational tables.
 - Dashboards/reporting: read from reporting/export projections designed for aggregation and period-over-period analysis.
 
+### Common V1 Operational Read Models
+
+- Contract list projection: supports operational browsing, filtering, saved views, and general browsing of contracts.
+- Obligation queue projection: supports upcoming obligations and deadline-oriented worklists.
+- Approval inbox projection: supports pending approvals for users.
+- Audit timeline projection: supports lifecycle history and contract activity playback.
+- Search index documents: support full-text and cross-field search.
+
+These projections are commonly derived from canonical lifecycle events. They support operational retrieval and workspace efficiency, but they do not replace authoritative lifecycle records.
+
+### Typical Modular-Monolith Module Boundaries
+
+Common V1 contract systems often organize logical modules such as Contract Lifecycle, Authoring / Intake, Artifact Repository, Review Collaboration, Approval Orchestration, Policy Decisioning, Obligations & Renewals, Query Workspace, Search Projection, Notification Policy & Delivery, Integration Hub, and Audit & Provenance.
+
+These boundaries often exist within one deployable application in a modular-monolith implementation. They represent logical ownership boundaries rather than required services.
+
+Teams often adjust module boundaries based on scale, team structure, regulatory needs, and organizational context.
+
+### Typical V1 Integration Boundaries
+
+Common V1 integration boundaries include an e-signature provider boundary that handles signing ceremonies and callbacks, and a business system integration boundary for ERP, CRM, or procurement systems that receive exports or synchronization updates.
+
+Integration checkpoints and reconciliation records are commonly used to track synchronization state and prevent duplicate external actions.
+
 ## Communication Boundary Notes
 
 - Contract negotiation/review threads are owned by the human-communication capability and hold collaboration context between legal and business participants.
 - Approval rationale is owned by approval workflow records and represents decision justification attached to gated transitions.
 - External notifications are owned by notification routing + messaging boundaries and represent delivery intent/execution, not collaboration truth.
 - Audit trail entries are owned by audit/provenance boundaries and represent immutable evidence of actions across lifecycle, workflow, and communication boundaries.
+
 ## Evolution Anchors
 
 - Start with drafting, versioning, and canonical contract state controls.
@@ -116,5 +140,3 @@ Guidance:
 - [System context](diagrams/system-context.mmd)
 - [Container view](diagrams/container-view.mmd)
 - [Lifecycle flow](diagrams/lifecycle-flow.mmd)
-
-

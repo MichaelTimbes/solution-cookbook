@@ -55,6 +55,42 @@ Related archetypes:
 - Notification and integration services react to events and update external boundaries.
 - Audit and observability capture all critical transitions for forensics and operations.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow and orchestration commonly manage approvals, exception paths, and follow-up tasks around customer and pipeline work.
+- CRM domain services typically own canonical mutation of accounts, contacts, leads, opportunities, cases, and ownership state.
+- Workflow completion may trigger domain commands such as approve stage advancement or reassign ownership, but workflow state does not itself represent authoritative customer or pipeline truth.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary CRM domain records for accounts, contacts, leads, opportunities, activities, and cases.
+- Operational pipeline lists, team queues, and dashboard views often read from projection or read-model tables tuned for daily sales and service work.
+- Search index reads are typically used for discovery, cross-account lookup, and full-text or faceted retrieval.
+- Reporting, forecasting, and analytical summaries are often served from reporting projections rather than mutable domain tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Input Boundary
+- Customer Domain
+- Pipeline Domain
+- Activity Timeline
+- Case Linkage
+- Rules and Decisioning
+- Workflow and Orchestration
+- Search and Query
+- Notification and Messaging
+- Audit and Provenance
+- Data Movement
+
+## Typical V1 Integration Boundaries
+
+- Identity providers commonly supply user identity, team context, and authorization inputs.
+- Marketing automation, support, and billing systems often exchange customer and lifecycle data.
+- Messaging and notification providers commonly handle reminders, assignments, and follow-up delivery.
+- External systems of record often receive exports or synchronization feeds for downstream processing.
+- Third-party APIs typically connect through adapter boundaries with idempotent event handling and reconciliation checks.
+
 ## Evolution Anchors
 
 - Start with core account, contact, lead, and opportunity state management.
