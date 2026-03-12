@@ -34,6 +34,14 @@
 - One incident can map to many correlated alert events.
 - One responder team can own many incidents.
 
+## State Authority
+
+- Authoritative domain state typically lives in `Incident`, `IncidentTask`, `Responder`, `ResponderTeam`, `StatusTransition`, `EscalationTimer`, and `RunbookStepExecution`.
+- Supporting authoritative records commonly include `AuditEvent`, `IncidentCommandAssignment`, and correlated `AlertEvent` records within their own concerns.
+- Derived or rebuildable forms often include active-incident boards, search documents, responder dashboards, notification delivery views, and post-incident reporting summaries.
+- Artifacts may capture evidence, logs, or postmortem attachments, but those records typically do not own incident lifecycle state.
+- Search indexes, dashboards, and notifications are projections and should remain conceptually rebuildable from canonical incident records.
+
 ## Invariants
 
 - Severity changes require actor attribution.

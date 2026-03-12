@@ -90,6 +90,23 @@ How capabilities participate:
 - Import/export and idempotency stabilize integration and replay behavior.
 - Artifact repository can be added where screenshots, logs, or evidence files must be versioned and retained as authoritative records.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Ticket lifecycle and status progression | Ticket Lifecycle Service |
+| Queue routing and assignment | Queue and Assignment Service |
+| Query filtering and saved views | Search and Operations Query Service |
+| Search index | Search Projection Boundary |
+| Notification preferences and routing | Notification Policy Boundary |
+| Notification / messaging system | Notification and Messaging Service |
+| Approval workflows / human-in-the-loop | Workflow and Orchestration Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines | Integration and Data Movement Service |
+| Dynamic evaluation and custom fields | Classification and Prioritization Service |
+
 ## Reference Architecture
 
 Diagrams:

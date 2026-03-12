@@ -88,6 +88,23 @@ How capabilities participate:
 - Search supports queue operations and SLA management.
 - Audit, import/export, and idempotency maintain trusted lifecycle evidence and integration stability.
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Request capture and qualification | Intake Boundary Service |
+| Policy routing and approval logic | Policy Evaluation and Approval Routing Services |
+| Query filtering and saved views | Search and Reporting Query Service |
+| Search index | Search Projection Boundary |
+| Notification preferences and routing | Notification Policy Boundary |
+| Notification / messaging system | Notification and Messaging Service |
+| Approval workflows / human-in-the-loop | Workflow and Orchestration Service |
+| Audit log + provenance | Audit and Provenance Service |
+| Import / export pipelines and idempotency | Integration and Data Movement Service |
+| Custom fields and dynamic evaluation | Intake Boundary and Policy Evaluation Services |
+
 ## Reference Architecture
 
 Diagrams:

@@ -51,6 +51,39 @@ Related archetypes:
 - Search/query projections support pipeline visibility and operational reporting.
 - Audit and provenance captures immutable lifecycle evidence for governance.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow and orchestration commonly manage approvals, exception handling, and follow-up tasks around pipeline work.
+- Sales CRM lifecycle services typically own canonical mutation of lead, account, contact, opportunity, and stage state.
+- Workflow completion may trigger domain commands such as advance stage, assign owner, or approve exceptions, but workflow state does not itself represent authoritative sales-lifecycle truth.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary lead, account, contact, opportunity, activity, and stage-transition records.
+- Pipeline boards, territory views, and forecast worklists often read from projection or read-model tables tuned for daily sales operations.
+- Search index reads are typically used for discovery, relationship lookup, and keyword retrieval.
+- Reporting and forecast summaries are often served from reporting projections rather than mutable domain tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Intake Boundary
+- Lead Qualification
+- Opportunity Lifecycle
+- Workflow and Orchestration
+- Search and Reporting Query
+- Notification and Messaging
+- Audit and Provenance
+- Integration and Data Movement
+
+## Typical V1 Integration Boundaries
+
+- Forms, campaign, and API channels commonly provide lead ingress.
+- Adjacent CRM, support, and document systems often exchange relationship context.
+- Messaging providers commonly deliver reminders and stakeholder updates.
+- Downstream analytics and business systems often consume exports or synchronization feeds.
+- External adapters typically use idempotent event handling and reconciliation-aware synchronization.
+
 ## Evolution Anchors
 
 - Start with lead/account/contact and opportunity baseline lifecycle.

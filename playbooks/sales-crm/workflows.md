@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside broader sales-lifecycle management rather than the full lifecycle itself.
+
+- Lead qualification workflow: intake validation, scoring, and owner routing.
+- Opportunity approval workflow: governed stage advancement and exception handling.
+- Follow-up workflow: reminder scheduling, stakeholder communication, and next-action tracking.
+
 ## 1) Lead Intake and Qualification
 
 1. Lead enters from forms, campaigns, partner feeds, or API channels.

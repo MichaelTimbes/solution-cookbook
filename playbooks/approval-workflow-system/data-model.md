@@ -62,6 +62,14 @@ Purpose:
 - `CallbackRecord` references terminal decision outcomes for downstream consumers.
 - `AuditEvent` correlates submission, routing, escalation, and completion actions.
 
+## State Authority
+
+- Authoritative domain state typically lives in `ApprovalRequest`, `ApprovalStep`, `ApproverAssignment`, `DecisionRecord`, `StatusTransition`, and `DeadlineTimer`.
+- Supporting authoritative records commonly include `AuthorizationSnapshot`, `DelegationRecord`, `AuditEvent`, and callback or synchronization checkpoints within their own concerns.
+- Derived or rebuildable forms often include approval inboxes, search documents, notification delivery views, SLA dashboards, and reporting summaries.
+- Request attachments or artifacts may be authoritative within their own artifact boundary, but they typically do not own approval lifecycle state.
+- Search indexes, dashboards, and notifications are projections and should remain conceptually rebuildable from canonical approval records.
+
 ## Invariants
 
 - Decision actions require authorized approvers at decision time.

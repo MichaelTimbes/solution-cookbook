@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside the broader approval lifecycle rather than the full lifecycle itself.
+
+- Submission workflow: request intake, validation, and initial routing.
+- Decision workflow: multi-step approval progression and decision capture.
+- Escalation workflow: timer handling, reassignment, and exception routing.
+
 ## 1) Request Submission and Policy Evaluation
 
 1. Request is submitted through UI, API, or integration channels.

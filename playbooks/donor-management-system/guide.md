@@ -52,6 +52,23 @@ Related archetypes:
 - [Audit Log + Provenance](../../cookbook/capabilities/audit-log-provenance.md)
 - [Template / Merge Fields Document Generation](../../cookbook/capabilities/template-merge-fields-document-generation.md)
 
+## Capability Ownership Map
+
+This map is guidance for logical module ownership, not a strict deployment model.
+
+| Capability | Logical Module |
+|---|---|
+| Donor profile and household management | Donor Profile Service |
+| Campaign and pledge lifecycle | Campaign and Contribution Service |
+| Query filtering and saved views | Search and Reporting Query Service |
+| Search index | Search Projection Boundary |
+| Human communication | Stewardship Collaboration Boundary |
+| Approval workflows / human-in-the-loop | Stewardship Workflow Service |
+| Notification / messaging system | Communication and Acknowledgment Service |
+| Audit log + provenance | Audit and Compliance Service |
+| Template generation | Communication and Acknowledgment Service |
+| Rules and decisioning | Campaign and Segmentation Service |
+
 ## Reference Architecture
 
 Architecture aligns donor profile management, campaign workflow, pledge events, and acknowledgment generation.

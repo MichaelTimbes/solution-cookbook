@@ -2,6 +2,14 @@
 
 ## Core Workflow Set
 
+## Typical Workflow Units
+
+Workflows in this playbook usually represent bounded process units inside the broader support-ticket lifecycle rather than the full lifecycle itself.
+
+- Ticket intake workflow: intake validation, classification, and initial routing.
+- Escalation workflow: SLA-driven warning, reassignment, and supervisory handling.
+- Resolution workflow: remediation, requester communication, and controlled closure.
+
 ## 1) Multi-Channel Intake and Classification
 
 1. Requester submits issue through portal, email, or API.

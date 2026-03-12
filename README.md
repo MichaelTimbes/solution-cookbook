@@ -1,6 +1,7 @@
 # Solution Cookbook
 
 Solution Cookbook is a reference repository for composing enterprise systems from:
+
 - archetypes
 - capabilities
 - foundational patterns
@@ -15,18 +16,7 @@ Solution Cookbook is a reference repository for composing enterprise systems fro
 ## Playbooks
 
 Use [playbooks/index.md](playbooks/index.md) as the main entry point for example architectures, workflows, data models, failure modes, and diagrams.
+
 ## Playbook Queue
 
-The current V2 focus is a smaller set of stronger, broadly useful playbooks that cover the core archetypes and common capability mixes.
-
-Playbooks we may introduce or bring back into the primary set later:
-- `clinical-document-management`
-- `compliance-case-management`
-- `compliance-process-tracking`
-- `legal-case-management`
-- `patient-relationship-management`
-- `records-management-system`
-- `task-orchestration-platform`
-- `vendor-management-system`
-
-
+The current V2 catalog is intentionally scoped to the active playbooks listed in [playbooks/index.md](playbooks/index.md).

@@ -2,7 +2,7 @@
 
 ## Core Workflow Set
 
-### Typical Workflow Units
+## Typical Workflow Units
 
 In contract systems, workflows usually operate at a narrower scope than the full contract lifecycle. They commonly orchestrate tasks and approvals around a particular lifecycle moment, while the canonical lifecycle state remains owned by the contract lifecycle domain.
 

@@ -51,6 +51,38 @@ Related archetypes:
 - Search/query projections support queue operations and SLA monitoring.
 - Audit and provenance captures immutable approval lifecycle evidence.
 
+## Workflow / Lifecycle Handshake
+
+- Workflow and orchestration commonly manage approval sequencing, timer-based escalation, and exception handling tasks.
+- Approval lifecycle services typically own canonical mutation of request, assignment, and decision state.
+- Workflow completion may trigger lifecycle commands such as advance, reject, or finalize, but workflow state does not itself represent authoritative approval-request truth.
+
+## Read Model Strategy
+
+- Canonical reads usually come from the primary approval request, step, assignment, decision, and timer records.
+- Approval inboxes, aging views, and SLA work queues often read from projection or read-model tables tuned for daily approval operations.
+- Search index reads are typically used for request discovery and queue retrieval.
+- Reporting and governance summaries are often served from reporting projections rather than mutable workflow tables.
+
+## Typical Modular-Monolith Module Boundaries
+
+These are typical in-process module boundaries for this playbook:
+- Intake Boundary
+- Policy Evaluation
+- Approval Routing
+- Workflow and Orchestration
+- Search and Reporting Query
+- Notification and Messaging
+- Audit and Provenance
+- Integration and Data Movement
+
+## Typical V1 Integration Boundaries
+
+- Identity and authorization systems commonly provide approver eligibility context.
+- Messaging providers often deliver reminders, escalations, and outcome notifications.
+- External systems commonly submit requests or receive final callback outcomes.
+- Adapter boundaries typically use idempotent callback handling, controlled contracts, and reconciliation-aware synchronization.
+
 ## Evolution Anchors
 
 - Start with request intake, assignment, and canonical decision lifecycle state.
